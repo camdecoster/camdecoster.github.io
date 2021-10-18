@@ -11,7 +11,7 @@ pygmentsStyle = "monokai"
 
 [params]
   footer = "Cameron DeCoster"
-  description = "Sky above, sand below and peace within"
+  description = "Software Engineer"
   avatarURL = "/images/avatar.jpg"
   avatarSize = "size-m"
   customHeadHTML = """
@@ -39,10 +39,10 @@ pygmentsStyle = "monokai"
     url = "/posts/"
     weight = 2
 
-  [[menu.main]]
-    name = "Projects"
-    url = "/projects/"
-    weight = 3
+#  [[menu.main]]
+#    name = "Projects"
+#    url = "/projects/"
+#    weight = 3
 
   [[menu.main]]
     name = "Portfolio"
@@ -52,7 +52,7 @@ pygmentsStyle = "monokai"
 #  [[menu.main]]
 #    identifier = "github"
 #    pre = "<span data-feather='github'></span>"
-#    url = "https://github.com/526avijitgupta/gokarna"
+#    url = "https://github.com/camdecoster"
 #    weight = 5
 
   [[menu.main]]
