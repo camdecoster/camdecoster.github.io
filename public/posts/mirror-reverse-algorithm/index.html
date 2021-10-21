@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Mirror Reverse Algorithm</title>
+    <meta name="description" content="Software Engineer">
+    <meta name="keywords" content='blog, gokarna, hugo, javascript, algorithm, interview, practice problem'>
+
+    <meta property="og:url" content="https://camdecoster.github.io/posts/mirror-reverse-algorithm/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mirror Reverse Algorithm">
+    <meta property="og:description" content="Software Engineer">
+    <meta property="og:image" content="/images/mirror-reverse-algorithm/alex-lopez-JR1ChBgzJvQ-unsplash.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mirror Reverse Algorithm">
+    <meta name="twitter:description" content="Software Engineer">
+    <meta property="twitter:domain" content="https://camdecoster.github.io/posts/mirror-reverse-algorithm/">
+    <meta property="twitter:url" content="https://camdecoster.github.io/posts/mirror-reverse-algorithm/">
+    <meta name="twitter:image" content="/images/mirror-reverse-algorithm/alex-lopez-JR1ChBgzJvQ-unsplash.jpg">
+
+    
+    <link rel="canonical" href="https://camdecoster.github.io/posts/mirror-reverse-algorithm/" />
+
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="/css/dark.css">
+
+    <script src="/js/svg-injector.min.js"></script>
+    <script src="/js/feather-icons.min.js"></script>
+    <script src="/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://camdecoster.github.io">
+                <img src="/images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://camdecoster.github.io">Cameron DeCoster</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="/"> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/posts/"> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://camdecoster.github.io/portfolio"> Portfolio </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/index.xml"><span data-feather='rss'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="/"> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/posts/"> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://camdecoster.github.io/portfolio"> Portfolio </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/index.xml"><span data-feather='rss'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+
+    <div class="post-header-section">
+        <h1>Mirror Reverse Algorithm</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            August 1, 2020
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="/tags/javascript">javascript</a></li>
+        
+            <li class="post-tag"><a href="/tags/algorithm">algorithm</a></li>
+        
+            <li class="post-tag"><a href="/tags/interview">interview</a></li>
+        
+            <li class="post-tag"><a href="/tags/practice-problem">practice problem</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p><img src="/images/mirror-reverse-algorithm/alex-lopez-JR1ChBgzJvQ-unsplash.jpg" alt="mirror over a desk, ">
+Photo by <a href="https://unsplash.com/@alex_lopez00">Alex Lopez</a> on <a href="https://unsplash.com/?utm_source=medium&amp;utm_medium=referral">Unsplash</a></p>
+<p>I’ve been going through some practice problems that one is likely to see during a technical interview for a developer position. One that I worked through recently has a problem statement as follows:</p>
+<p>Write a function to reverse the order of words in a string in place.</p>
+<p>That seems simple enough, except for the last two words, “in place.” That means that you should be mutating the existing array, not creating a new one, which is what I would initially try to do. So how does one do this? Let’s walk through it (using JavaScript).</p>
+<p>For this example, assume that the input is the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> [
+    <span style="color:#e6db74">&#39;p&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>, <span style="color:#e6db74">&#39;f&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;t&#39;</span>, <span style="color:#e6db74">&#39; &#39;</span>,
+    <span style="color:#e6db74">&#39;m&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;k&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;s&#39;</span>, <span style="color:#e6db74">&#39; &#39;</span>,
+    <span style="color:#e6db74">&#39;p&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;t&#39;</span>, <span style="color:#e6db74">&#39;i&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>
+];
+</code></pre></div><p>And we expect the output to be the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">output</span> <span style="color:#f92672">=</span> [
+    <span style="color:#e6db74">&#39;p&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;t&#39;</span>, <span style="color:#e6db74">&#39;i&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39; &#39;</span>,
+    <span style="color:#e6db74">&#39;m&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;k&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;s&#39;</span>, <span style="color:#e6db74">&#39; &#39;</span>,
+    <span style="color:#e6db74">&#39;p&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>, <span style="color:#e6db74">&#39;f&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;t&#39;</span>
+];
+</code></pre></div><h2 id="create-the-mirror-reverse-algorithm">Create the mirror reverse algorithm</h2>
+<p>The most straightforward approach to this problem is to recognize that you need to reverse the elements in an array. In other words, the first element becomes the last and the last becomes the first, and so on, until all elements have been switched. So let’s create a function to handle this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mirrorReverse</span>(<span style="color:#a6e22e">input</span>, <span style="color:#a6e22e">start</span>, <span style="color:#a6e22e">end</span>) {
+    <span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">start</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">end</span>) {
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">temp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">input</span>[<span style="color:#a6e22e">start</span>];
+        <span style="color:#a6e22e">input</span>[<span style="color:#a6e22e">start</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">input</span>[<span style="color:#a6e22e">end</span>];
+        <span style="color:#a6e22e">input</span>[<span style="color:#a6e22e">end</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">temp</span>;
+        <span style="color:#a6e22e">start</span><span style="color:#f92672">++</span>;
+        <span style="color:#a6e22e">end</span><span style="color:#f92672">--</span>;
+    }
+}
+</code></pre></div><p>Here, given an array, input, and start and end locations, the function will switch the elements until it gets to the middle of the start and end locations. Alright, let’s use this algorithm in the actual solution:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">reverseWords</span>(<span style="color:#a6e22e">input</span>) {
+    <span style="color:#75715e">// Reverse the whole array
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">mirrorReverse</span>(<span style="color:#a6e22e">input</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+}
+</code></pre></div><p>So, we’re done, right? Not quite. All we’ve done is reverse the original array, which changed it to the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[
+    <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;i&#39;</span>, <span style="color:#e6db74">&#39;t&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>, <span style="color:#e6db74">&#39;p&#39;</span>, <span style="color:#e6db74">&#39; &#39;</span>,
+    <span style="color:#e6db74">&#39;s&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;k&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;m&#39;</span>, <span style="color:#e6db74">&#39; &#39;</span>,
+    <span style="color:#e6db74">&#39;t&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;f&#39;</span>,  <span style="color:#e6db74">&#39;r&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>, <span style="color:#e6db74">&#39;p&#39;</span>
+]
+</code></pre></div><p>The words are in the correct positions, but the letters are reversed. If only we had a way to reverse the letters to the correct order… Oh right, we do!</p>
+<h2 id="create-the-reverse-words-solution">Create the reverse words solution</h2>
+<p>Let’s use mirrorReverse again:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">reverseWords</span>(<span style="color:#a6e22e">input</span>) {
+    <span style="color:#75715e">// Reverse the whole array
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">mirrorReverse</span>(<span style="color:#a6e22e">input</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>);
+    <span style="color:#75715e">// Reverse each word in array
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">start</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">end</span>;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+        <span style="color:#75715e">// Handle end of word in middle of array
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">input</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34; &#34;</span>) {
+            <span style="color:#a6e22e">end</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+            <span style="color:#a6e22e">mirrorReverse</span>(<span style="color:#a6e22e">input</span>, <span style="color:#a6e22e">start</span>, <span style="color:#a6e22e">end</span>);
+            <span style="color:#a6e22e">start</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+        }
+        <span style="color:#75715e">// Handle end of word at end of array
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">length</span>) {
+            <span style="color:#a6e22e">end</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">i</span>;
+            <span style="color:#a6e22e">mirrorReverse</span>(<span style="color:#a6e22e">input</span>, <span style="color:#a6e22e">start</span>, <span style="color:#a6e22e">end</span>);
+        }
+    }
+}
+</code></pre></div><p>As we go through each element in the array, we check to see it’s a space. If it is, we’ve found the end of a word. Then we reverse the word and keep checking. Eventually we reach the end of the array and reverse the last word.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Ultimately, solving this problem is a two step process:</p>
+<ol>
+<li>Reverse the whole array</li>
+<li>Reverse each word in the array</li>
+</ol>
+<p>We use mirrorReverse in each step, changing the start and end locations to achieve our objective. Throughout this process, we’re passing the pointer to the array as a function argument, so the original array is changed as we work through the algorithm, thereby abiding by the restriction of “in place.” I’m sure that the solution could be improved or made more elegant, but this one works. I should note that there are edge cases that this won’t handle: space at the beginning, space at the end, etc.</p>
+<p>If you create a better solution, let me know in the comments.</p>
+
+        </p>
+    </div>
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2021 Cameron DeCoster</span>
+    <span>
+        Built with <a href="https://gohugo.io/">Hugo</a> and <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

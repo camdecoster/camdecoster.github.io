@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on Cameron DeCoster</title>
+    <link>https://camdecoster.github.io/tags/javascript/</link>
+    <description>Recent content in javascript on Cameron DeCoster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mirror Reverse Algorithm</title>
+      <link>https://camdecoster.github.io/posts/mirror-reverse-algorithm/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/mirror-reverse-algorithm/</guid>
+      <description>Photo by Alex Lopez on Unsplash
+I’ve been going through some practice problems that one is likely to see during a technical interview for a developer position. One that I worked through recently has a problem statement as follows:
+Write a function to reverse the order of words in a string in place.
+That seems simple enough, except for the last two words, “in place.” That means that you should be mutating the existing array, not creating a new one, which is what I would initially try to do.</description>
+    </item>
+    
+  </channel>
+</rss>
