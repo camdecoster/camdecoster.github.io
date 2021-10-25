@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html on Cameron DeCoster</title>
+    <link>https://camdecoster.github.io/tags/html/</link>
+    <description>Recent content in html on Cameron DeCoster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An Engineer is a Problem Solver</title>
+      <link>https://camdecoster.github.io/posts/an-engineer-is-a-problem-solver/</link>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/an-engineer-is-a-problem-solver/</guid>
+      <description>In mid-2018, I found out that my company, Zachry Engineering, was going to be closing two of our other offices and that some layoffs might take place in my office. This obviously killed morale and led me to try to distract myself from the potential negative outcomes.
+At the time, I was performing a number of exclusion zone calculations for pneumatic pressure testing of pipe. This kind of testing is dangerous because a lot of energy gets stored in the pipe to get it up to pressure.</description>
+    </item>
+    
+  </channel>
+</rss>

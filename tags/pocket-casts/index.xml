@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pocket casts on Cameron DeCoster</title>
+    <link>https://camdecoster.github.io/tags/pocket-casts/</link>
+    <description>Recent content in pocket casts on Cameron DeCoster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 13 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/pocket-casts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Change how a website looks with Stylus and UserCSS</title>
+      <link>https://camdecoster.github.io/posts/change-how-a-website-looks-with-stylus-and-usercss/</link>
+      <pubDate>Sat, 13 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/change-how-a-website-looks-with-stylus-and-usercss/</guid>
+      <description>When using a website, the way it looks (the way it’s styled) is a result of how the author has set up the CSS rules. These rules describe how the HTML should be displayed to the user in different situations. Most websites do a good job of creating something I find presentable. But sometimes I use a site a lot and start to notice things that bother me. In this case, it was the Pocket Casts web application.</description>
+    </item>
+    
+  </channel>
+</rss>

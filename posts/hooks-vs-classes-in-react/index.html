@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Hooks vs. Classes in React</title>
+    <meta name="description" content="Software Engineer">
+    <meta name="keywords" content='blog, gokarna, hugo, react, hooks, state'>
+
+    <meta property="og:url" content="https://camdecoster.github.io/posts/hooks-vs-classes-in-react/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hooks vs. Classes in React">
+    <meta property="og:description" content="Software Engineer">
+    <meta property="og:image" content="/images/an-engineer-is-a-problem-solver/header.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hooks vs. Classes in React">
+    <meta name="twitter:description" content="Software Engineer">
+    <meta property="twitter:domain" content="https://camdecoster.github.io/posts/hooks-vs-classes-in-react/">
+    <meta property="twitter:url" content="https://camdecoster.github.io/posts/hooks-vs-classes-in-react/">
+    <meta name="twitter:image" content="/images/an-engineer-is-a-problem-solver/header.png">
+
+    
+    <link rel="canonical" href="https://camdecoster.github.io/posts/hooks-vs-classes-in-react/" />
+
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="/css/dark.css">
+
+    <script src="/js/svg-injector.min.js"></script>
+    <script src="/js/feather-icons.min.js"></script>
+    <script src="/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://camdecoster.github.io">
+                <img src="/images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://camdecoster.github.io">Cameron DeCoster</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="/"> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/posts/"> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://camdecoster.github.io/portfolio"> Portfolio </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/index.xml"><span data-feather='rss'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="/"> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/posts/"> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://camdecoster.github.io/portfolio"> Portfolio </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/index.xml"><span data-feather='rss'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+
+    <div class="post-header-section">
+        <h1>Hooks vs. Classes in React</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            May 13, 2020
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="/tags/react">react</a></li>
+        
+            <li class="post-tag"><a href="/tags/hooks">hooks</a></li>
+        
+            <li class="post-tag"><a href="/tags/state">state</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p>I’m working on building a simple expense tracking site, very creatively named Expense Tracker. I’m building it using React for the front-end and Node/Express for the back-end with data being stored in a PostgreSQL database. Here’s a work in progress screenshot:</p>
+<p><img src="/images/hooks-vs-classes-in-react/expense-tracker-wip.png" alt="work in progress view of expense tracker site"></p>
+<p>The main function of this site is to show you how much you’ve been spending in easy to read tables. I hadn’t needed to use tables with React before, so I started looking into it and found <a href="https://react-table.js.org/">React Table</a>. It’s easy to use and only required a quick npm package install. But I found out that it uses React Hooks. Here’s an example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">useMemo</span>( <span style="color:#75715e">// &lt;-- What is useMemo? A hook.
+</span><span style="color:#75715e"></span>    () =&gt; [
+      {
+        <span style="color:#a6e22e">col1</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hello&#39;</span>,
+        <span style="color:#a6e22e">col2</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;World&#39;</span>,
+      },
+      {
+        <span style="color:#a6e22e">col1</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;react-table&#39;</span>,
+        <span style="color:#a6e22e">col2</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;rocks&#39;</span>,
+      },
+      {
+        <span style="color:#a6e22e">col1</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;whatever&#39;</span>,
+        <span style="color:#a6e22e">col2</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;you want&#39;</span>,
+      },
+    ],
+    []
+)
+</code></pre></div><h2 id="what-are-hooks-in-react">What are Hooks in React?</h2>
+<p>Simply put, Hooks let you use, or “hook” into, state and other features in functions rather than having to create classes (I’m only going to cover state in this post). Prior to Hooks, function components were sometimes referred to as stateless components because you couldn’t use state in them. Hooks now allow one to use state in functions along with other features. Here’s an <a href="https://reactjs.org/docs/hooks-intro.html">introduction</a> to them with more details. For me, using Hooks is a simpler way to create React components without having to complicate your app with class specific code. Here’s a class component for a simple button component that toggles between two values using a variable stored in state:</p>
+<p><script type="application/javascript" src="https://gist.github.com/camdecoster/795c10b2addc4112c3fb9b6a465c0947.js"></script>
+
+Class example of ToggleButton component</p>
+<p>Here’s a function component with a Hook that provides the same component:
+<script type="application/javascript" src="https://gist.github.com/camdecoster/7b9962a8b905e3c1a131681344dee71e.js"></script>
+</p>
+<p>Hook example of ToggleButton component</p>
+<h2 id="declaring-state-variables">Declaring State Variables</h2>
+<p>To declare a state variable with hooks, you simply use the useState hook and pass an initial value as an argument (which no longer has to be an object). It will return a state variable which stores the value (buttonText) and a function to update the value (setButtonText).
+const [buttonText, setButtonText] = useState(&lsquo;val1&rsquo;);
+This is much simpler than using a class component:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> {
+        <span style="color:#a6e22e">buttonText</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;val1&#34;</span>,
+    };
+}
+</code></pre></div><h2 id="reading-state-variables">Reading State Variables</h2>
+<p>With Hooks, the value of a state variable can be accessed just by reading it like any other variable.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">buttonText</span>);
+</code></pre></div><p>Again, it’s simpler than the equivalent with class components:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">buttonText</span>);
+</code></pre></div><h2 id="updating-state-variables">Updating State Variables</h2>
+<p>Updating the value of a state variable with Hooks is as simple as calling the update function from the initial declaration:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">setButtonText</span>(<span style="color:#e6db74">&#39;newVal&#39;</span>);
+</code></pre></div><p>Compared to the more complicated way using class components:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({ <span style="color:#a6e22e">buttonText</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;newVal&#39;</span> });
+</code></pre></div><h2 id="using-multiple-state-variables">Using Multiple State Variables</h2>
+<p>To store multiple values in state, call useState multiple times:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">num1</span>, <span style="color:#a6e22e">setNum1</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>(<span style="color:#ae81ff">1</span>);
+<span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">num2</span>, <span style="color:#a6e22e">setNum2</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>(<span style="color:#ae81ff">2</span>);
+</code></pre></div><p>To store multiple values at once, use an array or object:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">setArr</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]);
+<span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">obj</span>, <span style="color:#a6e22e">setObj</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>({
+    <span style="color:#a6e22e">val1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+    <span style="color:#a6e22e">val2</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>,
+});
+</code></pre></div><h2 id="recap">Recap</h2>
+<p>Hooks are a new way in React to write function components that can tap into features previously reserved for class components. The most visible of these is adding state using the useState hook. Using hooks can help simplify your code and make it easier to manage. There are other useful hooks that more or less replace the React class component lifecycle, and others that are brand new. You can also create your own custom hooks, so you’re not stuck with the standard functions. Hooks are relatively new, so start playing around with them and see what you can accomplish.</p>
+
+        </p>
+    </div>
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2021 Cameron DeCoster</span>
+    <span>
+        Built with <a href="https://gohugo.io/">Hugo</a> and <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
