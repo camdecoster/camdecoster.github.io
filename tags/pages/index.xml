@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pages on Cameron DeCoster</title>
+    <link>https://camdecoster.github.io/tags/pages/</link>
+    <description>Recent content in pages on Cameron DeCoster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 25 Oct 2021 13:21:58 -0600</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Deploy a Hugo Blog to GitHub Pages</title>
+      <link>https://camdecoster.github.io/posts/how-to-deploy-a-hugo-blog-to-github-pages/</link>
+      <pubDate>Mon, 25 Oct 2021 13:21:58 -0600</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/how-to-deploy-a-hugo-blog-to-github-pages/</guid>
+      <description>Well, it&amp;rsquo;s been a while since my last post. Also, that last post was on Medium. I&amp;rsquo;ve decided to try building my own blog using Hugo and GitHub Pages. Hugo is a static site generator built using Golang which results in very fast builds. Not that I&amp;rsquo;m taxing it with my blog, but it seems pretty quick.
+I decided to switch from Medium to Hugo because it was a new puzzle.</description>
+    </item>
+    
+  </channel>
+</rss>

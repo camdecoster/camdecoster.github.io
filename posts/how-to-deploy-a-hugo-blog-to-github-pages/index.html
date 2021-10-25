@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>How to Deploy a Hugo Blog to GitHub Pages</title>
+    <meta name="description" content="Software Engineer">
+    <meta name="keywords" content='blog, gokarna, hugo, github, pages, deploy'>
+
+    <meta property="og:url" content="https://camdecoster.github.io/posts/how-to-deploy-a-hugo-blog-to-github-pages/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="How to Deploy a Hugo Blog to GitHub Pages">
+    <meta property="og:description" content="Software Engineer">
+    <meta property="og:image" content="/images/avatar.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Deploy a Hugo Blog to GitHub Pages">
+    <meta name="twitter:description" content="Software Engineer">
+    <meta property="twitter:domain" content="https://camdecoster.github.io/posts/how-to-deploy-a-hugo-blog-to-github-pages/">
+    <meta property="twitter:url" content="https://camdecoster.github.io/posts/how-to-deploy-a-hugo-blog-to-github-pages/">
+    <meta name="twitter:image" content="/images/avatar.jpg">
+
+    
+    <link rel="canonical" href="https://camdecoster.github.io/posts/how-to-deploy-a-hugo-blog-to-github-pages/" />
+
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="/css/dark.css">
+
+    <script src="/js/svg-injector.min.js"></script>
+    <script src="/js/feather-icons.min.js"></script>
+    <script src="/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://camdecoster.github.io">
+                <img src="/images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://camdecoster.github.io">Cameron DeCoster</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="/"> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/posts/"> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://camdecoster.github.io/portfolio"> Portfolio </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/index.xml"><span data-feather='rss'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="/"> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/posts/"> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://camdecoster.github.io/portfolio"> Portfolio </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/index.xml"><span data-feather='rss'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+
+    <div class="post-header-section">
+        <h1>How to Deploy a Hugo Blog to GitHub Pages</h1>
+        <small role="doc-subtitle"></small>
+        <p class="post-date">
+            October 25, 2021
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="/tags/hugo">hugo</a></li>
+        
+            <li class="post-tag"><a href="/tags/blog">blog</a></li>
+        
+            <li class="post-tag"><a href="/tags/github">github</a></li>
+        
+            <li class="post-tag"><a href="/tags/pages">pages</a></li>
+        
+            <li class="post-tag"><a href="/tags/deploy">deploy</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p><img src="/images/how-to-deploy-a-hugo-blog-to-github-pages/hugo-github.png" alt="image"></p>
+<p>Well, it&rsquo;s been a while since my last post. Also, that last post was on Medium. I&rsquo;ve decided to try building my own blog using <a href="https://gohugo.io/">Hugo</a> and <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages">GitHub Pages</a>. Hugo is a static site generator built using Golang which results in very fast builds. Not that I&rsquo;m taxing it with my blog, but it seems pretty quick.</p>
+<p>I decided to switch from Medium to Hugo because it was a new puzzle. I also like the idea of being able to tweak everything under the hood or change the theme (I&rsquo;m using one called <a href="https://github.com/526avijitgupta/gokarna">Gokarna</a> for now, but I&rsquo;ll be looking at making a custom one in the future). Getting my content off of Medium was mostly a copy-paste operation. The big difference is that Hugo uses markdown to generate content instead of Medium&rsquo;s WYSIWYG presentation. But I like markdown and its flexibililty, so that&rsquo;s a win for me. Getting the images to show up correctly took some minor sleuthing, but overall it was very staightforward. I&rsquo;m not going into how to set up Hugo. Just check out the Hugo <a href="https://gohugo.io/documentation/">docs</a>. They helped me figure everything out.</p>
+<p>The head scratching part for me always comes back to GitHub Pages. I can never get the configuration correct the first time. It all comes down to pointing Pages to the correct source. Pages is limited in this sense, but it&rsquo;s free, so I can&rsquo;t complain too much. You have to choose the correct branch and then you have to choose the correct folder within the branch. But your options are restricted. You can choose whichever branch you want, but you can only choose the root of the branch or the /docs folder.</p>
+<h2 id="what-id-like-to-do">What I&rsquo;d like to do:</h2>
+<ul>
+<li>Create a repo for my blog that contains all of the source files Hugo needs along with my posts</li>
+<li>Build the site from that source and save it as part of the repo</li>
+<li>Serve the site from the build location</li>
+</ul>
+<p>I can do all of that except for the last step. I&rsquo;d like to be able to point Pages to serve the site from the folder that I choose, but that&rsquo;s not possible right now. Thankfully, there&rsquo;s an npm package I&rsquo;ve used in the past that takes care of everything for me. It&rsquo;s called <a href="https://www.npmjs.com/package/gh-pages">gh-pages</a> and it makes the process simple.</p>
+<h2 id="publish-to-github-pages">Publish to GitHub Pages</h2>
+<ol>
+<li>
+<p>Create a package.json file for your project if you don&rsquo;t already have one. I had to create a new one since Hugo doesn&rsquo;t need/create it by default.</p>
+</li>
+<li>
+<p>Add an npm script to build the site. You can choose a folder other than the default of public, but I&rsquo;m sticking with the default.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;scripts&#34;</span>: {
+        <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;hugo -D&#34;</span>
+    }
+}
+</code></pre></div></li>
+<li>
+<p>Install gh-pages to your project as a dev dependency.</p>
+<pre tabindex="0"><code>npm i gh-pages -D
+</code></pre></li>
+<li>
+<p>Add an npm script to deploy the site along with a pre deploy script to build the site. This assumes that you&rsquo;re using the public folder for building your site.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;scripts&#34;</span>: {
+        <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;hugo -D&#34;</span>,
+        <span style="color:#f92672">&#34;predeploy&#34;</span>: <span style="color:#e6db74">&#34;npm run build&#34;</span>,
+        <span style="color:#f92672">&#34;deploy&#34;</span>: <span style="color:#e6db74">&#34;gh-pages -d public&#34;</span>
+    }
+}
+</code></pre></div></li>
+<li>
+<p>Add the public folder to your .gitignore folder, along with any dependency folders. You won&rsquo;t need to include the built site here because you&rsquo;re including it in a different branch.</p>
+<pre tabindex="0"><code>...
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# production
+/public
+...
+</code></pre></li>
+<li>
+<p>Deploy your site to Pages using the deploy script:</p>
+<pre tabindex="0"><code>npm run deploy
+</code></pre></li>
+<li>
+<p>Configure GitHub Pages to serve your site from the proper source.</p>
+<p><img src="/images/how-to-deploy-a-hugo-blog-to-github-pages/github-pages-settings.png" alt="image"></p>
+</li>
+</ol>
+<h2 id="whats-happening">What&rsquo;s Happening?</h2>
+<p>So what&rsquo;s happening during deployment? gh-pages creates a new branch in your repo (gh-pages by default) and copies your built site to that branch. It then pushes that branch to GitHub. In the last step, you tell GitHub to use the root of the new branch as the source to serve your site from. In my case, that&rsquo;s <a href="https://camdecoster.github.io/">https://camdecoster.github.io/</a>. Now your site is available to the public and any time you want to update it, you just have to run the deploy script after adding your new content.</p>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>I wrote this post mostly to help me remember what to do in the future, since I can&rsquo;t seem to remember all of the proper steps. But it&rsquo;s pretty straightforward when you think about it: create your site, build it, deploy the site to the root of a new branch, configure GitHub. I&rsquo;m liking Hugo so far and I like being in control of my site and content. I&rsquo;ll be trying to post more often, but work and family take up most of my time, so we&rsquo;ll see how often that really is. Connect with me if you have any feedback.</p>
+
+        </p>
+    </div>
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2021 Cameron DeCoster</span>
+    <span>
+        Built with <a href="https://gohugo.io/">Hugo</a> and <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
