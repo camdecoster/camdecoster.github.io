@@ -218,11 +218,11 @@
 </code></pre></li>
 <li>
 <p>Configure GitHub Pages to serve your site from the proper source.</p>
-<p><img src="/images/how-to-deploy-a-hugo-blog-to-github-pages/github-pages-settings.png" alt="image"></p>
+<p><img src="/images/how-to-deploy-a-hugo-blog-to-github-pages/github-pages-settings.png" alt="github pages settings"></p>
 </li>
 </ol>
 <h2 id="whats-happening">What&rsquo;s Happening?</h2>
-<p>So what&rsquo;s happening during deployment? gh-pages creates a new branch in your repo (gh-pages by default) and copies your built site to that branch. It then pushes that branch to GitHub. In the last step, you tell GitHub to use the root of the new branch as the source to serve your site from. In my case, that&rsquo;s <a href="https://camdecoster.github.io/">https://camdecoster.github.io/</a>. Now your site is available to the public and any time you want to update it, you just have to run the deploy script after adding your new content.</p>
+<p>During deployment, gh-pages creates a new branch in your repo (gh-pages by default) and copies your built site to that branch. It then pushes that branch to GitHub. In the last step, you tell GitHub to use the root of the new branch as the source to serve your site from. In my case, that&rsquo;s <a href="https://camdecoster.github.io/">https://camdecoster.github.io/</a>. Now your site is available to the public and any time you want to update it, you just have to run the deploy script after adding your new content.</p>
 <h2 id="final-thoughts">Final Thoughts</h2>
 <p>I wrote this post mostly to help me remember what to do in the future, since I can&rsquo;t seem to remember all of the proper steps. But it&rsquo;s pretty straightforward when you think about it: create your site, build it, deploy the site to the root of a new branch, configure GitHub. I&rsquo;m liking Hugo so far and I like being in control of my site and content. I&rsquo;ll be trying to post more often, but work and family take up most of my time, so we&rsquo;ll see how often that really is. Connect with me if you have any feedback.</p>
 
