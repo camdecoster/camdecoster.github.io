@@ -1,13 +1,13 @@
 ---
 title: "Change how a website looks with Stylus and UserCSS"
 date: 2020-06-13
-image: "/images/change-how-a-website-looks-with-stylus-and-usercss/pocket-casts-dark-blue.png"
+image: "/posts/change-how-a-website-looks-with-stylus-and-usercss/images/pocket-casts-dark-blue.png"
 tags: ["stylus", "css", "usercss", "pocket casts", "user styles"]
 type: post
 weight: 20
 ---
 
-![image](/images/change-how-a-website-looks-with-stylus-and-usercss/pocket-casts-dark-blue.png)
+![pocket casts site with dark blue theme](/posts/change-how-a-website-looks-with-stylus-and-usercss/images/pocket-casts-dark-blue.png)
 
 When using a website, the way it looks (the way it’s styled) is a result of how the author has set up the [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) rules. These rules describe how the HTML should be displayed to the user in different situations. Most websites do a good job of creating something I find presentable. But sometimes I use a site a lot and start to notice things that bother me. In this case, it was the Pocket Casts web application.
 

@@ -27,6 +27,7 @@ pygmentsStyle = "monokai"
     {name = "github", url = "https://github.com/camdecoster"}
   ]
   metaKeywords = ["blog", "gokarna", "hugo"]
+  showPostsOnHomePage = "recent"
 
 [menu]
   [[menu.main]]

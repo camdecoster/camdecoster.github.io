@@ -2,11 +2,12 @@
 title: "How to Deploy a Hugo Blog to GitHub Pages"
 date: 2021-10-25T13:21:58-06:00
 tags: ["hugo", "blog", "github", "pages", "deploy"]
+image: "/posts/how-to-deploy-a-hugo-blog-to-github-pages/images/hugo-github.png"
 type: post
 weight: 20
 ---
 
-![image](/images/how-to-deploy-a-hugo-blog-to-github-pages/hugo-github.png)
+![hugo logo with github reference](/posts/how-to-deploy-a-hugo-blog-to-github-pages/images/hugo-github.png)
 
 Well, it's been a while since my last post. Also, that last post was on Medium. I've decided to try building my own blog using [Hugo](https://gohugo.io/) and [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages). Hugo is a static site generator built using Golang which results in very fast builds. Not that I'm taxing it with my blog, but it seems pretty quick.
 

@@ -1,13 +1,13 @@
 ---
 title: "Mirror Reverse Algorithm"
 date: 2020-08-01
-image: "/images/mirror-reverse-algorithm/alex-lopez-JR1ChBgzJvQ-unsplash.jpg"
+image: "/posts/mirror-reverse-algorithm/images/alex-lopez-JR1ChBgzJvQ-unsplash.jpg"
 tags: ["javascript", "algorithm", "interview", "practice problem"]
 type: post
 weight: 20
 ---
 
-![mirror over a desk, ](/images/mirror-reverse-algorithm/alex-lopez-JR1ChBgzJvQ-unsplash.jpg)
+![mirror over a desk](/posts/mirror-reverse-algorithm/images/alex-lopez-JR1ChBgzJvQ-unsplash.jpg)
 Photo by [Alex Lopez](https://unsplash.com/@alex_lopez00) on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)
 
 I’ve been going through some practice problems that one is likely to see during a technical interview for a developer position. One that I worked through recently has a problem statement as follows:

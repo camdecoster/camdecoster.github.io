@@ -1,7 +1,7 @@
 ---
 title: "Hooks vs. Classes in React"
 date: 2020-05-13
-image: "/images/an-engineer-is-a-problem-solver/header.png"
+image: "/posts/hooks-vs-classes-in-react/images/expense-tracker-wip.png"
 tags: ["react", "hooks", "state"]
 type: post
 weight: 20
@@ -9,7 +9,7 @@ weight: 20
 
 I’m working on building a simple expense tracking site, very creatively named Expense Tracker. I’m building it using React for the front-end and Node/Express for the back-end with data being stored in a PostgreSQL database. Here’s a work in progress screenshot:
 
-![work in progress view of expense tracker site](/images/hooks-vs-classes-in-react/expense-tracker-wip.png)
+![work in progress view of expense tracker site](/posts/hooks-vs-classes-in-react/images/expense-tracker-wip.png)
 
 The main function of this site is to show you how much you’ve been spending in easy to read tables. I hadn’t needed to use tables with React before, so I started looking into it and found [React Table](https://react-table.js.org/). It’s easy to use and only required a quick npm package install. But I found out that it uses React Hooks. Here’s an example:
 ```js

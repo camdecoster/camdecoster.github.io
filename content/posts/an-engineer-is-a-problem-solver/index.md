@@ -2,12 +2,12 @@
 title: "An Engineer is a Problem Solver"
 date: 2020-05-13
 description: "(Or how to lose your job during a pandemic)"
-image: "/images/an-engineer-is-a-problem-solver/header.png"
-tags: ["introduction", "css", "html"]
+image: "/posts/an-engineer-is-a-problem-solver/images/header.png"
+tags: ["introduction", "journal-entry"]
 type: post
 weight: 20
 ---
-![image](/images/an-engineer-is-a-problem-solver/header.png)
+![image](/posts/an-engineer-is-a-problem-solver/images/header.png)
 
 In mid-2018, I found out that my company, Zachry Engineering, was going to be closing two of our other offices and that some layoffs might take place in my office. This obviously killed morale and led me to try to distract myself from the potential negative outcomes.
 
