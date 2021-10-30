@@ -25,14 +25,14 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Hooks vs. Classes in React">
     <meta property="og:description" content="Software Engineer">
-    <meta property="og:image" content="/images/an-engineer-is-a-problem-solver/header.png">
+    <meta property="og:image" content="/posts/hooks-vs-classes-in-react/images/expense-tracker-wip.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Hooks vs. Classes in React">
     <meta name="twitter:description" content="Software Engineer">
     <meta property="twitter:domain" content="https://camdecoster.github.io/posts/hooks-vs-classes-in-react/">
     <meta property="twitter:url" content="https://camdecoster.github.io/posts/hooks-vs-classes-in-react/">
-    <meta name="twitter:image" content="/images/an-engineer-is-a-problem-solver/header.png">
+    <meta name="twitter:image" content="/posts/hooks-vs-classes-in-react/images/expense-tracker-wip.png">
 
     
     <link rel="canonical" href="https://camdecoster.github.io/posts/hooks-vs-classes-in-react/" />
@@ -159,7 +159,7 @@
     <div class="post-content">
         <p>
             <p>I’m working on building a simple expense tracking site, very creatively named Expense Tracker. I’m building it using React for the front-end and Node/Express for the back-end with data being stored in a PostgreSQL database. Here’s a work in progress screenshot:</p>
-<p><img src="/images/hooks-vs-classes-in-react/expense-tracker-wip.png" alt="work in progress view of expense tracker site"></p>
+<p><img src="/posts/hooks-vs-classes-in-react/images/expense-tracker-wip.png" alt="work in progress view of expense tracker site"></p>
 <p>The main function of this site is to show you how much you’ve been spending in easy to read tables. I hadn’t needed to use tables with React before, so I started looking into it and found <a href="https://react-table.js.org/">React Table</a>. It’s easy to use and only required a quick npm package install. But I found out that it uses React Hooks. Here’s an example:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">useMemo</span>( <span style="color:#75715e">// &lt;-- What is useMemo? A hook.
 </span><span style="color:#75715e"></span>    () =&gt; [

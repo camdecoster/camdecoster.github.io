@@ -6,7 +6,16 @@
     <description>Recent content on Cameron DeCoster</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 25 Oct 2021 13:21:58 -0600</lastBuildDate><atom:link href="https://camdecoster.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://camdecoster.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>One Year In</title>
+      <link>https://camdecoster.github.io/posts/one-year-in/</link>
+      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/one-year-in/</guid>
+      <description>It&amp;rsquo;s kind of hard to believe, but I recently hit my 1 year anniversary of working for Markit Digital as a Software Engineer. I&amp;rsquo;ve learned so much in this short amount of time. It&amp;rsquo;s quite the change from May of 2020, when I got laid off after working as a Mechanical Engineer for 14 years. It might seem odd that I decided to start a new career at this point in my life, but it makes sense when you understand my history.</description>
+    </item>
+    
     <item>
       <title>How to Deploy a Hugo Blog to GitHub Pages</title>
       <link>https://camdecoster.github.io/posts/how-to-deploy-a-hugo-blog-to-github-pages/</link>

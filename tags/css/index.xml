@@ -16,15 +16,5 @@
       <description>When using a website, the way it looks (the way it’s styled) is a result of how the author has set up the CSS rules. These rules describe how the HTML should be displayed to the user in different situations. Most websites do a good job of creating something I find presentable. But sometimes I use a site a lot and start to notice things that bother me. In this case, it was the Pocket Casts web application.</description>
     </item>
     
-    <item>
-      <title>An Engineer is a Problem Solver</title>
-      <link>https://camdecoster.github.io/posts/an-engineer-is-a-problem-solver/</link>
-      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://camdecoster.github.io/posts/an-engineer-is-a-problem-solver/</guid>
-      <description>In mid-2018, I found out that my company, Zachry Engineering, was going to be closing two of our other offices and that some layoffs might take place in my office. This obviously killed morale and led me to try to distract myself from the potential negative outcomes.
-At the time, I was performing a number of exclusion zone calculations for pneumatic pressure testing of pipe. This kind of testing is dangerous because a lot of energy gets stored in the pipe to get it up to pressure.</description>
-    </item>
-    
   </channel>
 </rss>

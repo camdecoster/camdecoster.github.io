@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>journal-entry on Cameron DeCoster</title>
+    <link>https://camdecoster.github.io/tags/journal-entry/</link>
+    <description>Recent content in journal-entry on Cameron DeCoster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 29 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/journal-entry/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>One Year In</title>
+      <link>https://camdecoster.github.io/posts/one-year-in/</link>
+      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/one-year-in/</guid>
+      <description>It&amp;rsquo;s kind of hard to believe, but I recently hit my 1 year anniversary of working for Markit Digital as a Software Engineer. I&amp;rsquo;ve learned so much in this short amount of time. It&amp;rsquo;s quite the change from May of 2020, when I got laid off after working as a Mechanical Engineer for 14 years. It might seem odd that I decided to start a new career at this point in my life, but it makes sense when you understand my history.</description>
+    </item>
+    
+    <item>
+      <title>An Engineer is a Problem Solver</title>
+      <link>https://camdecoster.github.io/posts/an-engineer-is-a-problem-solver/</link>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/an-engineer-is-a-problem-solver/</guid>
+      <description>In mid-2018, I found out that my company, Zachry Engineering, was going to be closing two of our other offices and that some layoffs might take place in my office. This obviously killed morale and led me to try to distract myself from the potential negative outcomes.
+At the time, I was performing a number of exclusion zone calculations for pneumatic pressure testing of pipe. This kind of testing is dangerous because a lot of energy gets stored in the pipe to get it up to pressure.</description>
+    </item>
+    
+  </channel>
+</rss>
