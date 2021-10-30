@@ -2,7 +2,7 @@
 title: "Mirror Reverse Algorithm"
 date: 2020-08-01
 image: "/posts/mirror-reverse-algorithm/images/alex-lopez-JR1ChBgzJvQ-unsplash.jpg"
-tags: ["javascript", "algorithm", "interview", "practice problem"]
+tags: ["javascript", "algorithm", "interview", "practice-problem"]
 type: post
 weight: 20
 ---

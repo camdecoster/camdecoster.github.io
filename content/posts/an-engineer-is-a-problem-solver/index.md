@@ -7,7 +7,7 @@ tags: ["introduction", "journal-entry"]
 type: post
 weight: 20
 ---
-![image](/posts/an-engineer-is-a-problem-solver/images/header.png)
+![text indicating switch from mechanical engineer to software engineer ](/posts/an-engineer-is-a-problem-solver/images/header.png)
 
 In mid-2018, I found out that my company, Zachry Engineering, was going to be closing two of our other offices and that some layoffs might take place in my office. This obviously killed morale and led me to try to distract myself from the potential negative outcomes.
 

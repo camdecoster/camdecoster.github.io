@@ -66,11 +66,11 @@ I can do all of that except for the last step. I'd like to be able to point Page
     ```
 1. Configure GitHub Pages to serve your site from the proper source.
 
-    ![image](/images/how-to-deploy-a-hugo-blog-to-github-pages/github-pages-settings.png)
+    ![github pages settings](/images/how-to-deploy-a-hugo-blog-to-github-pages/github-pages-settings.png)
 
 ## What's Happening?
 
-So what's happening during deployment? gh-pages creates a new branch in your repo (gh-pages by default) and copies your built site to that branch. It then pushes that branch to GitHub. In the last step, you tell GitHub to use the root of the new branch as the source to serve your site from. In my case, that's [https://camdecoster.github.io/](https://camdecoster.github.io/). Now your site is available to the public and any time you want to update it, you just have to run the deploy script after adding your new content.
+During deployment, gh-pages creates a new branch in your repo (gh-pages by default) and copies your built site to that branch. It then pushes that branch to GitHub. In the last step, you tell GitHub to use the root of the new branch as the source to serve your site from. In my case, that's [https://camdecoster.github.io/](https://camdecoster.github.io/). Now your site is available to the public and any time you want to update it, you just have to run the deploy script after adding your new content.
 
 ## Final Thoughts
 

@@ -8,7 +8,7 @@ type: post
 weight: 20
 ---
 
-![header](/posts/one-year-in/images/header.png)
+![year one checked, year two unchecked](/posts/one-year-in/images/header.png)
 
 It's kind of hard to believe, but I recently hit my 1 year anniversary of working for Markit Digital as a Software Engineer. I've learned so much in this short amount of time. It's quite the change from May of 2020, when I got laid off after working as a Mechanical Engineer for 14 years. It might seem odd that I decided to start a new career at this point in my life, but it makes sense when you understand my history.
 
