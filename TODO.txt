@@ -1,3 +1,0 @@
-Add favicon
-Work on social media previews
-Figure out why old projects are broken
