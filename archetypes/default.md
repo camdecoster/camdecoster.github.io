@@ -1,6 +1,8 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+tags: []
+image: "/posts/POST_DIRECTORY/images/IMAGE_NAME.png"
+type: post
 ---
 
