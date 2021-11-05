@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Add Windows Keyboard Shortcuts With AutoHotKey</title>
+    <meta name="description" content="Learn how to make multiple Windows desktops easier to use with AutoHotKey">
+    <meta name="keywords" content='blog, gokarna, hugo, devblog, windows, multiple-desktops, autohotkey'>
+
+    <meta property="og:url" content="https://camdecoster.github.io/posts/add-windows-keyboard-shortcuts-with-autohotkey/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Add Windows Keyboard Shortcuts With AutoHotKey">
+    <meta property="og:description" content="Learn how to make multiple Windows desktops easier to use with AutoHotKey">
+    <meta property="og:image" content="/posts/add-windows-keyboard-shortcuts-with-autohotkey/images/ahk_logo.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Add Windows Keyboard Shortcuts With AutoHotKey">
+    <meta name="twitter:description" content="Learn how to make multiple Windows desktops easier to use with AutoHotKey">
+    <meta property="twitter:domain" content="https://camdecoster.github.io/posts/add-windows-keyboard-shortcuts-with-autohotkey/">
+    <meta property="twitter:url" content="https://camdecoster.github.io/posts/add-windows-keyboard-shortcuts-with-autohotkey/">
+    <meta name="twitter:image" content="/posts/add-windows-keyboard-shortcuts-with-autohotkey/images/ahk_logo.png">
+
+    
+    <link rel="canonical" href="https://camdecoster.github.io/posts/add-windows-keyboard-shortcuts-with-autohotkey/" />
+
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="/css/dark.css">
+
+    <script src="/js/svg-injector.min.js"></script>
+    <script src="/js/feather-icons.min.js"></script>
+    <script src="/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://camdecoster.github.io">
+                <img src="/images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://camdecoster.github.io">Cameron DeCoster</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="/"> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/posts/"> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://camdecoster.github.io/portfolio"> Portfolio </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/index.xml"><span data-feather='rss'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="/"> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/posts/"> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://camdecoster.github.io/portfolio"> Portfolio </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/index.xml"><span data-feather='rss'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+
+    <div class="post-header-section">
+        <h1>Add Windows Keyboard Shortcuts With AutoHotKey</h1>
+        <small role="doc-subtitle">Learn how to make multiple Windows desktops easier to use with AutoHotKey</small>
+        <p class="post-date">
+            November 5, 2021
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="/tags/devblog">devblog</a></li>
+        
+            <li class="post-tag"><a href="/tags/windows">windows</a></li>
+        
+            <li class="post-tag"><a href="/tags/multiple-desktops">multiple-desktops</a></li>
+        
+            <li class="post-tag"><a href="/tags/autohotkey">autohotkey</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p><img src="/posts/add-windows-keyboard-shortcuts-with-autohotkey/images/ahk_logo.png" alt="autohotkey logo" title="AutoHotKey Logo"></p>
+<p>My preferred developing OS is Debian Linux, but that&rsquo;s not an option at my day job. One of the reasons I prefer Debian is the use of the Gnome desktop environment, which handles multiple desktops (or workspaces) really well. You can create as many as you need and easily move windows between them using the keyboard. I have to use Windows 10 at work, so I decided to figure out how to approximate this experience on that OS. Microsoft added some native shortcuts, but it&rsquo;s not enough for me. Below is a guide on how to add some more using AutoHotKey.</p>
+<h2 id="why-use-autohotkey">Why use AutoHotKey?</h2>
+<p>AutoHotKey (AHK) is a way to add functionality to Windows using a simple scripting language. This includes adding keyboard shortcuts or creating &ldquo;hotstrings&rdquo; (ie. text expansion). There are many other ways to use this software, and you can read about them <a href="https://www.autohotkey.com/">here</a>. It&rsquo;s also worth mentioning, it&rsquo;s free and open source.</p>
+<h2 id="installation">Installation</h2>
+<p>I suggest downloading the portable version without an installer (found <a href="https://www.autohotkey.com/download/ahk.zip">here</a>) and extracting the files to a local folder, such as:</p>
+<pre tabindex="0"><code>C:\Programs (Manual Install)\AutoHotKey
+</code></pre><p>There are other downloads available <a href="https://www.autohotkey.com/download/">here</a>, including a version with an installer. Using the installer version will let you double-click script files to run them, run the executable from any directory on the command line, and some other items. However, the portable version won&rsquo;t cause issues with security software and it&rsquo;s easy to remove.</p>
+<h2 id="building-a-script">Building a Script</h2>
+<p>A good starting point is the <a href="https://www.autohotkey.com/docs/Tutorial.htm">tutorial</a> to get an understanding of the basics, but we&rsquo;ll also build a <a href="https://www.autohotkey.com/docs/Hotstrings.htm">hotstring</a> script.</p>
+<p>Create a directory to store your script files, such as:</p>
+<pre tabindex="0"><code>C:\Users\{YOUR_USER_NAME}\Documents\AutoHotKey Scripts
+</code></pre><p>Now open your favorite text editor and save a file in this directory:</p>
+<pre tabindex="0"><code>Hotstrings.ahk
+</code></pre><p>AHK script files have the extension .ahk and there&rsquo;s an extension for VS Code that will recognize these files and provide suggestions when writing a script.</p>
+<p>Let&rsquo;s add a hotstring shortcut to the script:</p>
+<pre tabindex="0"><code class="language-autohotkey" data-lang="autohotkey">; Shortcut for work email
+::emi::
+  SendInput your.name@example.com
+  TrayTip, , Text 'emi' Expanded, 2
+Return
+</code></pre><p>When run, this script will look for the keyboard entry of emi, replace it with <a href="mailto:your.name@example.com">your.name@example.com</a>, and finally send a tray notification stating &ldquo;Text &lsquo;emi&rsquo; Expanded&rdquo; for 2 seconds. The command is enclosed in double colons (::). When it&rsquo;s typed in, the following commands will be run until getting to Return. Lines preceded by a semicolon (;) are comments. You can add multiple hotstrings in one script.</p>
+<h2 id="executing-a-script">Executing a Script</h2>
+<p>If you&rsquo;ve installed AHK using the installer, it&rsquo;s as simple as double-clicking the script. If you&rsquo;ve used the portable version, you need to execute it from the command line in the form of {path to executable} {path to script}. Using the directories above, this becomes:</p>
+<pre tabindex="0"><code>&quot;C:\Programs (Manual Install)\AutoHotKey\AutoHotkeyU64.exe&quot; &quot;C:\Users\{YOUR_USER_NAME}\Documents\AutoHotKey Scripts\Hostrings.ahk&quot;
+</code></pre><p>This will start the script and keep the terminal window open while it&rsquo;s running. An icon will show up in the notification area representing that script. You can manage the script by right-clicking on the icon. Once it&rsquo;s running, your hotstring should now work while you&rsquo;re typing.</p>
+<p>If you want to run the script automatically, get rid of the terminal, or run more than one script, it&rsquo;s best to use a batch file with a shortcut in the Startup folder. Let&rsquo;s start with the batch file.</p>
+<p>Save a file in your scripts folder:</p>
+<pre tabindex="0"><code>C:\Users\{YOUR_USER_NAME}\Documents\AutoHotKey Scripts\Launch AutoHotKey Scripts.bat
+</code></pre><p>And add the following commands:</p>
+<pre tabindex="0"><code>start &quot;&quot; &quot;C:\Programs (Manual Install)\AutoHotKey\AutoHotkeyU64.exe&quot; &quot;C:\Users\{YOUR_USER_NAME}\Documents\AutoHotKey Scripts\Hotstrings.ahk&quot;
+start &quot;&quot; &quot;C:\Programs (Manual Install)\AutoHotKey\AutoHotkeyU64.exe&quot; &quot;C:\Users\{YOUR_USER_NAME}\Documents\AutoHotKey Scripts\Other Script.ahk&quot;
+</code></pre><p>Using the start command in this way will execute the command in the terminal window, then close the window after the commands have been run.</p>
+<p>Now all you need to do is create a shortcut to this batch file and place it in your Startup folder:</p>
+<ol>
+<li>
+<p>Right-click the batch file and select &lsquo;Create shortcut&rsquo;. This will create a shortcut in the scripts folder.</p>
+</li>
+<li>
+<p>Copy the shortcut to the following directory:</p>
+<pre tabindex="0"><code>C:\Users\{YOUR_USER_NAME}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+</code></pre></li>
+</ol>
+<p>When Windows starts, the batch file will run and execute your AHK scripts.</p>
+<h2 id="window-manipulation-keyboard-shortcuts-script">Window Manipulation Keyboard Shortcuts Script</h2>
+<p>The following script will provide shortcuts to manipulate windows when using multiple desktops in Windows. Just save the text to a new script file and add it to your batch file to be executed. The key combinations are:</p>
+<ul>
+<li>Minimize window: Win+Alt+H</li>
+<li>Switch desktop (in addition to existing shortcut, Win+Ctrl+(Left or Right):
+<ul>
+<li>Switch to left desktop: Win+Alt+Left</li>
+<li>Switch to right desktop: Win+Alt+Right</li>
+</ul>
+</li>
+<li>Move window to desktop:
+<ul>
+<li>Move to left: Win+Shift+Left</li>
+<li>Move to right: Win+Shift+Right</li>
+</ul>
+</li>
+<li>Show windows on current desktop (this is a Windows shortcut, not in AHK but useful to know)
+<ul>
+<li>Show task view: Win+Tab</li>
+</ul>
+</li>
+</ul>
+<pre tabindex="0"><code class="language-autohotkey" data-lang="autohotkey">#SingleInstance, force
+; Minimize window
+!#H::
+  WinMinimize, A
+Return
+
+; Switch Desktops (in addition to normal shortcuts)
+^!Left::
+  Send {LWinDown}{CtrlDown}{Left}{CtrlUp}{LWinUp}
+Return
+
+^!Right::
+  Send {LWinDown}{CtrlDown}{Right}{CtrlUp}{LWinUp}
+Return
+
+; Commands to send window to desktop left or right
+; These don't work on modern Windows apps
+
+; Move active window to left
++#Left::
+  ; Get active window title
+  WinGetTitle, Title, A
+  ; Hide active window
+  WinHide %Title%
+  ; Switch to desktop to the left
+  Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
+  ; Pause for 50ms
+  sleep, 50
+  ; Unhide previously hidden window
+  WinShow %Title%
+  ; Activate the unhidden window
+  WinActivate, %Title%
+Return
+
+; Move active window to right
++#Right::
+  ; Get active window title
+  WinGetTitle, Title, A
+  ; Hide active window
+  WinHide %Title%
+  ; Switch to desktop to the right
+  Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
+  ; Pause for 50ms
+  sleep, 50
+  ; Unhide previously hidden window
+  WinShow %Title%
+  ; Activate the unhidden window
+  WinActivate, %Title%
+Return
+</code></pre>
+        </p>
+    </div>
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2021 Cameron DeCoster</span>
+    <span>
+        Built with <a href="https://gohugo.io/">Hugo</a> and <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>multiple-desktops on Cameron DeCoster</title>
+    <link>https://camdecoster.github.io/tags/multiple-desktops/</link>
+    <description>Recent content in multiple-desktops on Cameron DeCoster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 05 Nov 2021 13:40:19 -0600</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/multiple-desktops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Add Windows Keyboard Shortcuts With AutoHotKey</title>
+      <link>https://camdecoster.github.io/posts/add-windows-keyboard-shortcuts-with-autohotkey/</link>
+      <pubDate>Fri, 05 Nov 2021 13:40:19 -0600</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/add-windows-keyboard-shortcuts-with-autohotkey/</guid>
+      <description>My preferred developing OS is Debian Linux, but that&amp;rsquo;s not an option at my day job. One of the reasons I prefer Debian is the use of the Gnome desktop environment, which handles multiple desktops (or workspaces) really well. You can create as many as you need and easily move windows between them using the keyboard. I have to use Windows 10 at work, so I decided to figure out how to approximate this experience on that OS.</description>
+    </item>
+    
+  </channel>
+</rss>

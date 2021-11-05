@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cameron DeCoster</title>
-    <link>https://camdecoster.github.io/</link>
-    <description>Recent content on Cameron DeCoster</description>
+    <title>devblog on Cameron DeCoster</title>
+    <link>https://camdecoster.github.io/tags/devblog/</link>
+    <description>Recent content in devblog on Cameron DeCoster</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Nov 2021 13:40:19 -0600</lastBuildDate><atom:link href="https://camdecoster.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Nov 2021 13:40:19 -0600</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/devblog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Add Windows Keyboard Shortcuts With AutoHotKey</title>
       <link>https://camdecoster.github.io/posts/add-windows-keyboard-shortcuts-with-autohotkey/</link>
@@ -14,15 +14,6 @@
       
       <guid>https://camdecoster.github.io/posts/add-windows-keyboard-shortcuts-with-autohotkey/</guid>
       <description>My preferred developing OS is Debian Linux, but that&amp;rsquo;s not an option at my day job. One of the reasons I prefer Debian is the use of the Gnome desktop environment, which handles multiple desktops (or workspaces) really well. You can create as many as you need and easily move windows between them using the keyboard. I have to use Windows 10 at work, so I decided to figure out how to approximate this experience on that OS.</description>
-    </item>
-    
-    <item>
-      <title>One Year In</title>
-      <link>https://camdecoster.github.io/posts/one-year-in/</link>
-      <pubDate>Fri, 29 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://camdecoster.github.io/posts/one-year-in/</guid>
-      <description>It&amp;rsquo;s kind of hard to believe, but I recently hit my 1 year anniversary of working for Markit Digital as a Software Engineer. I&amp;rsquo;ve learned so much in this short amount of time. It&amp;rsquo;s quite the change from May of 2020, when I got laid off after working as a Mechanical Engineer for 14 years. It might seem odd that I decided to start a new career at this point in my life, but it makes sense when you understand my history.</description>
     </item>
     
     <item>
@@ -54,16 +45,6 @@ That seems simple enough, except for the last two words, “in place.” That me
       
       <guid>https://camdecoster.github.io/posts/change-how-a-website-looks-with-stylus-and-usercss/</guid>
       <description>When using a website, the way it looks (the way it’s styled) is a result of how the author has set up the CSS rules. These rules describe how the HTML should be displayed to the user in different situations. Most websites do a good job of creating something I find presentable. But sometimes I use a site a lot and start to notice things that bother me. In this case, it was the Pocket Casts web application.</description>
-    </item>
-    
-    <item>
-      <title>An Engineer is a Problem Solver</title>
-      <link>https://camdecoster.github.io/posts/an-engineer-is-a-problem-solver/</link>
-      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://camdecoster.github.io/posts/an-engineer-is-a-problem-solver/</guid>
-      <description>In mid-2018, I found out that my company, Zachry Engineering, was going to be closing two of our other offices and that some layoffs might take place in my office. This obviously killed morale and led me to try to distract myself from the potential negative outcomes.
-At the time, I was performing a number of exclusion zone calculations for pneumatic pressure testing of pipe. This kind of testing is dangerous because a lot of energy gets stored in the pipe to get it up to pressure.</description>
     </item>
     
     <item>

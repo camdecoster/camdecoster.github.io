@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://camdecoster.github.io/posts/add-windows-keyboard-shortcuts-with-autohotkey/</loc>
+    <lastmod>2021-11-05T13:40:19-06:00</lastmod>
+  </url><url>
     <loc>https://camdecoster.github.io/posts/one-year-in/</loc>
     <lastmod>2021-10-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -20,16 +23,28 @@
     <loc>https://camdecoster.github.io/posts/hooks-vs-classes-in-react/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://camdecoster.github.io/</loc>
-    <lastmod>2021-10-29T00:00:00+00:00</lastmod>
+    <loc>https://camdecoster.github.io/tags/autohotkey/</loc>
+    <lastmod>2021-11-05T13:40:19-06:00</lastmod>
   </url><url>
-    <loc>https://camdecoster.github.io/tags/journal-entry/</loc>
-    <lastmod>2021-10-29T00:00:00+00:00</lastmod>
+    <loc>https://camdecoster.github.io/</loc>
+    <lastmod>2021-11-05T13:40:19-06:00</lastmod>
+  </url><url>
+    <loc>https://camdecoster.github.io/tags/devblog/</loc>
+    <lastmod>2021-11-05T13:40:19-06:00</lastmod>
+  </url><url>
+    <loc>https://camdecoster.github.io/tags/multiple-desktops/</loc>
+    <lastmod>2021-11-05T13:40:19-06:00</lastmod>
   </url><url>
     <loc>https://camdecoster.github.io/posts/</loc>
-    <lastmod>2021-10-29T00:00:00+00:00</lastmod>
+    <lastmod>2021-11-05T13:40:19-06:00</lastmod>
   </url><url>
     <loc>https://camdecoster.github.io/tags/</loc>
+    <lastmod>2021-11-05T13:40:19-06:00</lastmod>
+  </url><url>
+    <loc>https://camdecoster.github.io/tags/windows/</loc>
+    <lastmod>2021-11-05T13:40:19-06:00</lastmod>
+  </url><url>
+    <loc>https://camdecoster.github.io/tags/journal-entry/</loc>
     <lastmod>2021-10-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://camdecoster.github.io/tags/blog/</loc>
