@@ -1,8 +1,9 @@
 ---
 title: "Change how a website looks with Stylus and UserCSS"
 date: 2020-06-13
+description: "Customize the styles on any website using Stylus and UserCSS"
 image: "/posts/change-how-a-website-looks-with-stylus-and-usercss/images/pocket-casts-dark-blue.png"
-tags: ["stylus", "css", "usercss", "pocket-casts", "user-styles"]
+tags: ["devblog", "stylus", "css", "usercss", "pocket-casts", "user-styles"]
 type: post
 weight: 20
 ---

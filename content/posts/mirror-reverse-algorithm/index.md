@@ -1,8 +1,9 @@
 ---
 title: "Mirror Reverse Algorithm"
 date: 2020-08-01
+description: "Learn about the mirror reverse algorithm that comes up in developer technical interviews"
 image: "/posts/mirror-reverse-algorithm/images/alex-lopez-JR1ChBgzJvQ-unsplash.jpg"
-tags: ["javascript", "algorithm", "interview", "practice-problem"]
+tags: ["devblog", "javascript", "algorithm", "interview", "practice-problem"]
 type: post
 weight: 20
 ---

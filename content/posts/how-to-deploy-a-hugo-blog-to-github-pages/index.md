@@ -1,7 +1,8 @@
 ---
 title: "How to Deploy a Hugo Blog to GitHub Pages"
 date: 2021-10-25T13:21:58-06:00
-tags: ["hugo", "blog", "github", "pages", "deploy"]
+description: "Simplify the Hugo deployment process to GitHub Pages"
+tags: ["devblog", "hugo", "blog", "github", "pages", "deploy"]
 image: "/posts/how-to-deploy-a-hugo-blog-to-github-pages/images/hugo-github.png"
 type: post
 weight: 20

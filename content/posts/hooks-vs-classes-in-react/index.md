@@ -1,8 +1,9 @@
 ---
 title: "Hooks vs. Classes in React"
 date: 2020-05-13
+description: "Learn about using Hooks instead of Classes in React for creating components"
 image: "/posts/hooks-vs-classes-in-react/images/expense-tracker-wip.png"
-tags: ["react", "hooks", "state"]
+tags: ["devblog", "react", "hooks", "state"]
 type: post
 weight: 20
 ---
