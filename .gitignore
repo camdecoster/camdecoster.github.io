@@ -22,5 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Ignore Hugo files
+.hugo_build.lock
+
 # Don't include local to do list
 TODO.txt
