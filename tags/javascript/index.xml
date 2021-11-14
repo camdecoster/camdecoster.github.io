@@ -6,7 +6,7 @@
     <description>Recent content in javascript on Cameron DeCoster</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Nov 2021 06:37:56 -0700</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mirror Reverse Algorithm</title>
       <link>https://camdecoster.github.io/posts/mirror-reverse-algorithm/</link>
@@ -17,6 +17,15 @@
 I’ve been going through some practice problems that one is likely to see during a technical interview for a developer position. One that I worked through recently has a problem statement as follows:
 Write a function to reverse the order of words in a string in place.
 That seems simple enough, except for the last two words, “in place.” That means that you should be mutating the existing array, not creating a new one, which is what I would initially try to do.</description>
+    </item>
+    
+    <item>
+      <title>What Is Array Reduce?</title>
+      <link>https://camdecoster.github.io/posts/what-is-array-reduce/</link>
+      <pubDate>Sat, 13 Nov 2021 06:37:56 -0700</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/what-is-array-reduce/</guid>
+      <description>JavaScript has a number of array methods that can be used to test and manipulate arrays. Most of these are pretty intuitive, but I always have to look at the documentation for the reduce method. Simply put, the reduce method uses a function to return a value from each element of the array and accumulates those values into a single result, reducing it to a single value. It&amp;rsquo;s works as follows:</description>
     </item>
     
   </channel>

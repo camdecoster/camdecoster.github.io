@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>What Is Array Reduce?</title>
+    <meta name="description" content="Some examples of how this array method can be useful">
+    <meta name="keywords" content='blog, gokarna, hugo, devblog, javascript, array, reduce'>
+
+    <meta property="og:url" content="https://camdecoster.github.io/posts/what-is-array-reduce/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="What Is Array Reduce?">
+    <meta property="og:description" content="Some examples of how this array method can be useful">
+    <meta property="og:image" content="/posts/what-is-array-reduce/images/header.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What Is Array Reduce?">
+    <meta name="twitter:description" content="Some examples of how this array method can be useful">
+    <meta property="twitter:domain" content="https://camdecoster.github.io/posts/what-is-array-reduce/">
+    <meta property="twitter:url" content="https://camdecoster.github.io/posts/what-is-array-reduce/">
+    <meta name="twitter:image" content="/posts/what-is-array-reduce/images/header.png">
+
+    
+    <link rel="canonical" href="https://camdecoster.github.io/posts/what-is-array-reduce/" />
+
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="/css/dark.css">
+
+    <script src="/js/svg-injector.min.js"></script>
+    <script src="/js/feather-icons.min.js"></script>
+    <script src="/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://camdecoster.github.io">
+                <img src="/images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://camdecoster.github.io">Cameron DeCoster</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="/"> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/posts/"> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://camdecoster.github.io/portfolio"> Portfolio </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/index.xml"><span data-feather='rss'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="/"> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/posts/"> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://camdecoster.github.io/portfolio"> Portfolio </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/index.xml"><span data-feather='rss'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+
+    <div class="post-header-section">
+        <h1>What Is Array Reduce?</h1>
+        <small role="doc-subtitle">Some examples of how this array method can be useful</small>
+        <p class="post-date">
+            November 13, 2021
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="/tags/devblog">devblog</a></li>
+        
+            <li class="post-tag"><a href="/tags/javascript">javascript</a></li>
+        
+            <li class="post-tag"><a href="/tags/array">array</a></li>
+        
+            <li class="post-tag"><a href="/tags/reduce">reduce</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p><img src="/posts/what-is-array-reduce/images/header.png" alt="reduce an array from many values to one" title="Reduce an array from many values to one!"></p>
+<p>JavaScript has a number of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array methods</a> that can be used to test and manipulate arrays. Most of these are pretty intuitive, but I always have to look at the documentation for the <code>reduce</code> method. Simply put, the reduce method uses a function to return a value from each element of the array and accumulates those values into a single result, <em>reducing</em> it to a single value. It&rsquo;s works as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">someArray</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">20</span>];
+
+<span style="color:#75715e">// Function adds up all of the elements in an array
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reducerFunction</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">total</span>, <span style="color:#a6e22e">elementValue</span>) =&gt; <span style="color:#a6e22e">total</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">elementValue</span>;
+
+<span style="color:#75715e">// Result is 50: 5 + 10 + 15 + 20
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">someArray</span>.<span style="color:#a6e22e">reduce</span>(<span style="color:#a6e22e">reducerFunction</span>));
+</code></pre></div><p>The method goes through each element in the array and gets the value, adding it to the total, and finally returns the total at the end. There&rsquo;s an optional second argument that can be passed in to set the intial value of total. If this isn&rsquo;t specified, the first element in the array provides the initial value:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// Result is 61: 11 + 5 + 10 + 15 + 20
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">someArray</span>.<span style="color:#a6e22e">reduce</span>(<span style="color:#a6e22e">reducerFunction</span>, <span style="color:#ae81ff">11</span>));
+</code></pre></div><p>The reducer function requires a minimum of two arguments: the accumulator and the current element value. There are two optional arguments: the current index of the array, and a reference to the array itself. These can be useful to use in the reducer function logic, but usually aren&rsquo;t necessary.</p>
+<p>This is a straightforward example, but <code>reduce</code> does seem less intuitive than a lot of the other array methods. In fact, I often feel that it would be easier to do the same thing using a loop (and easier to understand).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// Set the initial value
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">total</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+<span style="color:#75715e">// Add everything up
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">n</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">someArray</span>) {
+	<span style="color:#a6e22e">total</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">n</span>;
+}
+
+<span style="color:#75715e">// Result is 50: 5 + 10 + 15 + 20
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">total</span>);
+</code></pre></div><p>There are some circumstances where it can be nice to have everything together in one tidy declaration, such as checking that all elements have a certain property value:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">animals</span> <span style="color:#f92672">=</span> [
+	{ <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Cat&#39;</span>, <span style="color:#a6e22e">pet</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> },
+	{ <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Dog&#39;</span>, <span style="color:#a6e22e">pet</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> },
+	{ <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hamster&#39;</span>, <span style="color:#a6e22e">pet</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> }
+];
+
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">animalsArePets</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">animals</span>.<span style="color:#a6e22e">reduce</span>(
+	(<span style="color:#a6e22e">status</span>, <span style="color:#a6e22e">a</span>) =&gt; <span style="color:#a6e22e">status</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">pet</span>, <span style="color:#75715e">// New value becomes status value and current animal pet value
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">true</span> <span style="color:#75715e">// Set initial value (assume all animals are pets)
+</span><span style="color:#75715e"></span>);
+
+<span style="color:#75715e">// Result is true 
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">animalsArePets</span>);
+</code></pre></div><p>But it&rsquo;s not perfect, as the reducer function will run on every element, even if it finds an animal that isn&rsquo;t a pet. I do like that it could be written completely on one line.</p>
+<p><code>reduce</code> is a tool that I have in my array toolbox, but it&rsquo;s usually one that I forget how to use. This post will serve as a set of instructions for the future.</p>
+
+        </p>
+    </div>
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2021 Cameron DeCoster</span>
+    <span>
+        Built with <a href="https://gohugo.io/">Hugo</a> and <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

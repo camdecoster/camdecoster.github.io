@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>array on Cameron DeCoster</title>
+    <link>https://camdecoster.github.io/tags/array/</link>
+    <description>Recent content in array on Cameron DeCoster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 13 Nov 2021 06:37:56 -0700</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/array/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Is Array Reduce?</title>
+      <link>https://camdecoster.github.io/posts/what-is-array-reduce/</link>
+      <pubDate>Sat, 13 Nov 2021 06:37:56 -0700</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/what-is-array-reduce/</guid>
+      <description>JavaScript has a number of array methods that can be used to test and manipulate arrays. Most of these are pretty intuitive, but I always have to look at the documentation for the reduce method. Simply put, the reduce method uses a function to return a value from each element of the array and accumulates those values into a single result, reducing it to a single value. It&amp;rsquo;s works as follows:</description>
+    </item>
+    
+  </channel>
+</rss>
