@@ -6,7 +6,7 @@
     <description>Recent content in javascript on Cameron DeCoster</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 13 Nov 2021 06:37:56 -0700</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mirror Reverse Algorithm</title>
       <link>https://camdecoster.github.io/posts/mirror-reverse-algorithm/</link>
@@ -17,6 +17,15 @@
 I’ve been going through some practice problems that one is likely to see during a technical interview for a developer position. One that I worked through recently has a problem statement as follows:
 Write a function to reverse the order of words in a string in place.
 That seems simple enough, except for the last two words, “in place.” That means that you should be mutating the existing array, not creating a new one, which is what I would initially try to do.</description>
+    </item>
+    
+    <item>
+      <title>Calculate the Zoom Transform Between Two Scales in D3</title>
+      <link>https://camdecoster.github.io/posts/calculate-the-zoom-transform-between-two-scales-in-d3/</link>
+      <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/calculate-the-zoom-transform-between-two-scales-in-d3/</guid>
+      <description>D3 (data-driven documents) is a JavaScript library for creating and interacting with data visualizations. Think of charts, scatter plots, heatmaps, and bubble graphs just to name a few. Anything and everything required to create a data visualization is included in the D3 library. For my day job (Markit Digital, come join me!), I develop a number of charting products, including a JavaScript based interactive time-series chart which uses D3 Scale, D3 Selection, and D3 Zoom.</description>
     </item>
     
     <item>
