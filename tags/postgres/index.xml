@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>postgres on Cameron DeCoster</title>
+    <link>https://camdecoster.github.io/tags/postgres/</link>
+    <description>Recent content in postgres on Cameron DeCoster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 20 Feb 2022 07:53:32 -0700</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/postgres/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Old Apps Broke</title>
+      <link>https://camdecoster.github.io/posts/my-old-apps-broke/</link>
+      <pubDate>Sun, 20 Feb 2022 07:53:32 -0700</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/my-old-apps-broke/</guid>
+      <description>While going through the Bloc curriculum (which became Thinkful then became Chegg, I think), I created two applications for assignements: Expense Tracker and Quiz Builder. They both followed the same template: React single page application deployed to Vercel that connects to Express API and PostgreSQL database hosted on Heroku. Neither of these apps will win awards, but I did learn a lot by creating them. In the process of creating this blog and generally updating my online presence, I discovered that they stopped working.</description>
+    </item>
+    
+  </channel>
+</rss>

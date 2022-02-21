@@ -6,7 +6,7 @@
     <description>Recent content in devblog on Cameron DeCoster</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 08 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/devblog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Feb 2022 07:53:32 -0700</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/devblog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Add Windows Keyboard Shortcuts With AutoHotKey</title>
       <link>https://camdecoster.github.io/posts/add-windows-keyboard-shortcuts-with-autohotkey/</link>
@@ -55,6 +55,15 @@ That seems simple enough, except for the last two words, “in place.” That me
       <guid>https://camdecoster.github.io/posts/hooks-vs-classes-in-react/</guid>
       <description>I’m working on building a simple expense tracking site, very creatively named Expense Tracker. I’m building it using React for the front-end and Node/Express for the back-end with data being stored in a PostgreSQL database. Here’s a work in progress screenshot:
 The main function of this site is to show you how much you’ve been spending in easy to read tables. I hadn’t needed to use tables with React before, so I started looking into it and found React Table.</description>
+    </item>
+    
+    <item>
+      <title>My Old Apps Broke</title>
+      <link>https://camdecoster.github.io/posts/my-old-apps-broke/</link>
+      <pubDate>Sun, 20 Feb 2022 07:53:32 -0700</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/my-old-apps-broke/</guid>
+      <description>While going through the Bloc curriculum (which became Thinkful then became Chegg, I think), I created two applications for assignements: Expense Tracker and Quiz Builder. They both followed the same template: React single page application deployed to Vercel that connects to Express API and PostgreSQL database hosted on Heroku. Neither of these apps will win awards, but I did learn a lot by creating them. In the process of creating this blog and generally updating my online presence, I discovered that they stopped working.</description>
     </item>
     
     <item>
