@@ -3,7 +3,7 @@ title: "{{ replace .Name "-" " " | title }}"
 description: "Description of post"
 date: {{ .Date }}
 tags: []
-image: "/posts/{{.Name}}/images/IMAGE_NAME.png"
+image: "/posts/{{.Name}}/images/header.png"
 type: post
 ---
 
