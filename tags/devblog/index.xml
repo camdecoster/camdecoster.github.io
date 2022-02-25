@@ -84,5 +84,16 @@ The main function of this site is to show you how much you’ve been spending in
       <description>JavaScript has a number of array methods that can be used to test and manipulate arrays. Most of these are pretty intuitive, but I always have to look at the documentation for the reduce method. Simply put, the reduce method uses a function to return a value from each element of the array and accumulates those values into a single result, reducing it to a single value. It&amp;rsquo;s works as follows:</description>
     </item>
     
+    <item>
+      <title>Getting Calling Features to Work on the Sony XZ1 Compact</title>
+      <link>https://camdecoster.github.io/posts/calling-features-xz1c/</link>
+      <pubDate>Mon, 17 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/calling-features-xz1c/</guid>
+      <description>UPDATE 2022/02/25: I originally posted this information on XDA in 2018, but I was worried that it would get corrupted with future forum upgrades, so I&amp;rsquo;m capturing it here too. Enjoy.
+DISCLAIMER: This will only work on Android 8.0, and may not work on some versions of 8.0 depending on the security patch date. I&amp;rsquo;m using firmware version 47.A.1.16.20 with a security patch level of 2018/09/01.
+I figured out how to get VoLTE and WiFi Calling to work on MetroPCS.</description>
+    </item>
+    
   </channel>
 </rss>

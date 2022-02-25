@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Getting Calling Features to Work on the Sony XZ1 Compact</title>
+    <meta name="description" content="Enable VoLTE and WiFi Calling on the XZ1 Compact on MetroPCS (or other MVNO&#39;s)">
+    <meta name="keywords" content='blog, gokarna, hugo, devblog, backfill, xda, phone, sony, xz1 compact, t-mobile, metropcs'>
+
+    <meta property="og:url" content="https://camdecoster.github.io/posts/calling-features-xz1c/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Getting Calling Features to Work on the Sony XZ1 Compact">
+    <meta property="og:description" content="Enable VoLTE and WiFi Calling on the XZ1 Compact on MetroPCS (or other MVNO&#39;s)">
+    <meta property="og:image" content="/posts/calling-features-xz1c/images/header.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Getting Calling Features to Work on the Sony XZ1 Compact">
+    <meta name="twitter:description" content="Enable VoLTE and WiFi Calling on the XZ1 Compact on MetroPCS (or other MVNO&#39;s)">
+    <meta property="twitter:domain" content="https://camdecoster.github.io/posts/calling-features-xz1c/">
+    <meta property="twitter:url" content="https://camdecoster.github.io/posts/calling-features-xz1c/">
+    <meta name="twitter:image" content="/posts/calling-features-xz1c/images/header.png">
+
+    
+    <link rel="canonical" href="https://camdecoster.github.io/posts/calling-features-xz1c/" />
+
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="/css/dark.css">
+
+    <script src="/js/svg-injector.min.js"></script>
+    <script src="/js/feather-icons.min.js"></script>
+    <script src="/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://camdecoster.github.io">
+                <img src="/images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://camdecoster.github.io">Cameron DeCoster</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="/"> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/posts/"> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://camdecoster.github.io/portfolio"> Portfolio </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/tags/"> Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/index.xml"><span data-feather='rss'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="/"> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/posts/"> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://camdecoster.github.io/portfolio"> Portfolio </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/tags/"> Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/index.xml"><span data-feather='rss'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+
+    <div class="post-header-section">
+        <h1>Getting Calling Features to Work on the Sony XZ1 Compact</h1>
+        <small role="doc-subtitle">Enable VoLTE and WiFi Calling on the XZ1 Compact on MetroPCS (or other MVNO&#39;s)</small>
+        <p class="post-date">
+            December 17, 2018
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="/tags/devblog">devblog</a></li>
+        
+            <li class="post-tag"><a href="/tags/backfill">backfill</a></li>
+        
+            <li class="post-tag"><a href="/tags/xda">xda</a></li>
+        
+            <li class="post-tag"><a href="/tags/phone">phone</a></li>
+        
+            <li class="post-tag"><a href="/tags/sony">sony</a></li>
+        
+            <li class="post-tag"><a href="/tags/xz1-compact">xz1 compact</a></li>
+        
+            <li class="post-tag"><a href="/tags/t-mobile">t-mobile</a></li>
+        
+            <li class="post-tag"><a href="/tags/metropcs">metropcs</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p><img src="/posts/calling-features-xz1c/images/header.png" alt="screenshot of ongoing wifi call" title="Ongoing WiFi Call"></p>
+<p><em>UPDATE 2022/02/25: I originally posted this information on XDA in 2018, but I was worried that it would get corrupted with future forum upgrades, so I&rsquo;m capturing it here too. Enjoy.</em></p>
+<p><strong>DISCLAIMER: This will only work on Android 8.0, and may not work on some versions of 8.0 depending on the security patch date. I&rsquo;m using firmware version 47.A.1.16.20 with a security patch level of 2018/09/01.</strong></p>
+<p>I figured out how to get VoLTE and WiFi Calling to work on MetroPCS. The XZ1C works on T-Mobile because it recognizes T-Mobile specific SIM cards and loads the appropriate files when it detects one. For whatever reason, MetroPCS has SIM cards that don&rsquo;t provide a sim_config_id that the phone will recognize as being part of T-Mobile. The list of sim_config_id values that are recognized are contained in a file located within the APK /oem/overlay/com.sonymobile.customizationselector-res-305.apk. Within the APK, the file is located at /res/xml/configuration_selectors.xml. The xml contents are listed below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<span style="color:#f92672">&lt;configurations&gt;</span>
+    <span style="color:#f92672">&lt;configuration</span> <span style="color:#a6e22e">config_id=</span><span style="color:#e6db74">&#34;408&#34;</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.1<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.2<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.3<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.4<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.5<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.6<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.7<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.8<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.9<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.10<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.11<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.12<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.13<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.14<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.15<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.16<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.17<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.18<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S8663.1<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+    <span style="color:#f92672">&lt;/configuration&gt;</span>
+<span style="color:#f92672">&lt;/configurations&gt;</span>
+</code></pre></div><p>In order to get the MetroPCS SIM recognized, you need to add one line to the bottom of the list. This changes the code to the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<span style="color:#f92672">&lt;configurations&gt;</span>
+    <span style="color:#f92672">&lt;configuration</span> <span style="color:#a6e22e">config_id=</span><span style="color:#e6db74">&#34;408&#34;</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.1<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.2<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.3<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.4<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.5<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.6<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.7<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.8<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.9<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.10<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.11<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.12<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.13<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.14<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.15<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.16<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.17<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.18<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S8663.1<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+		<span style="color:#f92672">&lt;sim_config_id&gt;</span>S8957.1<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+    <span style="color:#f92672">&lt;/configuration&gt;</span>
+<span style="color:#f92672">&lt;/configurations&gt;</span>
+</code></pre></div><p>If you&rsquo;re on a different T-Mobile MVNO that supports VoLTE and WiFi Calling, but it&rsquo;s not working on your XZ1C, you can probably still get this to work. You&rsquo;ll need to figure out what sim_config_id to use using the following command:</p>
+<pre tabindex="0"><code>adb shell getprop persist.sys.sim_config_ids
+</code></pre><p>This should output a value similar to S8957.1. Use your value in the configuration_selectors.xml file.</p>
+<p>You also need to change the overlay priority in the AndroidManifest.xml file. The normal overlay has a priority of 305. I changed mine to 310, but anything over 305 should work.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; standalone=&#34;no&#34;?&gt;</span>
+<span style="color:#f92672">&lt;manifest</span> <span style="color:#a6e22e">xmlns:android=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span> <span style="color:#a6e22e">package=</span><span style="color:#e6db74">&#34;YOUR.PACKAGE.NAME&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;overlay</span> <span style="color:#a6e22e">android:priority=</span><span style="color:#e6db74">&#34;310&#34;</span> <span style="color:#a6e22e">android:targetPackage=</span><span style="color:#e6db74">&#34;com.sonymobile.customizationselector&#34;</span><span style="color:#f92672">/&gt;</span>
+<span style="color:#f92672">&lt;/manifest&gt;</span>
+</code></pre></div><p>In order to modify this APK, I used <a href="https://ibotpeaches.github.io/Apktool/">apktool</a> to decompile the original APK and compile the modified APK. I followed <a href="https://forum.xda-developers.com/showthread.php?t=2213985">this</a> guide.</p>
+<p>Once the APK is built and signed, install it with adb:</p>
+<pre tabindex="0"><code>adb install yourapkhere.apk
+</code></pre><p>This is an overlay file which works using RRO, so you need to give the file the proper permissions to run. Enter the following command:</p>
+<pre tabindex="0"><code>adb shell cmd overlay enable --user 0 yourapkhere.apk
+</code></pre><p>Reboot your phone and the overlay should be active.</p>
+<p>Due to the way the phone works, you need to trick the phone into loading the correct modem binary file. It loads a default modem when it doesn&rsquo;t recognize a T-Mobile SIM. But it won&rsquo;t load the T-Mobile modem even if you install the APK. I ended up having to get an unactivated T-Mobile SIM and put that in the phone to trigger the switch. Once you trigger it, you&rsquo;ll get a popup saying that the phone needs to reboot to optimize for your network. After it reboots and loads the proper modem, you can shutdown, put in your MetroPCS SIM card and boot. That should do it.</p>
+<p>There&rsquo;s one big caveat: This will only work on Android 8.0. The overlay permission model changed in 8.1+ so this change won&rsquo;t work on those ROM&rsquo;s. The fix is still good, but you&rsquo;d need to use root to make the change. I&rsquo;m sure there will be a way around this eventually, but I don&rsquo;t have one at the moment.</p>
+<p>For more technical information, I tracked my progress trying to get my X Compact working on MetroPCS with VoLTE and WiFi Calling in <a href="https://forum.xda-developers.com/x-compact/how-to/trying-to-figure-how-to-enable-volte-t3877692">this thread</a>. There&rsquo;s a lot of information regarding the XZ1C in there that might be of interest.</p>
+<p>Theoretically, this should work for the XZ1, the XZ Premium (with proper files flashed), and possibly other Sony phones that contain the correct modem binary file.</p>
+<p>Here are some screenshots showing the features working on my phone:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">VoLTE Call</th>
+<th style="text-align:center">WiFi Call</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="/posts/calling-features-xz1c/images/dialer_volte_small.jpg" alt="screenshot of ongoing volte call" title="Ongoing VoLTE Call"></td>
+<td style="text-align:center"><img src="/posts/calling-features-xz1c/images/dialer_wifi_small.jpg" alt="screenshot of ongoing wifi call" title="Ongoing WiFi Call"></td>
+</tr>
+</tbody>
+</table>
+
+        </p>
+    </div>
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2022 Cameron DeCoster</span>
+    <span>
+        Built with <a href="https://gohugo.io/">Hugo</a> and <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
