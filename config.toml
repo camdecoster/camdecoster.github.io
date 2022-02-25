@@ -57,6 +57,11 @@ pygmentsStyle = "monokai"
 #    weight = 5
 
   [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 4
+
+  [[menu.main]]
     identifier = "rss"
     pre = "<span data-feather='rss'></span>"
     url = "/index.xml"
