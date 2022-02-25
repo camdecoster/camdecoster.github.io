@@ -115,6 +115,6 @@ Theoretically, this should work for the XZ1, the XZ Premium (with proper files f
 
 Here are some screenshots showing the features working on my phone:
 
-|||
-|---|---|
+|VoLTE Call|WiFi Call|
+|:---:|:---:|
 |![screenshot of ongoing volte call](/posts/calling-features-xz1c/images/dialer_volte_small.jpg "Ongoing VoLTE Call")|![screenshot of ongoing wifi call](/posts/calling-features-xz1c/images/dialer_wifi_small.jpg "Ongoing WiFi Call")|
