@@ -6,7 +6,7 @@
     <description>Recent content in devblog on Cameron DeCoster</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 20 Feb 2022 07:53:32 -0700</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/devblog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Mar 2022 08:44:31 -0700</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/devblog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Add Windows Keyboard Shortcuts With AutoHotKey</title>
       <link>https://camdecoster.github.io/posts/add-windows-keyboard-shortcuts-with-autohotkey/</link>
@@ -55,6 +55,15 @@ That seems simple enough, except for the last two words, “in place.” That me
       <guid>https://camdecoster.github.io/posts/hooks-vs-classes-in-react/</guid>
       <description>I’m working on building a simple expense tracking site, very creatively named Expense Tracker. I’m building it using React for the front-end and Node/Express for the back-end with data being stored in a PostgreSQL database. Here’s a work in progress screenshot:
 The main function of this site is to show you how much you’ve been spending in easy to read tables. I hadn’t needed to use tables with React before, so I started looking into it and found React Table.</description>
+    </item>
+    
+    <item>
+      <title>Jest, Variables, and the Test Execution Cycle</title>
+      <link>https://camdecoster.github.io/posts/jest-variables-test-execution-cycle/</link>
+      <pubDate>Tue, 08 Mar 2022 08:44:31 -0700</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/jest-variables-test-execution-cycle/</guid>
+      <description>I recently ran into an issue with trying to write some unit tests for a charting component in Jest. This component had three configuration options, so I wanted to test each one. This involved adding an event listener, setting the configuration for a test, triggering the event, and reviewing the data that was returned by the listener. Since I was running the same test three times, I decided to use a loop.</description>
     </item>
     
     <item>

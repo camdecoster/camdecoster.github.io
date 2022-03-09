@@ -150,7 +150,7 @@
         <h1>How to Deploy a Hugo Blog to GitHub Pages</h1>
         <small role="doc-subtitle">Simplify the Hugo deployment process to GitHub Pages</small>
         <p class="post-date">
-            October 25, 2021
+            October 25, 2021 October 25, 2021
         </p>
 
         <ul class="post-tags">
@@ -190,26 +190,26 @@
 </li>
 <li>
 <p>Add an npm script to build the site. You can choose a folder other than the default of public, but I&rsquo;m sticking with the default.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-    <span style="color:#f92672">&#34;scripts&#34;</span>: {
-        <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;hugo -D&#34;</span>
-    }
-}
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;scripts&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;hugo -D&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
 <li>
 <p>Install gh-pages to your project as a dev dependency.</p>
 <pre tabindex="0"><code>npm i gh-pages -D
 </code></pre></li>
 <li>
 <p>Add an npm script to deploy the site along with a pre deploy script to build the site. This assumes that you&rsquo;re using the public folder for building your site.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-    <span style="color:#f92672">&#34;scripts&#34;</span>: {
-        <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;hugo -D&#34;</span>,
-        <span style="color:#f92672">&#34;predeploy&#34;</span>: <span style="color:#e6db74">&#34;npm run build&#34;</span>,
-        <span style="color:#f92672">&#34;deploy&#34;</span>: <span style="color:#e6db74">&#34;gh-pages -d public&#34;</span>
-    }
-}
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;scripts&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;hugo -D&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;predeploy&#34;</span>: <span style="color:#e6db74">&#34;npm run build&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;deploy&#34;</span>: <span style="color:#e6db74">&#34;gh-pages -d public&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
 <li>
 <p>Add the public folder to your .gitignore folder, along with any dependency folders. You won&rsquo;t need to include the built site here because you&rsquo;re including it in a different branch.</p>
 <pre tabindex="0"><code>...

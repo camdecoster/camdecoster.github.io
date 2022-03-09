@@ -150,7 +150,7 @@
         <h1>Add Windows Keyboard Shortcuts With AutoHotKey</h1>
         <small role="doc-subtitle">Learn how to make multiple Windows desktops easier to use with AutoHotKey</small>
         <p class="post-date">
-            November 5, 2021
+            November 5, 2021 November 5, 2021
         </p>
 
         <ul class="post-tags">
@@ -187,19 +187,19 @@
 <pre tabindex="0"><code class="language-autohotkey" data-lang="autohotkey">; Shortcut for work email
 ::emi::
   SendInput your.name@example.com
-  TrayTip, , Text 'emi' Expanded, 2
+  TrayTip, , Text &#39;emi&#39; Expanded, 2
 Return
-</code></pre><p>When run, this script will look for the keyboard entry of emi, replace it with <a href="mailto:your.name@example.com">your.name@example.com</a>, and finally send a tray notification stating &ldquo;Text &lsquo;emi&rsquo; Expanded&rdquo; for 2 seconds. The command is enclosed in double colons (::). When it&rsquo;s typed in, the following commands will be run until getting to Return. Lines preceded by a semicolon (;) are comments. You can add multiple hotstrings in one script.</p>
+</code></pre><p>When run, this script will look for the keyboard entry of emi, replace it with <a href="mailto:your.name@example.com">your.name@example.com</a>, and finally send a tray notification stating &ldquo;Text &rsquo;emi&rsquo; Expanded&rdquo; for 2 seconds. The command is enclosed in double colons (::). When it&rsquo;s typed in, the following commands will be run until getting to Return. Lines preceded by a semicolon (;) are comments. You can add multiple hotstrings in one script.</p>
 <h2 id="executing-a-script">Executing a Script</h2>
 <p>If you&rsquo;ve installed AHK using the installer, it&rsquo;s as simple as double-clicking the script. If you&rsquo;ve used the portable version, you need to execute it from the command line in the form of {path to executable} {path to script}. Using the directories above, this becomes:</p>
-<pre tabindex="0"><code>&quot;C:\Programs (Manual Install)\AutoHotKey\AutoHotkeyU64.exe&quot; &quot;C:\Users\{YOUR_USER_NAME}\Documents\AutoHotKey Scripts\Hostrings.ahk&quot;
+<pre tabindex="0"><code>&#34;C:\Programs (Manual Install)\AutoHotKey\AutoHotkeyU64.exe&#34; &#34;C:\Users\{YOUR_USER_NAME}\Documents\AutoHotKey Scripts\Hostrings.ahk&#34;
 </code></pre><p>This will start the script and keep the terminal window open while it&rsquo;s running. An icon will show up in the notification area representing that script. You can manage the script by right-clicking on the icon. Once it&rsquo;s running, your hotstring should now work while you&rsquo;re typing.</p>
 <p>If you want to run the script automatically, get rid of the terminal, or run more than one script, it&rsquo;s best to use a batch file with a shortcut in the Startup folder. Let&rsquo;s start with the batch file.</p>
 <p>Save a file in your scripts folder:</p>
 <pre tabindex="0"><code>C:\Users\{YOUR_USER_NAME}\Documents\AutoHotKey Scripts\Launch AutoHotKey Scripts.bat
 </code></pre><p>And add the following commands:</p>
-<pre tabindex="0"><code>start &quot;&quot; &quot;C:\Programs (Manual Install)\AutoHotKey\AutoHotkeyU64.exe&quot; &quot;C:\Users\{YOUR_USER_NAME}\Documents\AutoHotKey Scripts\Hotstrings.ahk&quot;
-start &quot;&quot; &quot;C:\Programs (Manual Install)\AutoHotKey\AutoHotkeyU64.exe&quot; &quot;C:\Users\{YOUR_USER_NAME}\Documents\AutoHotKey Scripts\Other Script.ahk&quot;
+<pre tabindex="0"><code>start &#34;&#34; &#34;C:\Programs (Manual Install)\AutoHotKey\AutoHotkeyU64.exe&#34; &#34;C:\Users\{YOUR_USER_NAME}\Documents\AutoHotKey Scripts\Hotstrings.ahk&#34;
+start &#34;&#34; &#34;C:\Programs (Manual Install)\AutoHotKey\AutoHotkeyU64.exe&#34; &#34;C:\Users\{YOUR_USER_NAME}\Documents\AutoHotKey Scripts\Other Script.ahk&#34;
 </code></pre><p>Using the start command in this way will execute the command in the terminal window, then close the window after the commands have been run.</p>
 <p>Now all you need to do is create a shortcut to this batch file and place it in your Startup folder:</p>
 <ol>
@@ -250,7 +250,7 @@ Return
 Return
 
 ; Commands to send window to desktop left or right
-; These don't work on modern Windows apps
+; These don&#39;t work on modern Windows apps
 
 ; Move active window to left
 +#Left::

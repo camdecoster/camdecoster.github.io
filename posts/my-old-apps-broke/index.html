@@ -150,7 +150,7 @@
         <h1>My Old Apps Broke</h1>
         <small role="doc-subtitle">An investigation in to why my frontend could no longer connect to my backend</small>
         <p class="post-date">
-            February 20, 2022
+            February 20, 2022 February 20, 2022
         </p>
 
         <ul class="post-tags">
@@ -178,37 +178,37 @@
 <p>While going through the Bloc curriculum (which became Thinkful then became Chegg, I think), I created two applications for assignements: <a href="https://expense-tracker-client.vercel.app/">Expense Tracker</a> and <a href="https://quiz-builder-client.vercel.app/">Quiz Builder</a>. They both followed the same template: React single page application deployed to Vercel that connects to Express API and PostgreSQL database hosted on Heroku. Neither of these apps will win awards, but I did learn a lot by creating them. In the process of creating this blog and generally updating my online presence, I discovered that they stopped working. I still reference these on my <a href="https://camdecoster.github.io/portfolio/">portfolio</a>, so it wasn&rsquo;t a good look. That was in October. I checked again this week, and, unfortunately, no one else solved this problem for me while I was ignoring it. So I did this weekend!</p>
 <p>My first hope was that some quick googling would show me the answer on Stack Overflow or a similar site, but no luck. The only feedback that I was getting was a 500 response code with the very unhelpful &lsquo;Internal server error&rsquo; message (thanks past Cam!). At least I could tell that it was the backend. I fired up Postman and started playing around with the payload to see if I could get any other information from the Quiz Builder API. Leaving out some of the required parameters resulted in an error message stating that I was missing information. So the API was working to some degree.</p>
 <p>The next step was to check the Heroku logs. Here&rsquo;s what I found:</p>
-<pre tabindex="0"><code>2022-02-19T15:13:29.688089+00:00 heroku[router]: at=info method=OPTIONS path=&quot;/api/auth/login&quot; host=quiz-builder-cdd.herokuapp.com request_id=52f8134e-41d3-40fa-ab8b-7dcffb4efdae fwd=&quot;67.165.216.59&quot; dyno=web.1 connect=0ms service=2ms status=204 bytes=580 protocol=https
-2022-02-19T15:13:29.785404+00:00 heroku[router]: at=info method=POST path=&quot;/api/auth/login&quot; host=quiz-builder-cdd.herokuapp.com request_id=d99c4a01-9b31-4aa7-a1c4-13958ec4ad01 fwd=&quot;67.165.216.59&quot; dyno=web.1 connect=0ms service=8ms status=500 bytes=588 protocol=https
+<pre tabindex="0"><code>2022-02-19T15:13:29.688089+00:00 heroku[router]: at=info method=OPTIONS path=&#34;/api/auth/login&#34; host=quiz-builder-cdd.herokuapp.com request_id=52f8134e-41d3-40fa-ab8b-7dcffb4efdae fwd=&#34;67.165.216.59&#34; dyno=web.1 connect=0ms service=2ms status=204 bytes=580 protocol=https
+2022-02-19T15:13:29.785404+00:00 heroku[router]: at=info method=POST path=&#34;/api/auth/login&#34; host=quiz-builder-cdd.herokuapp.com request_id=d99c4a01-9b31-4aa7-a1c4-13958ec4ad01 fwd=&#34;67.165.216.59&#34; dyno=web.1 connect=0ms service=8ms status=500 bytes=588 protocol=https
 </code></pre><p>Again, there wasn&rsquo;t much to go on. Just another reference to the 500 status. This application is on the hobby tier (aka. free), so not much log information is surfaced. There&rsquo;s an add-on for Heroku instances called <a href="https://logentries.com/">Logentries</a> that can make a bit more information available, but that still just mentioned the 500 status.</p>
 <p>If Heroku wasn&rsquo;t going to show me any info about this error, I would have to make my app do it. After all, the API was at least partially working. Looking at the API code, I saw that this was where Express was returning the 500 status:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>((<span style="color:#a6e22e">error</span>, <span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">next</span>) =&gt; {
-    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">response</span>;
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;production&#34;</span>) {
-        <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">error</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Internal server error&#34;</span> } };
-    } <span style="color:#66d9ef">else</span> {
-        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">error</span>);
-        <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> {
-            <span style="color:#a6e22e">error</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Internal server error&#34;</span>, <span style="color:#a6e22e">error</span> },
-        };
-    }
-	
-    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">500</span>).<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">response</span>);
-});
-</code></pre></div><p>By design, the production implementation didn&rsquo;t return the error information. But I needed that error, so I made a temporary change:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>((<span style="color:#a6e22e">error</span>, <span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">next</span>) =&gt; {
-	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> {
-		<span style="color:#a6e22e">error</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Internal server error&#34;</span>, <span style="color:#a6e22e">error</span> },
-	};
-	
-    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">500</span>).<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">response</span>);
-});
-</code></pre></div><p>After deploying the update and trying to log in again, I could now see the issue in the server response:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>((<span style="color:#a6e22e">error</span>, <span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">next</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">response</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">NODE_ENV</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;production&#34;</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">error</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Internal server error&#34;</span> } };
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">error</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">error</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Internal server error&#34;</span>, <span style="color:#a6e22e">error</span> },
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">500</span>).<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">response</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>By design, the production implementation didn&rsquo;t return the error information. But I needed that error, so I made a temporary change:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>((<span style="color:#a6e22e">error</span>, <span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">next</span>) =&gt; {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">response</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">error</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Internal server error&#34;</span>, <span style="color:#a6e22e">error</span> },
+</span></span><span style="display:flex;"><span>	};
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">500</span>).<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">response</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>After deploying the update and trying to log in again, I could now see the issue in the server response:</p>
 <pre tabindex="0"><code>{
-	name: 'error',
+	name: &#39;error&#39;,
 	length: 165,
-	severity: 'FATAL',
-	code: '28000',
+	severity: &#39;FATAL&#39;,
+	code: &#39;28000&#39;,
 	detail: undefined,
 	hint: undefined,
 	position: undefined,
@@ -220,12 +220,12 @@
 	column: undefined,
 	dataType: undefined,
 	constraint: undefined,
-	file: 'auth.c',
-	line: '502',
-	routine: 'ClientAuthentication'
+	file: &#39;auth.c&#39;,
+	line: &#39;502&#39;,
+	routine: &#39;ClientAuthentication&#39;
 }
 </code></pre><p>And from checking Logentries, the error is even more specific (secrets redacted):</p>
-<pre tabindex="0"><code>error: no pg_hba.conf entry for host &quot;▮▮.▮▮.▮▮.▮▮&quot;, user &quot;▮▮▮▮▮▮▮▮&quot;, database &quot;▮▮▮▮▮▮▮▮&quot;, SSL off
+<pre tabindex="0"><code>error: no pg_hba.conf entry for host &#34;▮▮.▮▮.▮▮.▮▮&#34;, user &#34;▮▮▮▮▮▮▮▮&#34;, database &#34;▮▮▮▮▮▮▮▮&#34;, SSL off
 </code></pre><p>There was some kind of SSL issue with the database. Searching around, I found this <a href="https://devcenter.heroku.com/changelog-items/2035">announcement</a> from Heroku:</p>
 <blockquote>
 <p>Beginning today, we will be rolling out changes to the platform that <strong>will enforce SSL for all Heroku Postgres client connections</strong>, including ephemeral add-ons like those used for CI/CD workflows. We recommend you evaluate your application setup, especially those that may have been implicitly relying on insecure connectivity between Common Runtime and hobby tier databases.</p>
@@ -233,19 +233,19 @@
 <p>Somehow, I missed all of the notices that this would be taking place. My applications relied on &lsquo;insecure connectivity between Common Runtime and hobby tier databases&rsquo;, so they broke. I just wanted to get my apps running again without having to implement a more secure solution (which I deemed unnecessary for these projects). Thankfully, there&rsquo;s an easy way to work around this issue.</p>
 <p>The API&rsquo;s both use <strong>knex</strong> to interact with the database. When setting up a connection to a database with knex, unauthorized connections are rejected by default. Since Heroku was forcing SSL to be used for connections, the connection being set up in these applications was not being authorized and was therefore being rejected. But defaults can be changed, so that&rsquo;s what I did.</p>
 <p>The connection config changed from this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">knex</span>({
-    <span style="color:#a6e22e">client</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;pg&#34;</span>,
-    <span style="color:#a6e22e">connection</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">DATABASE_URL</span>
-});
-</code></pre></div><p>To this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">knex</span>({
-    <span style="color:#a6e22e">client</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;pg&#34;</span>,
-    <span style="color:#a6e22e">connection</span><span style="color:#f92672">:</span> {
-		<span style="color:#a6e22e">connectionString</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">DATABASE_URL</span>,
-		<span style="color:#a6e22e">ssl</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">rejectUnauthorized</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span> }
-	}
-});
-</code></pre></div><p>(h/t to <a href="https://stackoverflow.com/a/61125814">SO</a>)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">knex</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">client</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;pg&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">connection</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">DATABASE_URL</span>
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>To this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">knex</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">client</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;pg&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">connection</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">connectionString</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">DATABASE_URL</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">ssl</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">rejectUnauthorized</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span> }
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>(h/t to <a href="https://stackoverflow.com/a/61125814">SO</a>)</p>
 <p>With this update, Quiz Builder started working once again. It&rsquo;s not the best solution, but it fixed one of my portfolio apps.</p>
 <p>Unfortunately, Expense Tracker was still having an unrelated issue. When I first deployed it, Vercel was still Zeit and served apps from a different domain. In this case, that was <a href="https://expense-tracker-client.now.sh">https://expense-tracker-client.now.sh</a>. But now Expense Tracker is being served from <a href="https://expense-tracker-client.vercel.app">https://expense-tracker-client.vercel.app</a>. I had previously set up Heroku to expect a CLIENT_ORIGIN header of the now.sh domain. Since this value was now coming from the vercel.app domain, I was getting a CORS error. This is easy to change in Heroku. Just go to your app settings page and edit the &lsquo;Config Vars&rsquo; to update the CLIENT_ORIGIN value. Now both apps were working again.</p>
 <p>I haven&rsquo;t looked at any of the apps I built in bootcamp since I got them working in the first place (around July of 2020). It was strange to go back through the code I had written with some professional experience. There are parts that I would build differently, but plenty that I feel were built well. There are also parts that I don&rsquo;t remember. Honestly, it made me feel a bit rusty to diagnose this database issue. That&rsquo;s just not something that I deal with in my day job. This reminds me of when I was studying to take the Professional Engineer exam in my past career. There was so much that I had forgotten and I was worried that I would fail miserably. But then I realized something that helped me calm down and succeed: if I learned this once, I can learn it again. After all, an engineer is a problem solver.</p>

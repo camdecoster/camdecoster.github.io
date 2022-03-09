@@ -150,7 +150,7 @@
         <h1>What Is Array Reduce?</h1>
         <small role="doc-subtitle">Some examples of how this array method can be useful</small>
         <p class="post-date">
-            November 13, 2021
+            November 13, 2021 November 13, 2021
         </p>
 
         <ul class="post-tags">
@@ -170,44 +170,44 @@
         <p>
             <p><img src="/posts/what-is-array-reduce/images/header.png" alt="reduce an array from many values to one" title="Reduce an array from many values to one!"></p>
 <p>JavaScript has a number of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array methods</a> that can be used to test and manipulate arrays. Most of these are pretty intuitive, but I always have to look at the documentation for the <code>reduce</code> method. Simply put, the reduce method uses a function to return a value from each element of the array and accumulates those values into a single result, <em>reducing</em> it to a single value. It&rsquo;s works as follows:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">someArray</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">20</span>];
-
-<span style="color:#75715e">// Function adds up all of the elements in an array
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reducerFunction</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">total</span>, <span style="color:#a6e22e">elementValue</span>) =&gt; <span style="color:#a6e22e">total</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">elementValue</span>;
-
-<span style="color:#75715e">// Result is 50: 5 + 10 + 15 + 20
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">someArray</span>.<span style="color:#a6e22e">reduce</span>(<span style="color:#a6e22e">reducerFunction</span>));
-</code></pre></div><p>The method goes through each element in the array and gets the value, adding it to the total, and finally returns the total at the end. There&rsquo;s an optional second argument that can be passed in to set the intial value of total. If this isn&rsquo;t specified, the first element in the array provides the initial value:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// Result is 61: 11 + 5 + 10 + 15 + 20
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">someArray</span>.<span style="color:#a6e22e">reduce</span>(<span style="color:#a6e22e">reducerFunction</span>, <span style="color:#ae81ff">11</span>));
-</code></pre></div><p>The reducer function requires a minimum of two arguments: the accumulator and the current element value. There are two optional arguments: the current index of the array, and a reference to the array itself. These can be useful to use in the reducer function logic, but usually aren&rsquo;t necessary.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">someArray</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">20</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Function adds up all of the elements in an array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reducerFunction</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">total</span>, <span style="color:#a6e22e">elementValue</span>) =&gt; <span style="color:#a6e22e">total</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">elementValue</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Result is 50: 5 + 10 + 15 + 20
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">someArray</span>.<span style="color:#a6e22e">reduce</span>(<span style="color:#a6e22e">reducerFunction</span>));
+</span></span></code></pre></div><p>The method goes through each element in the array and gets the value, adding it to the total, and finally returns the total at the end. There&rsquo;s an optional second argument that can be passed in to set the intial value of total. If this isn&rsquo;t specified, the first element in the array provides the initial value:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Result is 61: 11 + 5 + 10 + 15 + 20
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">someArray</span>.<span style="color:#a6e22e">reduce</span>(<span style="color:#a6e22e">reducerFunction</span>, <span style="color:#ae81ff">11</span>));
+</span></span></code></pre></div><p>The reducer function requires a minimum of two arguments: the accumulator and the current element value. There are two optional arguments: the current index of the array, and a reference to the array itself. These can be useful to use in the reducer function logic, but usually aren&rsquo;t necessary.</p>
 <p>This is a straightforward example, but <code>reduce</code> does seem less intuitive than a lot of the other array methods. In fact, I often feel that it would be easier to do the same thing using a loop (and easier to understand).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// Set the initial value
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">total</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-
-<span style="color:#75715e">// Add everything up
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">n</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">someArray</span>) {
-	<span style="color:#a6e22e">total</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">n</span>;
-}
-
-<span style="color:#75715e">// Result is 50: 5 + 10 + 15 + 20
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">total</span>);
-</code></pre></div><p>There are some circumstances where it can be nice to have everything together in one tidy declaration, such as checking that all elements have a certain property value:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">animals</span> <span style="color:#f92672">=</span> [
-	{ <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Cat&#39;</span>, <span style="color:#a6e22e">pet</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> },
-	{ <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Dog&#39;</span>, <span style="color:#a6e22e">pet</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> },
-	{ <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hamster&#39;</span>, <span style="color:#a6e22e">pet</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> }
-];
-
-
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">animalsArePets</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">animals</span>.<span style="color:#a6e22e">reduce</span>(
-	(<span style="color:#a6e22e">status</span>, <span style="color:#a6e22e">a</span>) =&gt; <span style="color:#a6e22e">status</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">pet</span>, <span style="color:#75715e">// New value becomes status value and current animal pet value
-</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">true</span> <span style="color:#75715e">// Set initial value (assume all animals are pets)
-</span><span style="color:#75715e"></span>);
-
-<span style="color:#75715e">// Result is true 
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">animalsArePets</span>);
-</code></pre></div><p>But it&rsquo;s not perfect, as the reducer function will run on every element, even if it finds an animal that isn&rsquo;t a pet. I do like that it could be written completely on one line.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Set the initial value
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">total</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Add everything up
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">n</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">someArray</span>) {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">total</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">n</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Result is 50: 5 + 10 + 15 + 20
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">total</span>);
+</span></span></code></pre></div><p>There are some circumstances where it can be nice to have everything together in one tidy declaration, such as checking that all elements have a certain property value:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">animals</span> <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>	{ <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Cat&#39;</span>, <span style="color:#a6e22e">pet</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> },
+</span></span><span style="display:flex;"><span>	{ <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Dog&#39;</span>, <span style="color:#a6e22e">pet</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> },
+</span></span><span style="display:flex;"><span>	{ <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hamster&#39;</span>, <span style="color:#a6e22e">pet</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> }
+</span></span><span style="display:flex;"><span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">animalsArePets</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">animals</span>.<span style="color:#a6e22e">reduce</span>(
+</span></span><span style="display:flex;"><span>	(<span style="color:#a6e22e">status</span>, <span style="color:#a6e22e">a</span>) =&gt; <span style="color:#a6e22e">status</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">pet</span>, <span style="color:#75715e">// New value becomes status value and current animal pet value
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">true</span> <span style="color:#75715e">// Set initial value (assume all animals are pets)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Result is true 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">animalsArePets</span>);
+</span></span></code></pre></div><p>But it&rsquo;s not perfect, as the reducer function will run on every element, even if it finds an animal that isn&rsquo;t a pet. I do like that it could be written completely on one line.</p>
 <p><code>reduce</code> is a tool that I have in my array toolbox, but it&rsquo;s usually one that I forget how to use. This post will serve as a set of instructions for the future.</p>
 
         </p>

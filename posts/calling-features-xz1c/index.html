@@ -150,7 +150,7 @@
         <h1>Getting Calling Features to Work on the Sony XZ1 Compact</h1>
         <small role="doc-subtitle">Enable VoLTE and WiFi Calling on the XZ1 Compact on MetroPCS (or other MVNO&#39;s)</small>
         <p class="post-date">
-            December 17, 2018
+            December 17, 2018 December 17, 2018
         </p>
 
         <ul class="post-tags">
@@ -180,65 +180,65 @@
 <p><em>UPDATE 2022/02/25: I originally posted this information on XDA in 2018, but I was worried that it would get corrupted with future forum upgrades, so I&rsquo;m capturing it here too. Enjoy.</em></p>
 <p><strong>DISCLAIMER: This will only work on Android 8.0, and may not work on some versions of 8.0 depending on the security patch date. I&rsquo;m using firmware version 47.A.1.16.20 with a security patch level of 2018/09/01.</strong></p>
 <p>I figured out how to get VoLTE and WiFi Calling to work on MetroPCS. The XZ1C works on T-Mobile because it recognizes T-Mobile specific SIM cards and loads the appropriate files when it detects one. For whatever reason, MetroPCS has SIM cards that don&rsquo;t provide a sim_config_id that the phone will recognize as being part of T-Mobile. The list of sim_config_id values that are recognized are contained in a file located within the APK /oem/overlay/com.sonymobile.customizationselector-res-305.apk. Within the APK, the file is located at /res/xml/configuration_selectors.xml. The xml contents are listed below:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
-<span style="color:#f92672">&lt;configurations&gt;</span>
-    <span style="color:#f92672">&lt;configuration</span> <span style="color:#a6e22e">config_id=</span><span style="color:#e6db74">&#34;408&#34;</span><span style="color:#f92672">&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.1<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.2<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.3<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.4<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.5<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.6<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.7<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.8<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.9<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.10<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.11<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.12<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.13<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.14<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.15<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.16<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.17<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.18<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S8663.1<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-    <span style="color:#f92672">&lt;/configuration&gt;</span>
-<span style="color:#f92672">&lt;/configurations&gt;</span>
-</code></pre></div><p>In order to get the MetroPCS SIM recognized, you need to add one line to the bottom of the list. This changes the code to the following:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
-<span style="color:#f92672">&lt;configurations&gt;</span>
-    <span style="color:#f92672">&lt;configuration</span> <span style="color:#a6e22e">config_id=</span><span style="color:#e6db74">&#34;408&#34;</span><span style="color:#f92672">&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.1<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.2<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.3<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.4<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.5<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.6<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.7<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.8<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.9<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.10<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.11<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.12<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.13<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.14<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.15<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.16<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.17<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.18<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S8663.1<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-		<span style="color:#f92672">&lt;sim_config_id&gt;</span>S8957.1<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
-    <span style="color:#f92672">&lt;/configuration&gt;</span>
-<span style="color:#f92672">&lt;/configurations&gt;</span>
-</code></pre></div><p>If you&rsquo;re on a different T-Mobile MVNO that supports VoLTE and WiFi Calling, but it&rsquo;s not working on your XZ1C, you can probably still get this to work. You&rsquo;ll need to figure out what sim_config_id to use using the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;configurations&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;configuration</span> <span style="color:#a6e22e">config_id=</span><span style="color:#e6db74">&#34;408&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.1<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.2<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.3<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.4<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.5<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.6<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.7<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.8<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.9<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.10<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.11<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.12<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.13<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.14<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.15<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.16<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.17<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.18<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S8663.1<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/configuration&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/configurations&gt;</span>
+</span></span></code></pre></div><p>In order to get the MetroPCS SIM recognized, you need to add one line to the bottom of the list. This changes the code to the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;configurations&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;configuration</span> <span style="color:#a6e22e">config_id=</span><span style="color:#e6db74">&#34;408&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.1<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.2<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.3<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.4<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.5<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.6<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.7<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.8<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.9<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.10<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.11<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.12<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.13<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.14<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.15<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.16<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.17<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S264.18<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;sim_config_id&gt;</span>S8663.1<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">&lt;sim_config_id&gt;</span>S8957.1<span style="color:#f92672">&lt;/sim_config_id&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/configuration&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/configurations&gt;</span>
+</span></span></code></pre></div><p>If you&rsquo;re on a different T-Mobile MVNO that supports VoLTE and WiFi Calling, but it&rsquo;s not working on your XZ1C, you can probably still get this to work. You&rsquo;ll need to figure out what sim_config_id to use using the following command:</p>
 <pre tabindex="0"><code>adb shell getprop persist.sys.sim_config_ids
 </code></pre><p>This should output a value similar to S8957.1. Use your value in the configuration_selectors.xml file.</p>
 <p>You also need to change the overlay priority in the AndroidManifest.xml file. The normal overlay has a priority of 305. I changed mine to 310, but anything over 305 should work.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; standalone=&#34;no&#34;?&gt;</span>
-<span style="color:#f92672">&lt;manifest</span> <span style="color:#a6e22e">xmlns:android=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span> <span style="color:#a6e22e">package=</span><span style="color:#e6db74">&#34;YOUR.PACKAGE.NAME&#34;</span><span style="color:#f92672">&gt;</span>
-    <span style="color:#f92672">&lt;overlay</span> <span style="color:#a6e22e">android:priority=</span><span style="color:#e6db74">&#34;310&#34;</span> <span style="color:#a6e22e">android:targetPackage=</span><span style="color:#e6db74">&#34;com.sonymobile.customizationselector&#34;</span><span style="color:#f92672">/&gt;</span>
-<span style="color:#f92672">&lt;/manifest&gt;</span>
-</code></pre></div><p>In order to modify this APK, I used <a href="https://ibotpeaches.github.io/Apktool/">apktool</a> to decompile the original APK and compile the modified APK. I followed <a href="https://forum.xda-developers.com/showthread.php?t=2213985">this</a> guide.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; standalone=&#34;no&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;manifest</span> <span style="color:#a6e22e">xmlns:android=</span><span style="color:#e6db74">&#34;http://schemas.android.com/apk/res/android&#34;</span> <span style="color:#a6e22e">package=</span><span style="color:#e6db74">&#34;YOUR.PACKAGE.NAME&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;overlay</span> <span style="color:#a6e22e">android:priority=</span><span style="color:#e6db74">&#34;310&#34;</span> <span style="color:#a6e22e">android:targetPackage=</span><span style="color:#e6db74">&#34;com.sonymobile.customizationselector&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/manifest&gt;</span>
+</span></span></code></pre></div><p>In order to modify this APK, I used <a href="https://ibotpeaches.github.io/Apktool/">apktool</a> to decompile the original APK and compile the modified APK. I followed <a href="https://forum.xda-developers.com/showthread.php?t=2213985">this</a> guide.</p>
 <p>Once the APK is built and signed, install it with adb:</p>
 <pre tabindex="0"><code>adb install yourapkhere.apk
 </code></pre><p>This is an overlay file which works using RRO, so you need to give the file the proper permissions to run. Enter the following command:</p>

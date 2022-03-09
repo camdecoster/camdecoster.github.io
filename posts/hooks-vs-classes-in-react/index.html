@@ -150,7 +150,7 @@
         <h1>Hooks vs. Classes in React</h1>
         <small role="doc-subtitle">Learn about using Hooks instead of Classes in React for creating components</small>
         <p class="post-date">
-            May 13, 2020
+            May 13, 2020 May 13, 2020
         </p>
 
         <ul class="post-tags">
@@ -171,24 +171,24 @@
             <p>I’m working on building a simple expense tracking site, very creatively named Expense Tracker. I’m building it using React for the front-end and Node/Express for the back-end with data being stored in a PostgreSQL database. Here’s a work in progress screenshot:</p>
 <p><img src="/posts/hooks-vs-classes-in-react/images/expense-tracker-wip.png" alt="work in progress view of expense tracker site"></p>
 <p>The main function of this site is to show you how much you’ve been spending in easy to read tables. I hadn’t needed to use tables with React before, so I started looking into it and found <a href="https://react-table.js.org/">React Table</a>. It’s easy to use and only required a quick npm package install. But I found out that it uses React Hooks. Here’s an example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">useMemo</span>( <span style="color:#75715e">// &lt;-- What is useMemo? A hook.
-</span><span style="color:#75715e"></span>    () =&gt; [
-      {
-        <span style="color:#a6e22e">col1</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hello&#39;</span>,
-        <span style="color:#a6e22e">col2</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;World&#39;</span>,
-      },
-      {
-        <span style="color:#a6e22e">col1</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;react-table&#39;</span>,
-        <span style="color:#a6e22e">col2</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;rocks&#39;</span>,
-      },
-      {
-        <span style="color:#a6e22e">col1</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;whatever&#39;</span>,
-        <span style="color:#a6e22e">col2</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;you want&#39;</span>,
-      },
-    ],
-    []
-)
-</code></pre></div><h2 id="what-are-hooks-in-react">What are Hooks in React?</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">useMemo</span>( <span style="color:#75715e">// &lt;-- What is useMemo? A hook.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    () =&gt; [
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">col1</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hello&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">col2</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;World&#39;</span>,
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">col1</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;react-table&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">col2</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;rocks&#39;</span>,
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">col1</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;whatever&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">col2</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;you want&#39;</span>,
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>    []
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h2 id="what-are-hooks-in-react">What are Hooks in React?</h2>
 <p>Simply put, Hooks let you use, or “hook” into, state and other features in functions rather than having to create classes (I’m only going to cover state in this post). Prior to Hooks, function components were sometimes referred to as stateless components because you couldn’t use state in them. Hooks now allow one to use state in functions along with other features. Here’s an <a href="https://reactjs.org/docs/hooks-intro.html">introduction</a> to them with more details. For me, using Hooks is a simpler way to create React components without having to complicate your app with class specific code. Here’s a class component for a simple button component that toggles between two values using a variable stored in state:</p>
 <p><script type="application/javascript" src="https://gist.github.com/camdecoster/795c10b2addc4112c3fb9b6a465c0947.js"></script>
 
@@ -201,33 +201,33 @@ Class example of ToggleButton component</p>
 <p>To declare a state variable with hooks, you simply use the useState hook and pass an initial value as an argument (which no longer has to be an object). It will return a state variable which stores the value (buttonText) and a function to update the value (setButtonText).
 const [buttonText, setButtonText] = useState(&lsquo;val1&rsquo;);
 This is much simpler than using a class component:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
-    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> {
-        <span style="color:#a6e22e">buttonText</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;val1&#34;</span>,
-    };
-}
-</code></pre></div><h2 id="reading-state-variables">Reading State Variables</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">props</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">props</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">buttonText</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;val1&#34;</span>,
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="reading-state-variables">Reading State Variables</h2>
 <p>With Hooks, the value of a state variable can be accessed just by reading it like any other variable.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">buttonText</span>);
-</code></pre></div><p>Again, it’s simpler than the equivalent with class components:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">buttonText</span>);
-</code></pre></div><h2 id="updating-state-variables">Updating State Variables</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">buttonText</span>);
+</span></span></code></pre></div><p>Again, it’s simpler than the equivalent with class components:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">buttonText</span>);
+</span></span></code></pre></div><h2 id="updating-state-variables">Updating State Variables</h2>
 <p>Updating the value of a state variable with Hooks is as simple as calling the update function from the initial declaration:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">setButtonText</span>(<span style="color:#e6db74">&#39;newVal&#39;</span>);
-</code></pre></div><p>Compared to the more complicated way using class components:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({ <span style="color:#a6e22e">buttonText</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;newVal&#39;</span> });
-</code></pre></div><h2 id="using-multiple-state-variables">Using Multiple State Variables</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">setButtonText</span>(<span style="color:#e6db74">&#39;newVal&#39;</span>);
+</span></span></code></pre></div><p>Compared to the more complicated way using class components:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">setState</span>({ <span style="color:#a6e22e">buttonText</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;newVal&#39;</span> });
+</span></span></code></pre></div><h2 id="using-multiple-state-variables">Using Multiple State Variables</h2>
 <p>To store multiple values in state, call useState multiple times:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">num1</span>, <span style="color:#a6e22e">setNum1</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>(<span style="color:#ae81ff">1</span>);
-<span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">num2</span>, <span style="color:#a6e22e">setNum2</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>(<span style="color:#ae81ff">2</span>);
-</code></pre></div><p>To store multiple values at once, use an array or object:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">setArr</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]);
-<span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">obj</span>, <span style="color:#a6e22e">setObj</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>({
-    <span style="color:#a6e22e">val1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
-    <span style="color:#a6e22e">val2</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>,
-});
-</code></pre></div><h2 id="recap">Recap</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">num1</span>, <span style="color:#a6e22e">setNum1</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>(<span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">num2</span>, <span style="color:#a6e22e">setNum2</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>(<span style="color:#ae81ff">2</span>);
+</span></span></code></pre></div><p>To store multiple values at once, use an array or object:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">arr</span>, <span style="color:#a6e22e">setArr</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">obj</span>, <span style="color:#a6e22e">setObj</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">val1</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">val2</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>,
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="recap">Recap</h2>
 <p>Hooks are a new way in React to write function components that can tap into features previously reserved for class components. The most visible of these is adding state using the useState hook. Using hooks can help simplify your code and make it easier to manage. There are other useful hooks that more or less replace the React class component lifecycle, and others that are brand new. You can also create your own custom hooks, so you’re not stuck with the standard functions. Hooks are relatively new, so start playing around with them and see what you can accomplish.</p>
 
         </p>
