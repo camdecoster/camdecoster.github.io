@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>json5 on Cameron DeCoster</title>
+    <link>https://camdecoster.github.io/tags/json5/</link>
+    <description>Recent content in json5 on Cameron DeCoster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 11 Mar 2022 08:20:03 -0700</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/json5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Convert JavaScript Object to String</title>
+      <link>https://camdecoster.github.io/posts/convert-javascript-object-to-string/</link>
+      <pubDate>Fri, 11 Mar 2022 08:20:03 -0700</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/convert-javascript-object-to-string/</guid>
+      <description>At my day job, the styles for one of the charting libraries that I develop are configured by passing in an object. There are lots of options to change (eg. color, line width, line dash, etc.) and it can be a bit much to keep track of without a list. To help guide users, we include a manual page which lists the contents of the styles object with default values. But updating this page requires manually copying the default styles from the DevTools console and pasting it into the manual page.</description>
+    </item>
+    
+  </channel>
+</rss>

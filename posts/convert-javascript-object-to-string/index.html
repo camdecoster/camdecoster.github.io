@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Convert JavaScript Object to String</title>
+    <meta name="description" content="For use in Markdown files, documents, etc.">
+    <meta name="keywords" content='blog, gokarna, hugo, devblog, javascript, object, string, markdown, json, json5, concat-md'>
+
+    <meta property="og:url" content="https://camdecoster.github.io/posts/convert-javascript-object-to-string/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Convert JavaScript Object to String">
+    <meta property="og:description" content="For use in Markdown files, documents, etc.">
+    <meta property="og:image" content="/posts/convert-javascript-object-to-string/images/header.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Convert JavaScript Object to String">
+    <meta name="twitter:description" content="For use in Markdown files, documents, etc.">
+    <meta property="twitter:domain" content="https://camdecoster.github.io/posts/convert-javascript-object-to-string/">
+    <meta property="twitter:url" content="https://camdecoster.github.io/posts/convert-javascript-object-to-string/">
+    <meta name="twitter:image" content="/posts/convert-javascript-object-to-string/images/header.png">
+
+    
+    <link rel="canonical" href="https://camdecoster.github.io/posts/convert-javascript-object-to-string/" />
+
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="/css/dark.css">
+
+    <script src="/js/svg-injector.min.js"></script>
+    <script src="/js/feather-icons.min.js"></script>
+    <script src="/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://camdecoster.github.io">
+                <img src="/images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://camdecoster.github.io">Cameron DeCoster</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="/"> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/posts/"> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://camdecoster.github.io/portfolio"> Portfolio </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/tags/"> Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/index.xml"><span data-feather='rss'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="/"> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/posts/"> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://camdecoster.github.io/portfolio"> Portfolio </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/tags/"> Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/index.xml"><span data-feather='rss'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+
+    <div class="post-header-section">
+        <h1>Convert JavaScript Object to String</h1>
+        <small role="doc-subtitle">For use in Markdown files, documents, etc.</small>
+        <p class="post-date">
+            March 11, 2022 March 11, 2022
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="/tags/devblog">devblog</a></li>
+        
+            <li class="post-tag"><a href="/tags/javascript">javascript</a></li>
+        
+            <li class="post-tag"><a href="/tags/object">object</a></li>
+        
+            <li class="post-tag"><a href="/tags/string">string</a></li>
+        
+            <li class="post-tag"><a href="/tags/markdown">markdown</a></li>
+        
+            <li class="post-tag"><a href="/tags/json">json</a></li>
+        
+            <li class="post-tag"><a href="/tags/json5">json5</a></li>
+        
+            <li class="post-tag"><a href="/tags/concat-md">concat-md</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p><img src="/posts/convert-javascript-object-to-string/images/header.png" alt="image alt text" title="Image title text"></p>
+<p>At my day job, the styles for one of the charting libraries that I develop are configured by passing in an object. There are lots of options to change (eg. color, line width, line dash, etc.) and it can be a bit much to keep track of without a list. To help guide users, we include a manual page which lists the contents of the styles object with default values. But updating this page requires manually copying the default styles from the DevTools console and pasting it into the manual page. As with any manually performed operation, it gets missed from time to time and the manual gets out of date. This happened again recently, so I decided to finally fix the problem.</p>
+<p>My requirements for a solution included the following:</p>
+<ul>
+<li>Include all of the existing manual page content</li>
+<li>Make it automated</li>
+<li>Make it look good</li>
+</ul>
+<p>To include all of the existing manual page content, I used a package that combines markdown files, called <a href="https://github.com/ozum/concat-md">concat-md</a>, available on <a href="https://www.npmjs.com/package/concat-md">npm</a>. To make it automated, I used an npm script. I&rsquo;ll get back to these points later, because most of the work involved the last requirement. In order to make it look good, I tried a few different options. Let&rsquo;s assume that this is my styles object:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">styles</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">background</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;red&#39;</span>
+</span></span><span style="display:flex;"><span>	},
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;blue&#39;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">lineDash</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;4,2&#39;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Now let&rsquo;s convert it.</p>
+<h2 id="convert-the-object-to-a-string">Convert the object to a string:</h2>
+<p>Input:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">styles</span>.<span style="color:#a6e22e">toString</span>());
+</span></span></code></pre></div><p>Output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">[</span>object Object<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>As you can see, that doesn&rsquo;t provide any useful information.</p>
+<h2 id="convert-the-object-into-json">Convert the object into JSON</h2>
+<p>Input:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">styles</span>));
+</span></span></code></pre></div><p>Output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">{</span><span style="color:#e6db74">&#34;background&#34;</span>:<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;color&#34;</span>:<span style="color:#e6db74">&#34;red&#34;</span><span style="color:#f92672">}</span>,<span style="color:#e6db74">&#34;color&#34;</span>:<span style="color:#e6db74">&#34;blue&#34;</span>,<span style="color:#e6db74">&#34;lineDash&#34;</span>:<span style="color:#e6db74">&#34;4,2&#34;</span>,<span style="color:#e6db74">&#34;width&#34;</span>:3<span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>That&rsquo;s closer, but we&rsquo;ve lost all of the formatting that makes it human readable. Thankfully, <code>JSON.stringify</code> has an option to add white space. I like tabs, so we&rsquo;ll use a tab character as the white space.</p>
+<p>Input:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">styles</span>, <span style="color:#66d9ef">null</span>, <span style="color:#e6db74">&#39;\t&#39;</span>));
+</span></span></code></pre></div><p>Output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;background&#34;</span>: <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;red&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;blue&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;lineDash&#34;</span>: <span style="color:#e6db74">&#34;4,2&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;width&#34;</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>Almost there, but I&rsquo;d prefer not to have quotation marks around the keys. Unfortunately, <code>JSON.stringify</code> has no option to remove the quotation marks. It is JSON after all.</p>
+<h2 id="convert-the-object-to-a-string-using-utilinspect">Convert the object to a string using <code>util.inspect</code></h2>
+<p>Node includes a handy utility called <code>inspect</code> that will convert the object into a string, including white space, and skip the quotation marks.</p>
+<p>Input:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">util</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;util&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">util</span>.<span style="color:#a6e22e">inspect</span>(<span style="color:#a6e22e">styles</span>));
+</span></span></code></pre></div><p>Output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  background: <span style="color:#f92672">{</span> color: <span style="color:#e6db74">&#39;red&#39;</span> <span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>  color: <span style="color:#e6db74">&#39;blue&#39;</span>,
+</span></span><span style="display:flex;"><span>  lineDash: <span style="color:#e6db74">&#39;4,2&#39;</span>,
+</span></span><span style="display:flex;"><span>  width: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>This is really close to what I&rsquo;m looking for, but it uses spaces instead of tabs and there&rsquo;s no way to change that.</p>
+<h2 id="convert-the-object-into-json5">Convert the object into JSON5</h2>
+<p>In searching for a solution, I discovered a package called <a href="https://json5.org/">JSON5</a> that describes itself as &ldquo;JSON for humans&rdquo;. Under it&rsquo;s summary of features, one <a href="https://json5.org/#objects">item</a> stood out to me:</p>
+<blockquote>
+<ul>
+<li>Objects
+<ul>
+<li><strong>Object keys may be an ECMAScript 5.1 IdentifierName.</strong></li>
+<li>Objects may have a single trailing comma.</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>In short, <code>JSON5.stringify</code> can convert objects to strings without quotation marks around the keys.</p>
+<p>Input:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">JSON5</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;json5&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">JSON5</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">styles</span>, <span style="color:#66d9ef">null</span>, <span style="color:#e6db74">&#39;\t&#39;</span>));
+</span></span></code></pre></div><p>Output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>	background: <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		color: <span style="color:#e6db74">&#39;red&#39;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>	color: <span style="color:#e6db74">&#39;blue&#39;</span>,
+</span></span><span style="display:flex;"><span>	lineDash: <span style="color:#e6db74">&#39;4,2&#39;</span>,
+</span></span><span style="display:flex;"><span>	width: 3,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>There we go. The only downside I&rsquo;ve found is that <code>JSON5.stringify</code> adds trailing commas by default when white space is added. And it doesn&rsquo;t look like there&rsquo;s any way to change that. From the documentation on <code>JSON5.stringify</code>:</p>
+<blockquote>
+<p><em>If white space is used, trailing commas will be used in objects and arrays.</em></p>
+</blockquote>
+<p>But that&rsquo;s a minor nag.</p>
+<h2 id="putting-it-all-together">Putting it all together</h2>
+<p>Now that we have the string version of the object, let&rsquo;s build the manual page. First up, a script to generate the markdown file, which we&rsquo;ll assume is located in the root directory and is titled &lsquo;stylesList.md&rsquo;:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// buildStylesList.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">JSON5</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;json5&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// These are example styles. Import your own styles in your script.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">styles</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">background</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;red&#39;</span>
+</span></span><span style="display:flex;"><span>	},
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;blue&#39;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">lineDash</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;4,2&#39;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Updating the styles list&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFile</span>(
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#39;./stylesList.md&#39;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#39;```javascript\n&#39;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">JSON5</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">styles</span>, <span style="color:#66d9ef">null</span>, <span style="color:#e6db74">&#39;\n&#39;</span>) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#39;\n```&#39;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">err</span> =&gt; { <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span>) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">err</span>); }
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Update complete&#39;</span>);
+</span></span></code></pre></div><p>Running this script will update &lsquo;stylesList.md&rsquo; to the following:</p>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span><span style="color:#e6db74">```javascript
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"></span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">background</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;red&#39;</span>,
+</span></span><span style="display:flex;"><span>	},
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;blue&#39;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">lineDash</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;4,2&#39;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">3</span>,
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```</span>
+</span></span></code></pre></div><p>Finally, let&rsquo;s use <code>concat-md</code> to put the styles info and list together. Create a <code>concat-md</code> execution script (assuming that &lsquo;styles.md&rsquo; exists in the root directory):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// concatMdFiles.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">concat</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;concat-md&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFile</span>(
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#39;./styles.md&#39;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">concatMd</span>.<span style="color:#a6e22e">concatMdSync</span>(<span style="color:#e6db74">&#39;./&#39;</span>),
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">err</span> =&gt; { <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span>) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">err</span>); }
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>Running this script will combine all of the markdown files from the root directory (in alphabetical order) into &lsquo;styles.md&rsquo;. If you generate documentation using the npm script &lsquo;doc&rsquo;, you can set this all to run before that with the following additional npm scripts in &lsquo;package.json&rsquo;:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;scripts&#34;</span>: {
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">&#34;buildStylesList&#34;</span>: <span style="color:#e6db74">&#34;node ./buildStylesList.js&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">&#34;concatMdFiles&#34;</span>: <span style="color:#e6db74">&#34;node ./concatMdFiles.js&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">&#34;predoc&#34;</span>: <span style="color:#e6db74">&#34;npm run buildStylesList &amp;&amp; npm run concatMdFiles&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">&#34;doc&#34;</span>: <span style="color:#e6db74">&#34;esdoc&#34;</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Now the styles list will be built every time documentation is generated, and you won&rsquo;t have to worry about pasting it in yourself. Just make sure you use your actual styles list instead of the example one. Good luck with creating your documentation!</p>
+
+        </p>
+    </div>
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2022 Cameron DeCoster</span>
+    <span>
+        Built with <a href="https://gohugo.io/">Hugo</a> and <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
