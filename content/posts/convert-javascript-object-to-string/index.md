@@ -7,7 +7,7 @@ image: "/posts/convert-javascript-object-to-string/images/header.png"
 type: post
 ---
 
-![batman slapping robin meme object/string](/posts/convert-javascript-object-to-string/images/header.png "Take that object!")
+![batman slapping robin meme: object? string!](/posts/convert-javascript-object-to-string/images/header.png "Take that object!")
 
 At my day job, the styles for one of the charting libraries that I develop are configured by passing in an object. There are lots of options to change (eg. color, line width, line dash, etc.) and it can be a bit much to keep track of without a list. To help guide users, we include a manual page which lists the contents of the styles object with default values. But updating this page requires manually copying the default styles from the DevTools console and pasting it into the manual page. As with any manually performed operation, it gets missed from time to time and the manual gets out of date. This happened again recently, so I decided to finally fix the problem.
 
