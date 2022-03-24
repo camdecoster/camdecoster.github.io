@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>quick tip on Cameron DeCoster</title>
+    <link>https://camdecoster.github.io/tags/quick-tip/</link>
+    <description>Recent content in quick tip on Cameron DeCoster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 24 Mar 2022 13:22:18 -0600</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/quick-tip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sort Git Tags by Date</title>
+      <link>https://camdecoster.github.io/posts/sort-git-tags-by-date/</link>
+      <pubDate>Thu, 24 Mar 2022 13:22:18 -0600</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/sort-git-tags-by-date/</guid>
+      <description>One of the libraries that I develop has a lot of tags. During a sprint, we tag new builds as alpha. At the end, we build a final release which we tag as a beta. When it comes to assigning the version number for this beta, I usually can&amp;rsquo;t remember what version we&amp;rsquo;re on. Thankfully, Git has a simple way to list all of your tags in chronological order:
+git tag --sort=taggerdate This command will print a list to the console like this:</description>
+    </item>
+    
+  </channel>
+</rss>
