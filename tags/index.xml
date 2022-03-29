@@ -6,13 +6,58 @@
     <description>Recent content in Tags on Cameron DeCoster</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Mar 2022 13:22:18 -0600</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Mar 2022 04:29:27 -0600</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>d3</title>
+      <link>https://camdecoster.github.io/tags/d3/</link>
+      <pubDate>Tue, 29 Mar 2022 04:29:27 -0600</pubDate>
+      
+      <guid>https://camdecoster.github.io/tags/d3/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>devblog</title>
       <link>https://camdecoster.github.io/tags/devblog/</link>
-      <pubDate>Thu, 24 Mar 2022 13:22:18 -0600</pubDate>
+      <pubDate>Tue, 29 Mar 2022 04:29:27 -0600</pubDate>
       
       <guid>https://camdecoster.github.io/tags/devblog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://camdecoster.github.io/tags/github/</link>
+      <pubDate>Tue, 29 Mar 2022 04:29:27 -0600</pubDate>
+      
+      <guid>https://camdecoster.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://camdecoster.github.io/tags/javascript/</link>
+      <pubDate>Tue, 29 Mar 2022 04:29:27 -0600</pubDate>
+      
+      <guid>https://camdecoster.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pages</title>
+      <link>https://camdecoster.github.io/tags/pages/</link>
+      <pubDate>Tue, 29 Mar 2022 04:29:27 -0600</pubDate>
+      
+      <guid>https://camdecoster.github.io/tags/pages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vue</title>
+      <link>https://camdecoster.github.io/tags/vue/</link>
+      <pubDate>Tue, 29 Mar 2022 04:29:27 -0600</pubDate>
+      
+      <guid>https://camdecoster.github.io/tags/vue/</guid>
       <description></description>
     </item>
     
@@ -58,15 +103,6 @@
       <pubDate>Fri, 11 Mar 2022 08:20:03 -0700</pubDate>
       
       <guid>https://camdecoster.github.io/tags/concat-md/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://camdecoster.github.io/tags/javascript/</link>
-      <pubDate>Fri, 11 Mar 2022 08:20:03 -0700</pubDate>
-      
-      <guid>https://camdecoster.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     
@@ -188,15 +224,6 @@
     </item>
     
     <item>
-      <title>d3</title>
-      <link>https://camdecoster.github.io/tags/d3/</link>
-      <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://camdecoster.github.io/tags/d3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>scale</title>
       <link>https://camdecoster.github.io/tags/scale/</link>
       <pubDate>Sat, 08 Jan 2022 00:00:00 +0000</pubDate>
@@ -287,29 +314,11 @@
     </item>
     
     <item>
-      <title>github</title>
-      <link>https://camdecoster.github.io/tags/github/</link>
-      <pubDate>Mon, 25 Oct 2021 13:21:58 -0600</pubDate>
-      
-      <guid>https://camdecoster.github.io/tags/github/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>hugo</title>
       <link>https://camdecoster.github.io/tags/hugo/</link>
       <pubDate>Mon, 25 Oct 2021 13:21:58 -0600</pubDate>
       
       <guid>https://camdecoster.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pages</title>
-      <link>https://camdecoster.github.io/tags/pages/</link>
-      <pubDate>Mon, 25 Oct 2021 13:21:58 -0600</pubDate>
-      
-      <guid>https://camdecoster.github.io/tags/pages/</guid>
       <description></description>
     </item>
     
