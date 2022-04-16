@@ -168,7 +168,7 @@
 
     <div class="post-content">
         <p>
-            <p><img src="/posts/jest-variables-test-execution-cycle/images/header.png" alt="image alt text" title="Image title text"></p>
+            <p><img src="/posts/jest-variables-test-execution-cycle/images/header.png" alt="test execution cycle" title="Test Execution Cycle"></p>
 <p>I recently ran into an issue with trying to write some unit tests for a charting component in <a href="https://jestjs.io/">Jest</a>. This component had three configuration options, so I wanted to test each one. This involved adding an event listener, setting the configuration for a test, triggering the event, and reviewing the data that was returned by the listener. Since I was running the same test three times, I decided to use a loop. I&rsquo;ve done this before and it has worked without issue. But not this time.</p>
 <p>Let&rsquo;s take a look at a simplified version of the test I was running:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">events</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;events&#39;</span>);
