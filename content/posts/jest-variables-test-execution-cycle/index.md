@@ -7,7 +7,7 @@ image: "/posts/jest-variables-test-execution-cycle/images/header.png"
 type: post
 ---
 
-![image alt text](/posts/jest-variables-test-execution-cycle/images/header.png "Image title text")
+![test execution cycle](/posts/jest-variables-test-execution-cycle/images/header.png "Test Execution Cycle")
 
 I recently ran into an issue with trying to write some unit tests for a charting component in [Jest](https://jestjs.io/). This component had three configuration options, so I wanted to test each one. This involved adding an event listener, setting the configuration for a test, triggering the event, and reviewing the data that was returned by the listener. Since I was running the same test three times, I decided to use a loop. I've done this before and it has worked without issue. But not this time.
 
