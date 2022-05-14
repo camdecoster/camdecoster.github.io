@@ -6,7 +6,7 @@
     <description>Recent content on Cameron DeCoster</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 16 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://camdecoster.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 May 2022 08:39:47 -0600</lastBuildDate><atom:link href="https://camdecoster.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Add Windows Keyboard Shortcuts With AutoHotKey</title>
       <link>https://camdecoster.github.io/posts/add-windows-keyboard-shortcuts-with-autohotkey/</link>
@@ -74,6 +74,16 @@ At the time, I was performing a number of exclusion zone calculations for pneuma
       <guid>https://camdecoster.github.io/posts/hooks-vs-classes-in-react/</guid>
       <description>I’m working on building a simple expense tracking site, very creatively named Expense Tracker. I’m building it using React for the front-end and Node/Express for the back-end with data being stored in a PostgreSQL database. Here’s a work in progress screenshot:
 The main function of this site is to show you how much you’ve been spending in easy to read tables. I hadn’t needed to use tables with React before, so I started looking into it and found React Table.</description>
+    </item>
+    
+    <item>
+      <title>One and a Half Years In</title>
+      <link>https://camdecoster.github.io/posts/one-and-a-half-years-in/</link>
+      <pubDate>Sat, 14 May 2022 08:39:47 -0600</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/one-and-a-half-years-in/</guid>
+      <description>I have some professional news: I&amp;rsquo;m starting a new job as a Software Developer at Observable! My last day at Markit was on 05/12 and my first day at Observable is on 05/16. How did this turn in my career path come to be? Let me recount it for you. But don&amp;rsquo;t worry; there&amp;rsquo;s no bad news in this story.
+I started working at the Markit Digital division of IHS Markit in October of 2020 (now a division in S&amp;amp;P Global; yay mergers!</description>
     </item>
     
     <item>
