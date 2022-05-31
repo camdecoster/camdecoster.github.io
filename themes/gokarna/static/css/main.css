@@ -237,6 +237,7 @@ pre {
 }
 
 pre {
+  max-height: 600px;
   font-size: 0.95rem;
   overflow: auto;
   padding: 20px;
