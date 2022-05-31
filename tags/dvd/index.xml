@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dvd on Cameron DeCoster</title>
+    <link>https://camdecoster.github.io/tags/dvd/</link>
+    <description>Recent content in dvd on Cameron DeCoster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 22 May 2022 13:14:01 -0600</lastBuildDate><atom:link href="https://camdecoster.github.io/tags/dvd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Rip the Audio from a Video DVD on Linux</title>
+      <link>https://camdecoster.github.io/posts/how-to-rip-audio-from-dvd/</link>
+      <pubDate>Sun, 22 May 2022 13:14:01 -0600</pubDate>
+      
+      <guid>https://camdecoster.github.io/posts/how-to-rip-audio-from-dvd/</guid>
+      <description>I recently purchased a copy of the DVD, &amp;ldquo;The Raconteurs: Live At Montreux 2008&amp;rdquo;. The recording is high quality and the set list is great. However, my intention was not to watch this video but to rip the audio from it. I listen to a lot of concerts as I work and I wanted to add this to my collection. I did this once a couple of years ago using a cross-platform program called DVD Audio Extractor and it made the process very easy.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>How to Rip the Audio from a Video DVD on Linux</title>
+    <meta name="description" content="Learn how to convert the audio track from a DVD video to something more portable">
+    <meta name="keywords" content='blog, gokarna, hugo, devblog, linux, dvd'>
+
+    <meta property="og:url" content="https://camdecoster.github.io/posts/how-to-rip-audio-from-dvd/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="How to Rip the Audio from a Video DVD on Linux">
+    <meta property="og:description" content="Learn how to convert the audio track from a DVD video to something more portable">
+    <meta property="og:image" content="/posts/how-to-rip-audio-from-dvd/images/header.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Rip the Audio from a Video DVD on Linux">
+    <meta name="twitter:description" content="Learn how to convert the audio track from a DVD video to something more portable">
+    <meta property="twitter:domain" content="https://camdecoster.github.io/posts/how-to-rip-audio-from-dvd/">
+    <meta property="twitter:url" content="https://camdecoster.github.io/posts/how-to-rip-audio-from-dvd/">
+    <meta name="twitter:image" content="/posts/how-to-rip-audio-from-dvd/images/header.png">
+
+    
+    <link rel="canonical" href="https://camdecoster.github.io/posts/how-to-rip-audio-from-dvd/" />
+
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link disabled id="dark-theme" rel="stylesheet" href="/css/dark.css">
+
+    <script src="/js/svg-injector.min.js"></script>
+    <script src="/js/feather-icons.min.js"></script>
+    <script src="/js/main.js"></script>
+
+    
+    
+        <!-- KaTeX -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.css" integrity="sha384-6LkG2wmY8FK9E0vU9OOr8UvLwsaqUg9SETfpq4uTCN1agNe8HRdE9ABlk+fVx6gZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/katex.min.js" integrity="sha384-31El76TwmbHj4rF9DyLsygbq6xoIobG0W+jqXim+a3dU9W53tdH3A/ngRPxOzzaB" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.16/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  
+    
+</head>
+<body>
+        <script type="text/javascript">
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://camdecoster.github.io">
+                <img src="/images/avatar.jpg" alt="avatar" />
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://camdecoster.github.io">Cameron DeCoster</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="/"> Home </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/posts/"> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://camdecoster.github.io/portfolio"> Portfolio </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/tags/"> Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="/index.xml"><span data-feather='rss'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <a>
+                    <span id="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="/"> Home </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/posts/"> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://camdecoster.github.io/portfolio"> Portfolio </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/tags/"> Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="/index.xml"><span data-feather='rss'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <a>
+                        <span id="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+
+    <div class="post-header-section">
+        <h1>How to Rip the Audio from a Video DVD on Linux</h1>
+        <small role="doc-subtitle">Learn how to convert the audio track from a DVD video to something more portable</small>
+        <p class="post-date">
+            May 22, 2022
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="/tags/devblog">devblog</a></li>
+        
+            <li class="post-tag"><a href="/tags/linux">linux</a></li>
+        
+            <li class="post-tag"><a href="/tags/dvd">dvd</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p>
+            <p><img src="/posts/how-to-rip-audio-from-dvd/images/header.png" alt="image alt text" title="Image title text"></p>
+<p>I recently purchased a copy of the DVD, &ldquo;<a href="https://youtu.be/a-SeNaClWmo">The Raconteurs: Live At Montreux 2008</a>&rdquo;. The recording is high quality and the set list is great. However, my intention was not to watch this video but to rip the audio from it. I listen to a lot of concerts as I work and I wanted to add this to my collection. I did this once a couple of years ago using a cross-platform program called <a href="https://www.dvdae.com/">DVD Audio Extractor</a> and it made the process very easy. I was able to use a free trial that first time, but that trial expired so I had to find a new solution. I seriously considered just buying a license for DVDAE, but I couldn&rsquo;t justify the cost for something that I would use so seldomly. As I use Debian Linux as my operating system, I was sure that I could find a combination of utilities to do the same thing that DVDAE does. And I did! But before I tell you how, keep in mind that you should only decrypt DVD&rsquo;s that you own and you should only use the resulting files yourself. Alright, here&rsquo;s how I managed it.</p>
+<h3 id="accessing-the-dvd">Accessing the DVD</h3>
+<p>Before you can access the DVD, you need to install the libraries necessary to decrypt DVD&rsquo;s on your OS. You can read about how to do that on Debian <a href="https://wiki.debian.org/CDDVD">here</a>. You&rsquo;ll also need a DVD drive. It&rsquo;s easier if your DVD drive and the DVD use the same region code, but it should still work even if they don&rsquo;t match.</p>
+<h3 id="get-title-and-chapter-info">Get Title and Chapter Info</h3>
+<p>There are a number of ways to do this, but I chose to use <a href="https://mplayerhq.hu/design7/news.html"><strong>MPlayer</strong></a>. MPlayer is a swiss-army-knife media player that&rsquo;s incredibly powerful. You only need it to get the title and chapter info from the DVD. After installing it, enter the following command into your console:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mplayer dvd://3 -identify -frames <span style="color:#ae81ff">0</span>
+</span></span></code></pre></div><p>This command tells MPlayer to provide information about title 3 in the DVD drive and suppress video output. The 3 in this case is the title number for the DVD where the recording is. You&rsquo;ll have to play around with that to find the correct title. Part of the result from this command will be a list of the chapter breaks down to the millisecond. You&rsquo;ll also notice that audio stream 0 has the stereo mix. Save this information for later. Your output should look similar to the following:</p>
+<pre tabindex="0"><code>MPlayer 1.4 (Debian), built with gcc-10 (C) 2000-2019 MPlayer Team
+do_connect: could not connect to socket
+connect: No such file or directory
+Failed to open LIRC support. You will not be able to use your remote control.
+
+Playing dvd://3.
+ID_DVD_TITLES=5
+ID_DVD_TITLE_1_CHAPTERS=1
+ID_DVD_TITLE_1_ANGLES=1
+ID_DVD_TITLE_2_CHAPTERS=1
+ID_DVD_TITLE_2_ANGLES=1
+ID_DVD_TITLE_3_CHAPTERS=17
+ID_DVD_TITLE_3_ANGLES=1
+ID_DVD_TITLE_4_CHAPTERS=1
+ID_DVD_TITLE_4_ANGLES=1
+ID_DVD_TITLE_5_CHAPTERS=1
+ID_DVD_TITLE_5_ANGLES=1
+ID_DVD_TITLE_1_LENGTH=20.033
+ID_DVD_TITLE_2_LENGTH=0.400
+ID_DVD_TITLE_3_LENGTH=5365.266
+ID_DVD_TITLE_4_LENGTH=26.000
+ID_DVD_TITLE_5_LENGTH=0.400
+ID_DVD_DISC_ID=F5BEE0D2BA7F4D56A78EC56AA63A33D9
+ID_DVD_VOLUME_ID=EE392449
+There are 5 titles on this DVD.
+
+ID_DVD_CURRENT_TITLE=3
+There are 1 angles in this DVD title.
+libdvdread: Attempting to retrieve all CSS keys
+libdvdread: This can take a _long_ time, please be patient
+libdvdread: Get key for /VIDEO_TS/VIDEO_TS.VOB at 0x0000012b
+libdvdread: Elapsed time 0
+libdvdread: Get key for /VIDEO_TS/VTS_01_0.VOB at 0x00022a2d
+libdvdread: Elapsed time 0
+libdvdread: Get key for /VIDEO_TS/VTS_01_1.VOB at 0x00022a31
+libdvdread: Elapsed time 0
+libdvdread: Get key for /VIDEO_TS/VTS_02_0.VOB at 0x00024766
+libdvdread: Elapsed time 0
+libdvdread: Get key for /VIDEO_TS/VTS_02_1.VOB at 0x000428ef
+libdvdread: Elapsed time 0
+libdvdread: Found 2 VTS&#39;s
+libdvdread: Elapsed time 0
+audio stream: 0 format: ac3 (stereo) language: en aid: 128.
+
+ID_AUDIO_ID=128
+ID_AID_128_LANG=en
+audio stream: 1 format: ac3 (5.1) language: en aid: 129.
+
+ID_AUDIO_ID=129
+ID_AID_129_LANG=en
+audio stream: 2 format: dts (5.1) language: en aid: 138.
+
+ID_AUDIO_ID=138
+ID_AID_138_LANG=en
+number of audio channels on disk: 3.
+number of subtitles on disk: 0
+
+CHAPTERS: 00:00:00.000,00:04:33.800,00:08:18.567,00:13:34.800,00:19:09.767,00:23:16.701,00:26:50.401,00:30:35.201,00:34:49.068,00:40:14.535,00:46:05.202,00:57:18.535,01:07:38.068,01:12:38.568,01:17:30.235,01:20:41.235,01:29:24.735,
+ID_VIDEO_ID=0
+MPEG-PS file format detected.
+ID_AUDIO_ID=128
+VIDEO:  MPEG2  720x480  (aspect 3)  29.970 fps  9800.0 kbps (1225.0 kbyte/s)
+libva info: VA-API version 1.10.0
+libva info: Trying to open /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so
+libva info: Found init function __vaDriverInit_1_10
+libva info: va_openDriver() returns 0
+==========================================================================
+Opening video decoder: [ffmpeg] FFmpeg&#39;s libavcodec codec family
+libavcodec version 58.91.100 (external)
+Selected video codec: [ffmpeg2] vfm: ffmpeg (FFmpeg MPEG-2)
+==========================================================================
+ID_VIDEO_CODEC=ffmpeg2
+ID_FILENAME=dvd://3
+ID_DEMUXER=mpegps
+ID_VIDEO_FORMAT=0x10000002
+ID_VIDEO_BITRATE=9800000
+ID_VIDEO_WIDTH=720
+ID_VIDEO_HEIGHT=480
+ID_VIDEO_FPS=29.970
+ID_VIDEO_ASPECT=0.0000
+ID_AUDIO_FORMAT=8192
+ID_AUDIO_BITRATE=0
+ID_AUDIO_RATE=0
+ID_AUDIO_NCH=0
+ID_START_TIME=0.28
+ID_LENGTH=5365.27
+ID_SEEKABLE=1
+ID_CHAPTERS=17
+==========================================================================
+Opening audio decoder: [ffmpeg] FFmpeg/libavcodec audio decoders
+AUDIO: 48000 Hz, 2 ch, floatle, 448.0 kbit/14.58% (ratio: 56000-&gt;384000)
+ID_AUDIO_BITRATE=448000
+ID_AUDIO_RATE=48000
+ID_AUDIO_NCH=2
+Selected audio codec: [ffac3] afm: ffmpeg (FFmpeg AC-3)
+==========================================================================
+AO: [pulse] 48000Hz 2ch floatle (4 bytes per sample)
+ID_AUDIO_CODEC=ffac3
+Starting playback...
+
+
+Exiting... (End of file)
+ID_EXIT=EOF
+corrupted size vs. prev_size in fastbins
+
+
+MPlayer interrupted by signal 6 in module: exit_player
+ID_SIGNAL=6
+</code></pre><h3 id="convert-audio-to-wav">Convert Audio to WAV</h3>
+<p>Most DVD&rsquo;s have a stereo version of the <a href="https://en.wikipedia.org/wiki/DVD-Video#Audio_data">audio track</a> included on the disc. That&rsquo;s what you should convert as that&rsquo;s going to sound best on headphones. A simple way to do this is to use the <a href="https://wiki.videolan.org/Transcode/">convert function</a> from VLC. With VLC open, choose <em>Convert/Save</em> from the File menu.</p>
+<p><img src="/posts/how-to-rip-audio-from-dvd/images/vlc_menu.png" alt="vlc file menu" title="VLC File Menu"></p>
+<p>This will bring up the <em>Open Media</em> dialog. Choose the Disc tab at the top and select the correct title in the <em>Starting Position</em> section. VLC will default to an audio track of -1, which will select the first audio track. In our case that matches stream 0, so we&rsquo;ll leave that setting as is. If it didn&rsquo;t, you&rsquo;d need to select the proper audio track. Without changing any other settings, this will convert the entire video to a single WAV file.</p>
+<p><img src="/posts/how-to-rip-audio-from-dvd/images/vlc_open_media.png" alt="vlc open media dialog" title="VLC Open Media Dialog"></p>
+<p>Click the <em>Convert/Save</em> button to open the <em>Convert</em> dialog. Select the proper profile and choose a destination file. A good option is <em>Audio - CD</em>. I created a tweaked version of this called <em>Audio - DVD Video</em> with a Bitrate of 448kb/s and a sample rate of 48000Hz. I used this to get a slightly higher audio quality. Click the <em>Start</em> button to start the conversion.</p>
+<p><img src="/posts/how-to-rip-audio-from-dvd/images/vlc_convert.png" alt="vlc open convert dialog" title="VLC Open convert Dialog"></p>
+<p>Once the conversion has completed, you&rsquo;ll have one large WAV file of the entire video. Now it&rsquo;s time to break the large file into the smaller chapter files (or song tracks in this case). Select <em>Convert/Save</em> from the File menu again, but this time choose the File tab and open the WAV file that you just created. Now refer to the chapter breaks you found using MPlayer. Enter the second chapter break into <em>Stop Time</em> input (the first one after 00:00:00.000), then click the <em>Convert/Save</em> button.</p>
+<p><img src="/posts/how-to-rip-audio-from-dvd/images/vlc_open_media_file.png" alt="vlc open media dialog file tab" title="VLC Open Media Dialog File Tab"></p>
+<p>Choose the same profile, enter a file name for the chapter, and click the <em>Start</em> button. After this has completed, go through the process again but move the previous <em>Stop Time</em> to <em>Start Time</em>, and enter the next chapter break as the new <em>Stop Time</em>. Continue doing this until you&rsquo;ve broken up the entire WAV file.</p>
+<h3 id="convert-wav-to-mp3">Convert WAV to MP3</h3>
+<p>Now that the individual tracks have been converted to WAV files, it&rsquo;s time to convert them to something more portable. Choose whichever format you want, but I used MP3 due to broad support of the format. The GNOME project includes a program called <a href="https://soundconverter.org/">Sound Converter</a> that makes this simple (including drag and drop). It uses <a href="https://gstreamer.freedesktop.org/">GStreamer</a> to do the conversion and is straightforward to configure. Here are my preferences:</p>
+<p><img src="/posts/how-to-rip-audio-from-dvd/images/sound_converter_pref.png" alt="sound converter preferences" title="Sound Converter Preferences"></p>
+<p>Here&rsquo;s the main window after I&rsquo;ve added my files to convert:</p>
+<p><img src="/posts/how-to-rip-audio-from-dvd/images/sound_converter.png" alt="sound converter main window" title="Sound Converter Main Window"></p>
+<p>Just click <strong>Convert</strong> and Sound Converter will handle the rest.</p>
+<h3 id="update-file-tags">Update File Tags</h3>
+<p>The conversion is done at this point, but the files will be easier to use if they have some metadata in the form of ID3 tags. I used <a href="https://docs.puddletag.net/">puddletag</a> to manage this. Open the program and drag your files into the main window.</p>
+<p><img src="/posts/how-to-rip-audio-from-dvd/images/puddletag.png" alt="puddletag main window" title="puddletag Main Window"></p>
+<p>Start entering all of the proper tag information. At a minimum, this should include artist, title, album, track, and artwork. After entering a value in one column, you can copy that cell and paste it into all of the cells in the column below. To add artwork, select all of the files and right click the cover art graphic, then select <em>Add Cover</em>. Once you&rsquo;re done with all of that, save everything with Ctrl-S or <em>File &gt; Save</em>. Congratulations, you&rsquo;ve finished the conversion.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>This is not the only way to do this and is likely not the best/easiest way to do this. But this way worked for me do it will probably work for you too. It&rsquo;s a bit cumbersome, so there&rsquo;s room for improvement (and automation). If you have any suggestions, please get it touch with me. Enjoy listening to those DVD&rsquo;s!</p>
+
+        </p>
+    </div>
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    <span>&copy; 2022 Cameron DeCoster</span>
+    <span>
+        Built with <a href="https://gohugo.io/">Hugo</a> and <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>
