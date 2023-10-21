@@ -22,6 +22,7 @@ pygmentsStyle = "monokai"
         onload="renderMathInElement(document.body);"></script>
   """
   socialIcons = [
+    {name = "mastodon", url = "https://mastodon.online/@camdecoster"},
     {name = "twitter", url = "https://twitter.com/camdecoster"},
     {name = "linkedin", url = "https://www.linkedin.com/in/camerondecoster"},
     {name = "github", url = "https://github.com/camdecoster"}
