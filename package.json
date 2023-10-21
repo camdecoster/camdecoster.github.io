@@ -8,10 +8,7 @@
 	"name": "camdecoster.github.io",
 	"private": true,
 	"scripts": {
-		"build": "hugo -D",
-		"predeploy": "npm run build",
-		"deploy": "gh-pages -d public",
-		"dev": "hugo server",
+		"dev": "hugo server --buildDrafts",
 		"test": "jest"
 	}
 }
