@@ -9,11 +9,11 @@ type: post
 
 ![image alt text](/posts/how-to-rip-audio-from-dvd/images/header.png "Image title text")
 
-I recently purchased a copy of the DVD, "[The Raconteurs: Live At Montreux 2008](https://youtu.be/a-SeNaClWmo)". The recording is high quality and the set list is great. However, my intention was not to watch this video but to rip the audio from it. I listen to a lot of concerts as I work and I wanted to add this to my collection. I did this once a couple of years ago using a cross-platform program called [DVD Audio Extractor](https://www.dvdae.com/) and it made the process very easy. I was able to use a free trial that first time, but that trial expired so I had to find a new solution. I seriously considered just buying a license for DVDAE, but I couldn't justify the cost for something that I would use so seldomly. As I use Debian Linux as my operating system, I was sure that I could find a combination of utilities to do the same thing that DVDAE does. And I did! But before I tell you how, keep in mind that you should only decrypt DVD's that you own and you should only use the resulting files yourself. Alright, here's how I managed it.
+I recently purchased a copy of the DVD, "[The Raconteurs: Live At Montreux 2008](https://youtu.be/a-SeNaClWmo)". The recording is high quality and the set list is great. However, my intention was not to watch this video but to rip the audio from it. I listen to a lot of concerts as I work and I wanted to add this to my collection. I did this once a couple of years ago using a cross-platform program called [DVD Audio Extractor](https://www.dvdae.com/) and it made the process very easy. I was able to use a free trial that first time, but that trial expired so I had to find a new solution. I seriously considered just buying a license for DVDAE, but I couldn't justify the cost for something that I would use so seldomly. As I use Debian Linux as my operating system, I was sure that I could find a combination of utilities to do the same thing that DVDAE does. And I did! But before I tell you how, keep in mind that you should only decrypt DVDs that you own and you should only use the resulting files yourself. Alright, here's how I managed it.
 
 ### Accessing the DVD
 
-Before you can access the DVD, you need to install the libraries necessary to decrypt DVD's on your OS. You can read about how to do that on Debian [here](https://wiki.debian.org/CDDVD). You'll also need a DVD drive. It's easier if your DVD drive and the DVD use the same region code, but it should still work even if they don't match.
+Before you can access the DVD, you need to install the libraries necessary to decrypt DVDs on your OS. You can read about how to do that on Debian [here](https://wiki.debian.org/CDDVD). You'll also need a DVD drive. It's easier if your DVD drive and the DVD use the same region code, but it should still work even if they don't match.
 
 ### Get Title and Chapter Info
 
@@ -138,7 +138,7 @@ ID_SIGNAL=6
 
 ### Convert Audio to WAV
 
-Most DVD's have a stereo version of the [audio track](https://en.wikipedia.org/wiki/DVD-Video#Audio_data) included on the disc. That's what you should convert as that's going to sound best on headphones. A simple way to do this is to use the [convert function](https://wiki.videolan.org/Transcode/) from VLC. With VLC open, choose *Convert/Save* from the File menu.
+Most DVDs have a stereo version of the [audio track](https://en.wikipedia.org/wiki/DVD-Video#Audio_data) included on the disc. That's what you should convert as that's going to sound best on headphones. A simple way to do this is to use the [convert function](https://wiki.videolan.org/Transcode/) from VLC. With VLC open, choose *Convert/Save* from the File menu.
 
 ![vlc file menu](/posts/how-to-rip-audio-from-dvd/images/vlc_menu.png "VLC File Menu")
 
@@ -178,4 +178,4 @@ Start entering all of the proper tag information. At a minimum, this should incl
 
 ### Conclusion
 
-This is not the only way to do this and is likely not the best/easiest way to do this. But this way worked for me do it will probably work for you too. It's a bit cumbersome, so there's room for improvement (and automation). If you have any suggestions, please get it touch with me. Enjoy listening to those DVD's!
+This is not the only way to do this and is likely not the best/easiest way to do this. But this way worked for me do it will probably work for you too. It's a bit cumbersome, so there's room for improvement (and automation). If you have any suggestions, please get it touch with me. Enjoy listening to those DVDs!
