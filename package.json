@@ -1,14 +1,37 @@
 {
-	"author": "Cameron DeCoster",
-	"description": "Blog for Cameron DeCoster",
-	"devDependencies": {
-		"gh-pages": "^3.2.3",
-		"jest": "^27.5.1"
-	},
-	"name": "camdecoster.github.io",
-	"private": true,
-	"scripts": {
-		"dev": "hugo server --buildDrafts",
-		"test": "jest"
-	}
+  "name": "camdecoster-blog",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.3.1",
+    "@astrojs/mdx": "^2.0.0",
+    "@astrojs/rss": "^4.0.0",
+    "@astrojs/sitemap": "^3.0.3",
+    "astro": "^4.0.2"
+  },
+  "devDependencies": {
+    "@iconify-json/bi": "^1.1.21",
+    "@stylistic/eslint-plugin": "^1.5.1",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@unocss/transformer-directives": "^0.58.0",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard-with-typescript": "^42.0.0",
+    "eslint-plugin-astro": "^0.30.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-n": "^16.4.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "typescript": "^5.3.3",
+    "unocss": "^0.58.0"
+  }
 }

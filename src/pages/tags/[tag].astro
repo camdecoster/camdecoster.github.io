@@ -1,0 +1,79 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import { getTagCounts, getTagPosts } from "@utils/tagUtils";
+import BaseHead from "@components/BaseHead.astro";
+import Footer from "@components/Footer.astro";
+import FormattedDate from "@components/FormattedDate.astro";
+import Header from "@components/Header.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "consts";
+
+export async function getStaticPaths() {
+  const posts = (
+    await getCollection("blog", ({ data }) =>
+      import.meta.env.PROD ? !data.draft : true,
+    )
+  )
+  const tagCounts = getTagCounts(posts);
+
+  return tagCounts.map(([tag]) => ({
+    params: { tag },
+    props: { tag },
+  }));
+}
+
+
+type Props = {
+  posts: CollectionEntry<"blog">;
+  tag: string;
+}
+
+const { tag } = Astro.props;
+const posts = (
+  await getCollection("blog", ({ data }) =>
+    import.meta.env.PROD ? !data.draft : true,
+  )
+).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const tagPosts = getTagPosts(tag, posts);
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={`#${tag} Posts | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class="px-2 sm:p-0 mt-15 sm:mt-30">
+      <h3 class="text-3xl">Posts with tag <b>#{tag}</b></h3>
+      <button
+        class:list={[
+          "flex items-center text-base mb-4",
+          "hover:text-accent transition-colors",
+        ]}
+        onclick="history.back()"
+      >
+        <div class="i-bi-chevron-left mr-1" />
+        All Tags
+      </button>
+      <ul>
+        {
+          tagPosts.map(post => (
+            <li class="my-6 text-base">
+              <a class="flex justify-between" href={`/posts/${post.slug}/`}>
+                <div class="text-xl decoration-dashed hover:underline">
+                  {post.data.title}
+                </div>
+              </a>
+              <div class="date">
+                <FormattedDate date={post.data.pubDate} />
+              </div>
+              <div>
+                <i>{post.data.description}</i>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+    <Footer />
+  </body>
+</html>

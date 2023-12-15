@@ -1,0 +1,37 @@
+---
+interface Props {
+  class?: string;
+  reverse?: boolean;
+  skills: string[];
+}
+
+const { class: className, reverse = false, skills } = Astro.props;
+---
+
+<ul
+  class:list={[
+    "flex items-center",
+    reverse && "flex-row-reverse",
+    className,
+  ]}
+>
+  {
+    skills.map((s, i) => (
+      <li
+        class:list={[
+          i > 0 && (reverse ? "mr-1" : "ml-1"),
+          "p-2 leading-none text-sm text-dark-primary font-bold rounded bg-red",
+        ]}
+      >
+        {s}
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  ul {
+    list-style-type: none;    
+    margin-left: 0;
+  }
+</style>

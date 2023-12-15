@@ -1,0 +1,89 @@
+{
+	"projects": [
+		{
+			"name": "D3 Tester",
+			"description": "A tool that lets users test out configurations of the latest D3 modules. This includes the following modules: d3-format, d3-time-format.",
+			"tech": [
+				"JavaScript",
+				"Vue",
+				"Node"
+			],
+			"urls": {
+				"code": "https://github.com/camdecoster/d3-tester",
+				"site": "https://camdecoster.github.io/d3-tester"
+			},
+			"image": "d3_tester.png"
+		},
+		{
+			"name": "Pocket Casts Dark Blue Theme",
+			"description": "This is a dark blue theme with orange accents for the Pocket Casts web player. It's built using LESS and compiled to a single style. This user style can be installed using the Stylus browser extension.",
+			"tech": [
+				"CSS",
+				"LESS",
+				"Stylus"
+			],
+			"urls": {
+				"code": "https://github.com/camdecoster/pocket-casts-dark-blue",
+				"site": "https://play.pocketcasts.com"
+			},
+			"image": "pocket_casts_dark_blue.png"
+		},
+		{
+			"name": "Quiz Builder",
+			"description": "Quiz Builder is a site that helps you create simple multiple choice quizzes and share them with your friends. Each quiz can have up to 20 questions and each question can have up to 8 answer choices. It's built using Node/Express/PostgreSQL for the backend and React for the frontend and includes authentication using JSON web tokens. The backend is offline due to Heroku platform changes.",
+			"tech": [
+				"JavaScript",
+				"React",
+				"PostgreSQL",
+				"Node"
+			],
+			"urls": {
+				"code": "https://github.com/camdecoster/quiz-builder-client",
+				"site": "https://quiz-builder-client.vercel.app/"
+			},
+			"image": "quiz_builder.png"
+		},
+		{
+			"name": "Expense Tracker",
+			"description": "Expense Tracker is an easy to use budgeting app that helps one keep track of their expenses and see trends over time. It's built using Node/Express/PostgreSQL for the backend and React for the frontend and includes authentication using JSON web tokens. The backend is offline due to Heroku platform changes.",
+			"tech": [
+				"JavaScript",
+				"React",
+				"PostgreSQL",
+				"Node"
+			],
+			"urls": {
+				"code": "https://github.com/camdecoster/expense-tracker-client",
+				"site": "https://expense-tracker-client.vercel.app"
+			},
+			"image": "expense_tracker.png"
+		},
+		{
+			"name": "Down The Tubes",
+			"description": "Down The Tubes is a site designed to help you find old YouTube videos that you posted on your blog. Just enter your blog address and see what comes up.",
+			"tech": [
+				"JavaScript",
+				"React",
+				"Node"
+			],
+			"urls": {
+				"code": "https://github.com/camdecoster/expense-tracker-client",
+				"site": "https://expense-tracker-client.vercel.app"
+			},
+			"image": "down_the_tubes.png"
+		},
+		{
+			"name": "Markdown Previewer",
+			"description": "Markdown Previewer allows you to enter markdown in the left pane and shows you a preview of the corresponding HTML in the right pane. It's styled using Bootstrap (via Bootstrap Vue) and compiles the markdown using Marked.",
+			"tech": [
+				"JavaScript",
+				"Vue"
+			],
+			"urls": {
+				"code": "https://github.com/camdecoster/vue-markdown",
+				"site": "https://camdecoster.github.io/vue-markdown"
+			},
+			"image": "vue_markdown.png"
+		}
+	]
+}

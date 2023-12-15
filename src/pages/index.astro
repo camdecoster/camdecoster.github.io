@@ -1,0 +1,107 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Hr from "../components/Hr.astro";
+import Footer from "../components/Footer.astro";
+import {
+  RECENT_POSTS_LIMIT,
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  SOCIAL_LINKS,
+} from "../consts";
+import Avatar from "../components/Avatar.astro";
+import { getCollection } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+
+const posts = (
+  await getCollection("blog", ({ data }) =>
+    import.meta.env.PROD ? !data.draft : true,
+  )
+)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, RECENT_POSTS_LIMIT);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main class="px-2 sm:p-0 mt-15 sm:mt-30">
+      <section class="flex flex-col sm:flex-row items-center pb-4 my-10">
+        <Avatar class="mb-4 sm:mr-7 sm:mb-0" width={220} />
+        <div class="flex flex-col items-center sm:items-start">
+          <h1>Cameron DeCoster</h1>
+          <h4>Fullstack Software Engineer</h4>
+          <div class="mt-4 flex items-center text-3xl">
+            {
+              SOCIAL_LINKS.map((l, i) => (
+                <a href={l.href} target="_blank" rel="me">
+                  <div
+                    class:list={[
+                      i < SOCIAL_LINKS.length - 1 && "mr-3",
+                      "text-white hover:text-accent transition-all",
+                      l.icon,
+                    ]}
+                  />
+                  
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+      <Hr />
+      <section class="mt-4">
+        <h3 class="text-3xl">Recent Posts</h3>
+        <ul>
+          {
+            posts.map(post => (
+              <li class="my-6 text-base">
+                <a class="flex justify-between" href={`/posts/${post.slug}/`}>
+                  <div class="text-xl decoration-dashed hover:underline">
+                    {post.data.title}
+                  </div>
+                </a>
+                <div class="date">
+                  <FormattedDate date={post.data.pubDate} />
+                </div>
+                <div>
+                  <i>{post.data.description}</i>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+        <div class="flex justify-center">
+          <a href="/posts" class="text-white flex items-center">
+            All Posts
+            <div class="i-bi-arrow-right ml-2" />
+          </a>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+	main {
+		max-width: 48rem;
+	}
+
+	main h1,
+	main h2 {
+		@apply text-center sm:text-left;
+	}
+
+	main h1 {
+		@apply font-bold font-size-9 sm:font-size-13;
+	}
+
+	main h4 {
+		@apply font-size-5 sm:font-size-7;
+	}
+</style>

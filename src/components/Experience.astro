@@ -1,0 +1,47 @@
+---
+import { positions } from "../data/experience.json";
+import Hr from "./Hr.astro";
+import SkillsList from "./SkillsList.astro";
+
+type Props = {
+  class?: string;
+}
+
+const {class: className} = Astro.props;
+---
+
+<div class:list={[className]} id="experience">
+  <h2 class="text-3xl font-bold">Experience</h2>
+  <Hr class="my-5"/>
+  {
+    positions.map((p, i) => (
+      <>
+        {i > 0 && <div class="my-10" />}
+        <div class="py-2">
+          <div class="flex flex-col-reverse items-center sm:flex-row sm:items-start justify-between mb-5">
+            <div>
+              <h3 class="text-2xl font-bold">{p.company.name}</h3>
+              <div class="mb-2 italic">{p.company.description}</div>
+              <div class="font-bold">
+                <span>{p.title}</span>
+                <span>{p.duration}</span>
+              </div>
+            </div>
+            <img
+              alt={`${p.company.name} logo`}
+              class="mb-10 sm:mb-0 sm:ml-2"
+              src={`/images/${p.company.logo}`}
+              width={150}
+            />
+          </div>
+          <ul class="list-disc ml-4">
+            {p.description.map(i => (
+              <li>{i}</li>
+            ))}
+          </ul>
+          <SkillsList class="mt-5" skills={p.skills} />
+        </div>
+      </>
+    ))
+  }
+</div>

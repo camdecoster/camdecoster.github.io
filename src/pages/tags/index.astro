@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import { getTagCounts } from "@utils/tagUtils";
+import BaseHead from "@components/BaseHead.astro";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Tag from "@components/Tag.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+
+const posts = await getCollection("blog", ({ data }) =>
+  import.meta.env.PROD ? !data.draft : true,
+);
+const tagCounts = getTagCounts(posts);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main class="px-2 sm:p-0 mt-15 sm:mt-30">
+      <section>
+        <h3 class="text-3xl">Tags</h3>
+        {
+          tagCounts.map(([name, count]) => (
+            <Tag class="mr-1 mb-1" count={count} name={name} />
+          ))
+        }
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
