@@ -74,11 +74,20 @@ const headerLinkLocations: HeaderLinkLocations[] = [
         headerLinkLocations.map(({ href, content }) => (
           <li class="my-2">
             <a class="text-white hover:text-accent" href={href}>
-              <div set:html={content} />
+              {content}
             </a>
           </li>
         ))
       }
+      <li class="my-2 flex items-center justify-center" style="height: 30.6px;">
+        <a
+          class="text-white hover:text-accent"
+          href="/rss.xml"
+          title="RSS Feed"
+        >
+          <div class="i-bi-rss-fill" />
+        </a>
+      </li>
     </ul>
   </nav>
 </header>

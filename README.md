@@ -25,4 +25,4 @@ npm run dev
 
 ## Deploying updates
 
-Updates are deployed automatically using a custom [Astro GitHub Action](https://docs.astro.build/en/guides/deploy/github/). Previously, updates relied on the **gh-pages** package library to handle this. You can read about that solution [here](https://camdecoster.github.io/posts/how-to-deploy-a-hugo-blog-to-github-pages/).
+Updates are deployed automatically using a custom [Astro GitHub Action](https://docs.astro.build/en/guides/deploy/github/). Previously, updates relied on the **gh-pages** package library to handle this. You can read about that solution [here](https://camdecoster.dev/posts/how-to-deploy-a-hugo-blog-to-github-pages/).

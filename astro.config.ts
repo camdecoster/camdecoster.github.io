@@ -4,7 +4,7 @@ import { defineConfig } from "astro/config";
 import UnoCSS from "unocss/astro"
 
 export default defineConfig({
-  site: "https://camdecoster.github.io",
+  site: "https://camdecoster.dev",
   integrations: [
     mdx(),
     sitemap(),
