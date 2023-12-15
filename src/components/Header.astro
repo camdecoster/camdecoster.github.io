@@ -1,0 +1,127 @@
+---
+import {} from "astro:components"
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+import Avatar from "./Avatar.astro";
+
+interface HeaderLinkLocations {
+  href: string;
+  content: string;
+}
+const headerLinkLocations: HeaderLinkLocations[] = [
+  {
+    href: "/posts",
+    content: "Devblog",
+  },
+  {
+    href: "/about",
+    content: "About",
+  },
+  {
+    href: "/tags",
+    content: "Tags",
+  },
+  // TODO: Figure out how to get HTML content set properly
+  // {
+  //   href: "/rss.xml",
+  //   content: '<div class="i-bi-rss-fill" />',
+  // },
+];
+---
+
+<header class="fixed flex justify-center w-full top-0 z-10">
+  <nav class="w-full py-4 mx-2 sm:mx-0">
+    <div class="flex items-center justify-between px-2 sm:px-0">
+      <a href="/" title={SITE_TITLE}>
+        <Avatar
+          class="grayscale hover:grayscale-0 transition-all"
+          width={32}
+          zoomed
+        />
+      </a>
+      <button
+        aria-label="Open Menu"
+        aria-expanded="false"
+        aria-controls="menu-items"
+        class="leading-4"
+        id="menu"
+      >
+        <div class="i-bi-list menu-icon" />
+      </button>
+      <div class="hidden sm:flex items-center">
+        {
+          headerLinkLocations.map(({ href, content }, i) => (
+            <HeaderLink
+              class:list={[i > 0 && "ml-4", "text-white hover:text-accent p-0"]}
+              href={href}
+              title={content}
+            >
+              {content}
+            </HeaderLink>
+          ))
+        }
+        <HeaderLink
+          class="ml-4 text-white hover:text-accent p-0"
+          href="/rss.xml"
+          title="RSS Feed"
+        >
+          <div class="i-bi-rss-fill" />
+        </HeaderLink>
+      </div>
+    </div>
+    <ul id="menu-items" class="hidden text-center">
+      {
+        headerLinkLocations.map(({ href, content }) => (
+          <li class="my-2">
+            <a class="text-white hover:text-accent" href={href}>
+              <div set:html={content} />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    background-color: var(--dark-primary-opaque);
+  }
+  h2 {
+    margin: 0;
+    font-size: 1em;
+  }
+  nav {
+    max-width: 48rem;
+    border-bottom: 1px solid white;
+  }
+  #menu {
+    @apply p-2 sm:hidden;
+  }
+</style>
+
+<script>
+  function toggleNav() {
+    // Toggle menu
+    const menuBtn = document.querySelector("#menu");
+    const menuIcon = document.querySelector(".menu-icon");
+    const menuItems = document.querySelector("#menu-items");
+
+    menuBtn?.addEventListener("click", () => {
+      const menuExpanded = menuBtn.getAttribute("aria-expanded") === "true";
+      menuIcon?.classList.toggle("i-bi-list");
+      menuIcon?.classList.toggle("i-bi-x-lg");
+      menuBtn.setAttribute("aria-expanded", menuExpanded ? "false" : "true");
+      menuBtn.setAttribute(
+        "aria-label",
+        menuExpanded ? "Open Menu" : "Close Menu",
+      );
+      menuItems?.classList.toggle("hidden");
+    });
+  }
+
+  toggleNav();
+
+  // Runs on view transitions navigation
+  document.addEventListener("astro:after-swap", toggleNav);
+</script>

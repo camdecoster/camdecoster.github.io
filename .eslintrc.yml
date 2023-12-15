@@ -1,0 +1,43 @@
+env:
+  browser: true
+  es2021: true
+  node: true
+extends:
+  - eslint:recommended
+  # - standard-with-typescript
+  # - plugin:prettier/recommended
+  # - plugin:astro/recommended
+  # - "plugin:@stylistic/recommended"
+parser: "@typescript-eslint/parser"
+parserOptions:
+  ecmaVersion: latest
+  sourceType: module
+overrides:
+  - files:
+      - "*.astro"
+    parser: astro-eslint-parser
+    parserOptions:
+      parser: "@typescript-eslint/parser"
+      extraFileExtensions:
+        - ".astro"
+    # rules:
+    # // override/add rules settings here, such as:
+    # // "astro/no-set-html-directive": "error"
+plugins:
+  - "@typescript-eslint"
+  - "@stylistic"
+root: true
+rules:
+  "@stylistic/indent":
+    - error
+    - 2
+  "@stylistic/quotes":
+    - error
+    - double
+  "@stylistic/arrow-parens":
+    - error
+    - as-needed
+  "@stylistic/comma-dangle":
+    - error
+    - always-multiline
+    - avoidEscape: true

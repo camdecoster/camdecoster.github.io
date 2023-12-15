@@ -1,0 +1,15 @@
+---
+import avatar from "../assets/images/avatar.jpg";
+import avatarZoomed from "../assets/images/avatar_zoomed.jpg";
+
+interface Props {
+  class?: string;
+  width: number;
+  zoomed?: boolean;
+}
+const { class: className, width, zoomed } = Astro.props;
+const image = zoomed ? avatarZoomed : avatar;
+---
+
+<!-- Maybe use Image component? -->
+<img class:list={["rounded-full", className]} width={width} src={image.src} />

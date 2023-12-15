@@ -1,0 +1,71 @@
+positions:
+  - company:
+      name: Observable
+      description: Data visualization startup building browser-based computational notebook platform
+      logo: observable.png
+    title: Software Developer
+    location: San Francisco, California
+    remote: true
+    duration: 2022 - 2023
+    description:
+      - Implemented file attachment storage using private AWS S3 buckets
+      - Converted search to Elasticsearch, improving search speeds by up to 50%
+      - Added OpenAI based coding copilot with external knowledge sources (using retrieval augmented generation)
+      - Updated fundamental notebook editing interface, decreasing time-to-first-visualization to less than a minute
+      - Automated deployment of containerized applications to Azure, Heroku, using custom GitHub Actions
+      - Migrated marketing pages to headless CMS, eliminating the need for PRs to make copy changes
+      - Created unit and integration tests using Playwright, Cypress, Mocha, and Jest
+    skills:
+      - TypeScript
+      - React
+      - Node
+      - PostgreSQL
+  - company:
+      name: S&P Global
+      description: Leading provider of SaaS-based market data and investment analysis tools
+      logo: spglobal.png
+    title: Software Engineer
+    location: Boulder, Colorado
+    remote: false
+    duration: 2020 - 2022
+    description:
+      - Built interactive JavaScript/HTML Canvas charting library and .NET based on-demand chart image application used by multiple Fortune 500 companies
+      - Created interactive playground for prototyping chart configurations, allowing teams to build a chart in minutes
+      - Developed sites to demonstrate capabilities of charting libraries using frontend frameworks, including Vue, React, and jQuery
+      - Built custom CI/CD pipelines using Jenkins
+      - Created performant library bundles using Rollup
+      - Expanded automated testing coverage, using Jest
+      - Interfaced with internal and external customers to provide technical support
+    skills:
+      - JavaScript
+      - Vue
+      - Jenkins
+      - React
+  - company:
+      name: Zachry Engineering
+      description: Full-service engineering for multi-billion dollar industrial facilities
+      logo: zachry.png
+    title: Mechanical Engineer
+    location: Denver, Colorado
+    remote: false
+    duration: 2011 - 2020
+    description:
+      - Developed Visual Basic pneumatic testing exclusion zone calculator which reduced calculation time by 40%
+      - Served as Lead Mechanical Engineer on power plant project proposals
+      - Supervised generation of all equipment specifications and mechanical design drawings
+      - Certified piping designs for stress and wall-thickness calculations as Professional Engineer
+    skills: []
+  - company:
+      name: Ball
+      description: Industrial manufacturing of PET and HDPE beverage containers
+      logo: ball.png
+    title: Design Engineer
+    location: Broomfield, Colorado
+    remote: false
+    duration: 2007 - 2010
+    description:
+      - Designed beverage containers to customer specifications using SolidWorks
+      - Created custom SolidWorks add-ins using Visual Basic and C# to automate capacity calculations, reducing overall calculation time by 30%
+    skills:
+      - C#/.NET
+      - SolidWorks
