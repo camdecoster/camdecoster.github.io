@@ -1,31 +1,41 @@
 ---
 import Avatar from "@components/Avatar.astro";
-import Layout from "../layouts/BlogPost.astro";
 import Experience from "@components/Experience.astro";
 import Projects from "@components/Projects.astro";
+import BaseHead from "@components/BaseHead.astro";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "consts";
 ---
 
-<Layout
-  title="About Me"
-  description="Lorem ipsum dolor sit amet"
-  pubDate={new Date("2023/12/13")}
->
-  <section class="mt-20">
-    <div class="flex flex-col items-center sm:flex-row">
-      <Avatar class="mb-10 sm:mb-0 sm:mr-10" width={250} />
-      <div class="text-xl">
-        👋 Hello! I’m a Software Engineer based in Colorado, USA. I love solving puzzles and
-        building useful tools. I specialize in web development across the stack. I'm always
-        learning about new technologies and trying to build things with them. You can read more
-        about my experience below or learn something by checking out my <a class="decoration-dashed hover:underline" href="/posts">devblog</a>.
-      </div>
-    </div>
-    <div class="flex justify-center my-20 text-2xl leading-none">
-      <a class="text-white" href="#experience">EXPERIENCE</a>
-      <div class="border-l-2 mx-3" />
-      <a class="text-white" href="#projects">PROJECTS</a>
-    </div>
-  </section>
-  <Experience class="pt-20"/>
-  <Projects class="pt-20"/>
-</Layout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main class="px-2 sm:p-0 mt-15 sm:mt-30">
+      <h1>About Me</h1>
+      <section class="mt-20">
+        <div class="flex flex-col items-center sm:flex-row">
+          <Avatar class="mb-10 sm:mb-0 sm:mr-10" width={250} />
+          <div class="text-xl">
+            👋 Hello! I'm a Software Engineer based in Colorado, USA. I love solving puzzles and
+            building useful tools. I specialize in web development across the stack. I'm always
+            learning about new technologies and trying to build things with them. You can read more
+            about my experience below or learn something by checking out my <a class="decoration-dashed hover:underline" href="/posts">devblog</a>.
+          </div>
+        </div>
+        <div class="flex justify-center my-20 text-2xl leading-none">
+          <a class="text-white" href="#experience">EXPERIENCE</a>
+          <div class="border-l-2 mx-3" />
+          <a class="text-white" href="#projects">PROJECTS</a>
+        </div>
+      </section>
+      <Experience class="pt-20"/>
+      <Projects class="pt-20"/>
+    </main>
+    <Footer />
+  </body>
+</html>
