@@ -28,14 +28,13 @@ main {
 	max-width: 48rem;
 	margin: auto;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
 	margin: 2rem 0;
-	line-height: 1.2;
 }
 h1 {
 	font-size: 1.875rem;
@@ -81,6 +80,15 @@ p {
 .prose ol {
 	margin: 2rem 2rem;
 	list-style-type: decimal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 0.5rem 0;
+	line-height: 1.2;
 }
 textarea {
 	width: 100%;
