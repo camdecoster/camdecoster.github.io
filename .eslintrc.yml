@@ -34,10 +34,10 @@ rules:
   "@stylistic/quotes":
     - error
     - double
+    - avoidEscape: true
   "@stylistic/arrow-parens":
     - error
     - as-needed
   "@stylistic/comma-dangle":
     - error
     - always-multiline
-    - avoidEscape: true
