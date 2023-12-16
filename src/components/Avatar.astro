@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import avatar from "../assets/images/avatar.jpg";
 import avatarZoomed from "../assets/images/avatar_zoomed.jpg";
 
@@ -11,5 +12,9 @@ const { class: className, width, zoomed } = Astro.props;
 const image = zoomed ? avatarZoomed : avatar;
 ---
 
-<!-- Maybe use Image component? -->
-<img class:list={["rounded-full", className]} width={width} src={image.src} />
+<Image
+  alt="image of cameron decoster"
+  class:list={["rounded-full", className]}
+  src={image}
+  width={width}
+/>

@@ -34,14 +34,14 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0 0 0.5rem 0;
+	margin: 2rem 0;
 	line-height: 1.2;
 }
 h1 {
 	font-size: 1.875rem;
 }
 h2 {
-	font-size: 1.6rem;
+	font-size: 1.7rem;
 }
 h3 {
 	font-size: 1.5rem;
@@ -115,7 +115,7 @@ blockquote {
 	border-left: 4px solid var(--accent);
 	padding: 0 0 0 20px;
 	margin: 0px;
-	font-size: 1.333em;
+	font-size: 1.1em;
 }
 hr {
 	border: none;
