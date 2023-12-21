@@ -23,6 +23,6 @@ export const SOCIAL_LINKS = [
     display: "Mastodon",
     href: "https://mastodon.online/@camdecoster",
     name: "mastodon",
-    icon: "i-bi-twitter",
+    icon: "i-bi-mastodon",
   },
 ];
