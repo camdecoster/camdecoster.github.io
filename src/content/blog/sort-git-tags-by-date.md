@@ -3,10 +3,10 @@ title: "Sort Git Tags by Date"
 description: "A quick tip for sorting your git tags chronologically"
 pubDate: 2022-03-24T13:22:18-06:00
 tags: [devblog, quick-tip, git, sort, npm]
-image: "@assets/sort-git-tags-by-date/images/header.png"
+image: "@assets/images/quick_tip_header.png"
 ---
 
-![quick tip header](@assets/sort-git-tags-by-date/images/header.png "Quick Tip")
+![quick tip header](@assets/images/quick_tip_header.png "Quick Tip")
 
 One of the libraries that I develop has a lot of tags. During a sprint, we tag new builds as alpha. At the end, we build a final release which we tag as a beta. When it comes to assigning the version number for this beta, I usually can't remember what version we're on. Thankfully, Git has a simple way to list all of your tags in chronological order:
 
