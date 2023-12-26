@@ -2,6 +2,7 @@
 title: "Hanging up a Pix Brix picture"
 description: "How to build some LEGO brackets for hanging a Pix Brix picture"
 pubDate: 2023/12/26
+updatedDate: 2023/12/26
 tags: [journal-entry, pix-brix, lego]
 image: "@assets/hanging-pix-brix/images/header.png"
 ---
@@ -16,7 +17,7 @@ Here's the picture from the front:
 
 ![pix brix starry night](@assets/hanging-pix-brix/images/starry_night_front.jpg "Beautiful low res art")
 
-When were done, my son immediately wanted me to hang it up on his wall, but no hanging hardware was provided. So what to do? Conveniently, Pix Brix pieces are about the same size as 1x1 standard thickness LEGO bricks and will securely connect to LEGO studs. With this knowledge, I decided to build some hanging brackets out of LEGO. Here is the result (this is the right bracket; the left bracket is just a mirrored version):
+When we were done, my son immediately wanted me to hang it up on his wall, but no hanging hardware was provided. So what to do? Conveniently, Pix Brix pieces are about the same size as 1x1 standard thickness LEGO bricks and will securely connect to LEGO studs. With this knowledge, I decided to build some hanging brackets out of LEGO. Here is the result (this is the right bracket; the left bracket is just a mirrored version):
 
 ![pix brix lego hanging bracket](@assets/hanging-pix-brix/images/starry_night_bracket.jpg "The final hanging bracket design")
 
