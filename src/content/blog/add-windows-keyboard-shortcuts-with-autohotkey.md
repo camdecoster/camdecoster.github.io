@@ -1,5 +1,6 @@
 ---
 pubDate: 2021-11-05T13:40:19-06:00
+updatedDate: 2023/12/28
 title: "Add Windows Keyboard Shortcuts With AutoHotKey"
 description: "Learn how to make multiple Windows desktops easier to use with AutoHotKey"
 tags: [devblog, windows, multiple-desktops, autohotkey]
@@ -96,15 +97,15 @@ When Windows starts, the batch file will run and execute your AHK scripts.
 
 The following script will provide shortcuts to manipulate windows when using multiple desktops in Windows. Just save the text to a new script file and add it to your batch file to be executed. The key combinations are:
 
-- Minimize window: Win+Alt+H
-- Switch desktop (in addition to existing shortcut, Win+Ctrl+(Left or Right):
-    - Switch to left desktop: Win+Alt+Left
-    - Switch to right desktop: Win+Alt+Right
+- Minimize window: <kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>H</kbd>
+- Switch desktop (in addition to existing shortcut, <kbd>Win</kbd>+<kbd>Ctrl</kbd>+<kbd>Left</kbd> or <kbd>Right</kbd>):
+  - Switch to left desktop: <kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>Left</kbd>
+  - Switch to right desktop: <kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>Right</kbd>
 - Move window to desktop:
-    - Move to left: Win+Shift+Left
-    - Move to right: Win+Shift+Right
+  - Move to left: <kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>Left</kbd>
+  - Move to right: <kbd>Win</kbd>+<kbd>Shift</kbd>+<kbd>Right</kbd>
 - Show windows on current desktop (this is a Windows shortcut, not in AHK but useful to know)
-    - Show task view: Win+Tab
+  - Show task view: <kbd>Win</kbd>+<kbd>Tab</kbd>
 
 ```autohotkey
 #SingleInstance, force

@@ -2,6 +2,7 @@
 title: "How to Rip the Audio from a Video DVD on Linux"
 description: "Learn how to convert the audio track from a DVD video to something more portable"
 pubDate: 2022-05-22T13:14:01-06:00
+updatedDate: 2023/12/28
 tags: [devblog, linux, dvd]
 image: "@assets/how-to-rip-audio-from-dvd/images/header.png"
 ---
@@ -173,7 +174,7 @@ The conversion is done at this point, but the files will be easier to use if the
 
 ![puddletag main window](@assets/how-to-rip-audio-from-dvd/images/puddletag.png "puddletag Main Window")
 
-Start entering all of the proper tag information. At a minimum, this should include artist, title, album, track, and artwork. After entering a value in one column, you can copy that cell and paste it into all of the cells in the column below. To add artwork, select all of the files and right click the cover art graphic, then select _Add Cover_. Once you're done with all of that, save everything with Ctrl-S or _File > Save_. Congratulations, you've finished the conversion.
+Start entering all of the proper tag information. At a minimum, this should include artist, title, album, track, and artwork. After entering a value in one column, you can copy that cell and paste it into all of the cells in the column below. To add artwork, select all of the files and right click the cover art graphic, then select _Add Cover_. Once you're done with all of that, save everything with <kbd>Ctrl</kbd>+<kbd>S</kbd> or _File > Save_. Congratulations, you've finished the conversion.
 
 ### Conclusion
 
