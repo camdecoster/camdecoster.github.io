@@ -6,5 +6,5 @@ export const GET: APIRoute = () => {
   const resumePath = path.join(process.cwd(), "public", "resume_cameron_decoster.pdf")
   const response = Buffer.from(readFileSync(resumePath, "binary"), "binary")
 	
-  return new Response(response);
+  return new Response(response, { headers: { "Content-Type": "application/pdf" } });
 }
