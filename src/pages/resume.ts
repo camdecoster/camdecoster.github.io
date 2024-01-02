@@ -1,10 +1,5 @@
 import type { APIRoute } from "astro";
-import { readFileSync } from "fs";
-import path from "path";
 
-export const GET: APIRoute = () => {
-  const resumePath = path.join(process.cwd(), "public", "resume_cameron_decoster.pdf")
-  const response = Buffer.from(readFileSync(resumePath, "binary"), "binary")
-	
-  return new Response(response, { headers: { "Content-Type": "application/pdf" } });
-}
+const path = "https://docs.google.com/document/d/1juuz3vISqaGdMOt0wzDf_jfugJrqt_CqnqIqHvAJBrU/export?format=pdf"
+
+export const GET: APIRoute = ({ redirect }) => redirect(path, 304);
