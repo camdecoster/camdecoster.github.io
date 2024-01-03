@@ -1,11 +1,11 @@
 ---
 interface Props {
   class?: string;
-  count: number;
+  count?: number;
   name: string;
 }
 
-const { class: className, count, name } = Astro.props;
+const { class: className, count = 1, name } = Astro.props;
 ---
 
 <a
