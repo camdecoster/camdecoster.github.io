@@ -3,9 +3,9 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import { getTagCounts, getTagPosts } from "@utils/tagUtils";
 import BaseHead from "@components/BaseHead.astro";
 import Footer from "@components/Footer.astro";
-import FormattedDate from "@components/FormattedDate.astro";
 import Header from "@components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "consts";
+import PostList from "@components/PostList.astro";
 
 export async function getStaticPaths() {
   const posts = (
@@ -54,25 +54,7 @@ const tagPosts = getTagPosts(tag, posts);
         Go Back
       </button>
       <h3 class="text-3xl">Posts with tag <b>#{tag}</b></h3>
-      <ul>
-        {
-          tagPosts.map(post => (
-            <li class="my-6 text-base">
-              <a class="flex justify-between" href={`/posts/${post.slug}/`}>
-                <div class="text-xl decoration-dashed hover:underline">
-                  {post.data.title}
-                </div>
-              </a>
-              <div class="date">
-                <FormattedDate date={post.data.pubDate} />
-              </div>
-              <div>
-                <i>{post.data.description}</i>
-              </div>
-            </li>
-          ))
-        }
-      </ul>
+      <PostList posts={tagPosts} />
     </main>
     <Footer />
   </body>

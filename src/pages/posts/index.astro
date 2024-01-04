@@ -1,10 +1,10 @@
 ---
 import BaseHead from "@components/BaseHead.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
-import { getCollection, type CollectionEntry } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import PostList from "@components/PostList.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
+import { type CollectionEntry, getCollection } from "astro:content";
 
 const posts = (
   await getCollection("blog", ({ data }) =>
@@ -12,7 +12,7 @@ const posts = (
   )
 ).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const featuredPosts = posts.filter(({data}) => data.featured);
+const featuredPosts = posts.filter(({ data }) => data.featured);
 
 const postsByYear = new Map<number, CollectionEntry<"blog">[]>();
 posts.forEach(p => {
@@ -35,51 +35,15 @@ posts.forEach(p => {
       <p>My thoughts on all things technical and my career in software development.</p>
       {featuredPosts.length > 0 && (
         <h2>Featured</h2>
-        <ul>
-          {
-            featuredPosts.map(post => (
-              <li class="my-6 text-base">
-                <img src={post.data.image} />
-                <a class="flex justify-between" href={`/posts/${post.slug}/`}>
-                  <div class="text-xl decoration-dashed hover:underline">
-                    {post.data.title}
-                  </div>
-                </a>
-                <div class="date">
-                  <FormattedDate date={post.data.pubDate} />
-                </div>
-                <div>
-                  <i>{post.data.description}</i>
-                </div>
-              </li>
-            ))
-          }
-        </ul>
+        <PostList posts={featuredPosts} />
       )}
       {[...postsByYear.entries()].map(([year, posts]) => (
         <h2 class="text-2xl my-6 flex items-center">
           <div class="i-bi-calendar3 mr-3" />
           {year}
         </h2>
-        <ul class="">
-          {
-            posts.map(post => (
-              <li class="my-6 text-base">
-                <a class="flex justify-between" href={`/posts/${post.slug}/`}>
-                  <div class="text-xl decoration-dashed hover:underline">
-                    {post.data.title}
-                  </div>
-                </a>
-                <div class="date">
-                  <FormattedDate date={post.data.pubDate} />
-                </div>
-                <div>
-                  <i>{post.data.description}</i>
-                </div>
-              </li>
-            ))
-          }
-        </ul>))}
+        <PostList posts={posts} />
+      ))}
     </main>
 
     <Footer />
