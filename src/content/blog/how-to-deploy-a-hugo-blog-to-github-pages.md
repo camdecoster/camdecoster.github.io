@@ -2,7 +2,7 @@
 title: "How to Deploy a Hugo Blog to GitHub Pages"
 pubDate: 2021-10-25T13:21:58-06:00
 description: "Simplify the Hugo deployment process to GitHub Pages"
-tags: [devblog, hugo, blog, github, pages, deploy]
+tags: [devblog, hugo, blog, github, github-pages, deploy]
 image: "@assets/how-to-deploy-a-hugo-blog-to-github-pages/images/hugo-github.png"
 ---
 
