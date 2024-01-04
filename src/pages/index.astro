@@ -1,17 +1,17 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Hr from "../components/Hr.astro";
-import Footer from "../components/Footer.astro";
+import Avatar from "@components/Avatar.astro";
+import BaseHead from "@components/BaseHead.astro";
+import Footer from "@components/Footer.astro";
+import Header from "@components/Header.astro";
+import Hr from "@components/Hr.astro";
+import PostList from "@components/PostList.astro";
 import {
   RECENT_POSTS_LIMIT,
-  SITE_TITLE,
   SITE_DESCRIPTION,
+  SITE_TITLE,
   SOCIAL_LINKS,
 } from "../consts";
-import Avatar from "../components/Avatar.astro";
 import { getCollection } from "astro:content";
-import FormattedDate from "../components/FormattedDate.astro";
 
 const posts = (
   await getCollection("blog", ({ data }) =>
@@ -56,26 +56,7 @@ const posts = (
       <Hr />
       <section class="mt-4">
         <h3 class="text-3xl">Recent Posts</h3>
-        <ul>
-          {
-            posts.map(({data, slug}) => (
-              <li class="my-6 text-base">
-                <a class="flex justify-between" href={`/posts/${slug}/`}>
-                  <div class="text-xl decoration-dashed hover:underline">
-                    {data.title}
-                  </div>
-                </a>
-                {data.draft && <div class="text-red">(DRAFT)</div>}
-                <div class="date">
-                  <FormattedDate date={data.pubDate} />
-                </div>
-                <div>
-                  <i>{data.description}</i>
-                </div>
-              </li>
-            ))
-          }
-        </ul>
+        <PostList posts={posts} />
         <div class="flex justify-center">
           <a href="/posts" class="text-white flex items-center">
             All Posts
