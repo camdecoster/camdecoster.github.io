@@ -4,7 +4,6 @@ description: "Learn how I created an endpoint to display my resume in Astro"
 pubDate: 2024-01-04T18:26:13.334Z
 tags: [devblog, astro, resume, github, github-pages, pdf, google-drive]
 image: "@assets/adding-resume-endpoint-astro/images/header.png"
-draft: true
 ---
 
 ![pdf document pointing to astro](@assets/adding-resume-endpoint-astro/images/header.png "Serving PDFs with Astro")

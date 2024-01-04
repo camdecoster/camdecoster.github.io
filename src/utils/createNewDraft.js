@@ -1,4 +1,4 @@
-import { mkdirSync, readdirSync, writeFileSync } from "fs"
+import { copyFileSync, mkdirSync, readdirSync, writeFileSync } from "fs"
 import GithubSlugger from "github-slugger";
 import { join } from "path";
 import { argv, cwd } from "process";
@@ -44,6 +44,10 @@ draft: true
   writeFileSync(postPath, markdown);
   mkdirSync(join(cwd(), "src", "assets", slug));
   mkdirSync(join(cwd(), "src", "assets", slug, "images"));
+  copyFileSync(
+    join(cwd(), "src", "assets", "images", "header_draft.png"),
+    join(cwd(), "src", "assets", slug, "images", "header.png"),
+  );
   
   console.log(`Post created at ${postPath}`);
 } else {
