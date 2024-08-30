@@ -2,6 +2,32 @@
 	"positions": [
 		{
 			"company": {
+				"name": "WorkBright",
+				"description": "HR platform for onboarding, remote verification, and online Form I-9 management",
+				"logo": "workbright_logo.png"
+			},
+			"title": "Software Engineer",
+			"location": "Boulder, Colorado",
+			"remote": true,
+			"duration": "2024-Present",
+			"description": [
+				"Performed technical investigations of customer support requests",
+				"Maintained application state using AWS DynamoDB, Lambda, S3",
+				"Created monitors and dashboards for surfacing issues in Datadog",
+				"Built Ruby based tools to simplify repetitive tasks",
+				"Managed application deployment",
+				"Updated application frameworks and dependencies",
+				"Improved developer experience"
+			],
+			"skills": [
+				"Ruby on Rails",
+				"Datadog",
+				"AWS",
+				"Vue"
+			]
+		},
+		{
+			"company": {
 				"name": "Observable",
 				"description": "Data visualization startup building browser-based computational notebook platform",
 				"logo": "observable_logo.png"
