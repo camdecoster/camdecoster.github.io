@@ -1,4 +1,6 @@
 ---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 import { positions } from "../data/experience.json";
 import Hr from "./Hr.astro";
 import SkillsList from "./SkillsList.astro";
@@ -8,6 +10,7 @@ type Props = {
 }
 
 const { class: className } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/images/*.{jpeg,jpg,png,gif}");
 ---
 
 <div class:list={[className]} id="experience">
@@ -26,12 +29,16 @@ const { class: className } = Astro.props;
                 <span>{p.title}, {p.duration}</span>
               </div>
             </div>
-            <img
-              alt={`${p.company.name} logo`}
-              class="mb-10 sm:mb-0 sm:ml-2"
-              src={`/images/${p.company.logo}`}
-              width={150}
-            />
+            {
+              images[`/src/assets/images/${p.company.logo}`] &&
+              <Image
+                alt={`${p.company.name} logo`}
+                class="mb-10 sm:mb-0 sm:ml-2"
+                src={images[`/src/assets/images/${p.company.logo}`]()}
+                height={150}
+                width={150}
+              />
+            }
           </div>
           <ul class="list-disc ml-4">
             {p.description.map(i => (
