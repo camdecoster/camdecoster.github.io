@@ -3,7 +3,7 @@ title: "My Old Apps Broke"
 description: "An investigation in to why my frontend could no longer connect to my backend"
 pubDate: 2022-02-20T07:53:32-07:00
 tags: [devblog, heroku, vercel, zeit, ssl, postgres, sql]
-image: "@assets/my-old-apps-broke/images/IMAGE_NAME.png"
+image: "@assets/my-old-apps-broke/images/header.png"
 ---
 
 ![heroku logo modified to say hebroku](@assets/my-old-apps-broke/images/header.png "Broken Heroku = Hebroku")
