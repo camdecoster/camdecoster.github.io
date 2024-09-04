@@ -1,4 +1,6 @@
 ---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 import { projects } from "../data/projects.json";
 import Hr from "./Hr.astro";
 import SkillsList from "./SkillsList.astro";
@@ -7,7 +9,8 @@ type Props = {
   class?: string;
 }
 
-const {class: className} = Astro.props;
+const { class: className } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/images/*.{jpeg,jpg,png,gif}");
 ---
 
 <div class:list={[className]} id="projects">
@@ -27,12 +30,22 @@ const {class: className} = Astro.props;
               </div>
               <div class="mb-2">{p.description}</div>
             </div>
-            <img
+            {/* <img
               alt={`${p.name} screenshot`}
               class="mb-10 sm:mb-0 sm:ml-2"
               src={`/images/${p.image}`}
               width={150}
-            />
+            /> */}
+            {
+              images[`/src/assets/images/${p.image}`] &&
+              <Image
+                alt={`${p.name} screenshot`}
+                class="mb-10 sm:mb-0 sm:ml-2"
+                src={images[`/src/assets/images/${p.image}`]()}
+                height={150}
+                width={150}
+              />
+            }
           </div>
           <SkillsList class="mt-5" skills={p.tech} />
         </div>
