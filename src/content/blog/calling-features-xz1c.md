@@ -11,7 +11,7 @@ image: "@assets/calling-features-xz1c/images/header.png"
 
 *UPDATE 2022/02/25: I originally posted this information on [XDA](https://xdaforums.com/t/volte-and-wifi-calling-working-on-metropcs-and-probably-other-t-mobile-mvnos.3880189/) in 2018, but I was worried that it would get corrupted with future forum upgrades, so I'm capturing it here too. Enjoy.*
 
-*UPDATE 2024/09/12: It's now possible to get this working on Android 9 (Pie). See my new post [here](/posts/calling-features-xz1c-part-2/).*
+*UPDATE 2024/09/19: It's now possible to get this working on Android 9 (Pie). See my new post [here](/posts/calling-features-xz1c-part-2/).*
 
 **DISCLAIMER: This will only work on Android 8.0, and may not work on some versions of 8.0 depending on the security patch date. I'm using firmware version 47.A.1.16.20 with a security patch level of 2018/09/01.**
 
