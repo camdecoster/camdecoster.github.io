@@ -25,4 +25,10 @@ export const SOCIAL_LINKS = [
     name: "mastodon",
     icon: "i-bi-mastodon",
   },
+  {
+    display: "Bluesky",
+    href: "https://bsky.app/profile/camdecoster.dev",
+    name: "bluesky",
+    icon: "i-simple-icons-bluesky",
+  },
 ];
