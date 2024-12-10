@@ -10,9 +10,9 @@ const { posts } = Astro.props;
 
 <ul>
   {
-    posts.map(({ data, slug }) => (
+    posts.map(({ data, id }) => (
       <li class="my-6 text-base">
-        <a class="flex justify-between" href={`/posts/${slug}/`}>
+        <a class="flex justify-between" href={`/posts/${id}/`}>
           <div class="text-xl decoration-dashed hover:underline">
             {data.title}
           </div>

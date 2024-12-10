@@ -1,7 +1,9 @@
 import { defineCollection, z } from "astro:content";
-import { AUTHOR } from "../consts";
+import { glob } from "astro/loaders";
+import { AUTHOR } from "./consts";
 
 const blog = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
   // Type-check frontmatter using a schema
   schema: ({ image }) => z.object({
     author: z.string().default(AUTHOR).optional(),
