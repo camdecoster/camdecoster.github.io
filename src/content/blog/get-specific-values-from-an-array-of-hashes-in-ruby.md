@@ -52,4 +52,4 @@ books.select(:title, :length)
 # [{:title=>"Book 1", :length=>400}, {:title=>"Book 2", :length=>300}, {:title=>"Book 3", :length=>425}]
 ```
 
-☝️ This is a bit different since you're choosing columns with `select`, but the result is the same.
+☝️ This is a bit different since you're choosing columns with `select{:ruby}`, but the result is the same.

@@ -57,7 +57,7 @@ describe('Position emitter', () => {
 });
 ```
 
-If you run this test, you'll see that the assertions from the first two passes through the loop fail (seeing an emitted position of `'right'`), while the third pass works.
+If you run this test, you'll see that the assertions from the first two passes through the loop fail (seeing an emitted position of `'right'{:js}`), while the third pass works.
 
 ```shell
  FAIL  content/posts/jest-variables-test-execution-cycle/failingLoop.test.js
@@ -108,21 +108,21 @@ Time:        0.529 s
 
 What's going on here? The beforeEach block should run first, then the test, for each pass through the loop. Let's walk this through in a bit more detail:
 
-1. Set the global variable value, `paramsObject.position`, to the current `position` value
+1. Set the global variable value, `paramsObject.position{:js}`, to the current `position{:js}` value
 1. Enter the beforeEach block
 	1. Reset the mock
-	1. Emit `paramsObject.position`
+	1. Emit `paramsObject.position{:js}`
 1. Get the emitted position value from the mock function ([first function call][first argument from function call])
-1. Assert that `emittedPosition` should match `position`
+1. Assert that `emittedPosition{:js}` should match `position{:js}`
 
 That all seems correct, but it doesn't work. The issue is a result of the Jest test execution cycle, and it's something that developers should be aware of. Here's a breakdown of what Jest does when it opens a test file:
 
 1. Execute top level statements
-1. Execute `describe` blocks, in order
-1. If a test is found, add that to a list of tests to execute, along with any related `beforeEach`, `afterEach`, etc. blocks.
+1. Execute `describe{:js}` blocks, in order
+1. If a test is found, add that to a list of tests to execute, along with any related `beforeEach{:js}`, `afterEach{:js}`, etc. blocks.
 1. Go through the test list and run each test in order
 
-You'll notice that the tests don't actually get run until the end of the cycle. Because the loop is part of a describe block, it gets executed as part of step 2. While Jest is building a list of tests (without running them), `paramsObject.position` is set three times, with the final value being `'right'`. By the time the tests are actually run, `paramsObject.position` isn't changing anymore, so the first two tests fail because they're expecting `emittedPosition` to match `position`, and it doesn't.
+You'll notice that the tests don't actually get run until the end of the cycle. Because the loop is part of a describe block, it gets executed as part of step 2. While Jest is building a list of tests (without running them), `paramsObject.position{:js}` is set three times, with the final value being `'right'{:js}`. By the time the tests are actually run, `paramsObject.position{:js}` isn't changing anymore, so the first two tests fail because they're expecting `emittedPosition{:js}` to match `position{:js}`, and it doesn't.
 
 Ultimately, this is a scope issue. Because the value that's changing is global, it doesn't get saved in it's current state at the time the test is created. The solution is stop using a global variable. Here's how I changed the test to work the way I expected:
 
@@ -171,7 +171,7 @@ describe('Position emitter', () => {
 });
 ```
 
-Essentially, I'm creating my own local `beforeEach` block in the form of the function `triggerEvent`, which get's called with the locally scoped `position`. Other than that change, the code is pretty much the same. But now the correct value is emitted for each pass through the loop. Here's the Jest output:
+Essentially, I'm creating my own local `beforeEach{:js}` block in the form of the function `triggerEvent{:js}`, which get's called with the locally scoped `position{:js}`. Other than that change, the code is pretty much the same. But now the correct value is emitted for each pass through the loop. Here's the Jest output:
 
 ```shell
  PASS  content/posts/jest-variables-test-execution-cycle/passingLoop.test.js

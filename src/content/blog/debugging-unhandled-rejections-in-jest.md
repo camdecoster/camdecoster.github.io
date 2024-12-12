@@ -46,7 +46,7 @@ process.on('unhandledRejection', (reason, promise) => {
 
 This is great, but I wasn't sure how to get it to run during a test. Putting it in the test file didn't work for me. There could be a solution using the test file, but I didn't find one. What I did find was the suggestion to utilize the Jest configuration to handle this: [`setupFiles`](https://jestjs.io/docs/configuration#setupfiles-array). Here's what the Jest documentation says about this:
 
-> A list of paths to modules that run some code to configure or set up the testing environment. Each setupFile will be run once per test file. Since every test runs in its own environment, these scripts will be executed in the testing environment before executing `setupFilesAfterEnv` and before the test code itself.
+> A list of paths to modules that run some code to configure or set up the testing environment. Each setupFile will be run once per test file. Since every test runs in its own environment, these scripts will be executed in the testing environment before executing `setupFilesAfterEnv{:js}` and before the test code itself.
 
 All that I needed to do was save this snippet in a utility file (which I called **setup.js**) and update the **jest.config.js** file:
 

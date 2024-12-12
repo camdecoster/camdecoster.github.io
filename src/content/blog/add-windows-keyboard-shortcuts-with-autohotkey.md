@@ -45,7 +45,7 @@ AHK script files have the extension .ahk and there's an extension for VS Code th
 
 Let's add a hotstring shortcut to the script:
 
-```autohotkey
+```ahk
 ; Shortcut for work email
 ::emi::
   SendInput your.name@example.com
@@ -107,7 +107,7 @@ The following script will provide shortcuts to manipulate windows when using mul
 - Show windows on current desktop (this is a Windows shortcut, not in AHK but useful to know)
   - Show task view: <kbd>Win</kbd>+<kbd>Tab</kbd>
 
-```autohotkey
+```ahk
 #SingleInstance, force
 ; Minimize window
 !#H::
