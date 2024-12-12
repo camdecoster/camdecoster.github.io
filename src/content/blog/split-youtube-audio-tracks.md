@@ -14,7 +14,7 @@ Only extract audio from videos where you have permission to do so. Usually, crea
 
 ## Get the audio
 
-There's a piece of software called `yt-dlp` that handles this. It allows one to download a YouTube video (or audio in this case) from the command line. You can find it [here](https://github.com/yt-dlp/yt-dlp/releases) and download it for your operating system. With that installed, enter the following command in your terminal with the proper video id.
+There's a piece of software called `yt-dlp{:console}` that handles this. It allows one to download a YouTube video (or audio in this case) from the command line. You can find it [here](https://github.com/yt-dlp/yt-dlp/releases) and download it for your operating system. With that installed, enter the following command in your terminal with the proper video id.
 
 ```sh
 yt-dlp -x --audio-format mp3 "https://www.youtube.com/watch?v=VIDEO_ID_HERE"
@@ -25,7 +25,7 @@ Per the man page, here's what the options do:
 
 So, this command will download the video at the given URL and extract the audio as mp3. If you run the command, you should see some output similar to the following:
 
-```sh
+```console
 [youtube] Extracting URL: https://www.youtube.com/watch?v=aqz-KE-bpKQ
 [youtube] aqz-KE-bpKQ: Downloading webpage
 [youtube] aqz-KE-bpKQ: Downloading ios player API JSON
@@ -41,7 +41,7 @@ Deleting original file Big Buck Bunny 60fps 4K - Official Blender Foundation Sho
 
 ## Split the audio
 
-This solution relies on the program [`ffmpeg`](https://ffmpeg.org/), truly a Swiss Army Knife of audio/video manipulation. You should already have this installed since `yt-dlp` depends on it. The commands required to get `ffmpeg` to extract the proper audio are simple, but repetative. Thankfully, I found a Node script on [StackExchange](https://unix.stackexchange.com/a/706544) that will create them by reading track info from a text file. I modified it a bit to include the track number and also to handle some more characters in the track names.
+This solution relies on the program [`ffmpeg`](https://ffmpeg.org/), truly a Swiss Army Knife of audio/video manipulation. You should already have this installed since `yt-dlp{:console}` depends on it. The commands required to get `ffmpeg{:console}` to extract the proper audio are simple, but repetative. Thankfully, I found a Node script on [StackExchange](https://unix.stackexchange.com/a/706544) that will create them by reading track info from a text file. I modified it a bit to include the track number and also to handle some more characters in the track names.
 
 ```js
 const readline = require("readline");
@@ -79,7 +79,7 @@ With the full audio file and the timestamps, the script can now be called from t
 node splitAudio.js fullAudio.mp3 timestamps.txt
 ```
 
-After running the script, you'll have a list of `ffmpeg` commands to run which will create all of the track files.
+After running the script, you'll have a list of `ffmpeg{:console}` commands to run which will create all of the track files.
 
 ```plaintext
 ffmpeg -i "fullAudio.mp3" -ss 00:00:00 -to 00:01:00 "01 - First track name.mp3" &&

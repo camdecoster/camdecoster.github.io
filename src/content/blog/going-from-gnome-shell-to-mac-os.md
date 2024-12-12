@@ -61,7 +61,7 @@ I think the <kbd>Cmd</kbd> and <kbd>Ctrl</kbd> keys are redundant and lead to un
 - I installed [fnm](https://github.com/Schniz/fnm) as my Node version manager
 - This required mucking about in Fish to get the paths right. See [this](https://github.com/Schniz/fnm/blob/d6c132adfd1c29c48acb0b9de42538146e23cf18/.ci/install.sh#L174) section of the install script.
 - I installed [rbenv](https://formulae.brew.sh/formula/rbenv#default) as my Ruby version manager
-- When installing rbenv, I had to update the Fish config per the [  instructions listed](https://github.com/rbenv/rbenv?tab=readme-ov-file#how-rbenv-hooks-into-your-shell) with the command `rbenv init`.
+- When installing rbenv, I had to update the Fish config per the [  instructions listed](https://github.com/rbenv/rbenv?tab=readme-ov-file#how-rbenv-hooks-into-your-shell) with the command `rbenv init{:sh}`.
 - The output was:
   ```sh
   # Load rbenv automatically by appending

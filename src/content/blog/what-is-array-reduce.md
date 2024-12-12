@@ -8,7 +8,7 @@ image: "@assets/what-is-array-reduce/images/header.png"
 
 ![reduce an array from many values to one](@assets/what-is-array-reduce/images/header.png "Reduce an array from many values to one!")
 
-JavaScript has a number of [array methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) that can be used to test and manipulate arrays. Most of these are pretty intuitive, but I always have to look at the documentation for the `reduce` method. Simply put, the reduce method uses a function to return a value from each element of the array and accumulates those values into a single result, *reducing* it to a single value. It's works as follows:
+JavaScript has a number of [array methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) that can be used to test and manipulate arrays. Most of these are pretty intuitive, but I always have to look at the documentation for the `reduce{:js}` method. Simply put, the reduce method uses a function to return a value from each element of the array and accumulates those values into a single result, *reducing* it to a single value. It's works as follows:
 
 ```javascript
 const someArray = [5, 10, 15, 20];
@@ -29,7 +29,7 @@ console.log(someArray.reduce(reducerFunction, 11));
 
 The reducer function requires a minimum of two arguments: the accumulator and the current element value. There are two optional arguments: the current index of the array, and a reference to the array itself. These can be useful to use in the reducer function logic, but usually aren't necessary.
 
-This is a straightforward example, but `reduce` does seem less intuitive than a lot of the other array methods. In fact, I often feel that it would be easier to do the same thing using a loop (and easier to understand).
+This is a straightforward example, but `reduce{:js}` does seem less intuitive than a lot of the other array methods. In fact, I often feel that it would be easier to do the same thing using a loop (and easier to understand).
 
 ```javascript
 // Set the initial value
@@ -65,4 +65,4 @@ console.log(animalsArePets);
 
 But it's not perfect, as the reducer function will run on every element, even if it finds an animal that isn't a pet. I do like that it could be written completely on one line.
 
-`reduce` is a tool that I have in my array toolbox, but it's usually one that I forget how to use. This post will serve as a set of instructions for the future.
+`reduce{:js}` is a tool that I have in my array toolbox, but it's usually one that I forget how to use. This post will serve as a set of instructions for the future.

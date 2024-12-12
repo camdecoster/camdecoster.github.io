@@ -37,15 +37,15 @@ From the website: “UserCSS is essentially a CSS stylesheet with some extra dat
 ```
 
 Let’s go over what each of these items is:
-* `name`: The name of your style
-* `version`: The version of your style. When checking for updates, Stylus looks at this number to see if it has increased. I’m using a numbering system based on the date of publishing.
-* `description`: The description of the style.
-* `author`: Who created the style.
-* `namespace`: A label to distinguish this style from others which may have the same name. This may be obsolete now.
-* `homepageURL`: A link to the page for the style. In my case, the GitHub repo page.
-* `supportURL`: A link for when users need support.
-* `updateURL`: A link to the actual CSS file. This will be used during initial installation and on subsequent updates.
-* `license`: What license the style is released under.
+* `name{:css}`: The name of your style
+* `version{:css}`: The version of your style. When checking for updates, Stylus looks at this number to see if it has increased. I’m using a numbering system based on the date of publishing.
+* `description{:css}`: The description of the style.
+* `author{:css}`: Who created the style.
+* `namespace{:css}`: A label to distinguish this style from others which may have the same name. This may be obsolete now.
+* `homepageURL{:css}`: A link to the page for the style. In my case, the GitHub repo page.
+* `supportURL{:css}`: A link for when users need support.
+* `updateURL{:css}`: A link to the actual CSS file. This will be used during initial installation and on subsequent updates.
+* `license{:css}`: What license the style is released under.
 
 It’s pretty straightforward, but it allowed me to keep control over the style and made it easy to update. Stylus provides a [guide](https://github.com/openstyles/stylus/wiki/Writing-styles) on how to create your own style and answers most questions you’ll have. I used it a lot when figuring everything out for my Pocket Casts style. Speaking of which, here’s a link to the theme that I created: [Pocket Casts Dark Blue](https://github.com/camdecoster/pocket-casts-dark-blue).
 

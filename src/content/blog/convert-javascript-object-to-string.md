@@ -61,7 +61,7 @@ Output:
 {"background":{"color":"red"},"color":"blue","lineDash":"4,2","width":3}
 ```
 
-That's closer, but we've lost all of the formatting that makes it human readable. Thankfully, `JSON.stringify` has an option to add white space. I like tabs, so we'll use a tab character as the white space.
+That's closer, but we've lost all of the formatting that makes it human readable. Thankfully, `JSON.stringify{:js}` has an option to add white space. I like tabs, so we'll use a tab character as the white space.
 
 Input:
 
@@ -82,11 +82,11 @@ Output:
 }
 ```
 
-Almost there, but I'd prefer not to have quotation marks around the keys. Unfortunately, `JSON.stringify` has no option to remove the quotation marks. It is JSON after all.
+Almost there, but I'd prefer not to have quotation marks around the keys. Unfortunately, `JSON.stringify{:js}` has no option to remove the quotation marks. It is JSON after all.
 
-## Convert the object to a string using `util.inspect`
+## Convert the object to a string using `util.inspect{:js}`
 
-Node includes a handy utility called `inspect` that will convert the object into a string, including white space, and skip the quotation marks.
+Node includes a handy utility called `inspect{:js}` that will convert the object into a string, including white space, and skip the quotation marks.
 
 Input:
 
@@ -117,7 +117,7 @@ In searching for a solution, I discovered a package called [JSON5](https://json5
 >	- **Object keys may be an ECMAScript 5.1 IdentifierName.**
 >	- Objects may have a single trailing comma.
 
-In short, `JSON5.stringify` can convert objects to strings without quotation marks around the keys.
+In short, `JSON5.stringify{:js}` can convert objects to strings without quotation marks around the keys.
 
 Input:
 
@@ -140,7 +140,7 @@ Output:
 }
 ```
 
-There we go. The only downside I've found is that `JSON5.stringify` adds trailing commas by default when white space is added. And it doesn't look like there's any way to change that. From the documentation on `JSON5.stringify`:
+There we go. The only downside I've found is that `JSON5.stringify{:js}` adds trailing commas by default when white space is added. And it doesn't look like there's any way to change that. From the documentation on `JSON5.stringify{:js}`:
 
 > *If white space is used, trailing commas will be used in objects and arrays.*
 
@@ -192,7 +192,7 @@ Running this script will update 'stylesList.md' to the following:
 ```
 ````
 
-Finally, let's use `concat-md` to put the styles info and list together. Create a `concat-md` execution script (assuming that 'styles.md' exists in the root directory):
+Finally, let's use `concat-md{:js}` to put the styles info and list together. Create a `concat-md{:js}` execution script (assuming that 'styles.md' exists in the root directory):
 
 ```javascript
 // concatMdFiles.js

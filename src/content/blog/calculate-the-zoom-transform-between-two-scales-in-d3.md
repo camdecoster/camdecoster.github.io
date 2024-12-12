@@ -40,7 +40,7 @@ const { k, x, y } = d3.zoomTransform(chartNode.node());
 console.log(`Scale is ${k}, X translation is ${x}, Y translation is ${y}`);
 ```
 
-**Zoom** ties in well with **Scale**. **Zoom** catches zoom events, calculates the new transform, and can be configured to update a scale after a zoom event takes place, using the `rescaleX` and `rescaleY` methods. These methods essentially undo the current transform to get to the original state, and then apply the new transform. In this way, the scale is updated to show the panned/zoomed data on the chart.
+**Zoom** ties in well with **Scale**. **Zoom** catches zoom events, calculates the new transform, and can be configured to update a scale after a zoom event takes place, using the `rescaleX{:js}` and `rescaleY{:js}` methods. These methods essentially undo the current transform to get to the original state, and then apply the new transform. In this way, the scale is updated to show the panned/zoomed data on the chart.
 
 ```javascript
 // Rescale the dataScale during a zoom event
@@ -49,7 +49,7 @@ function zoomFunction(event) {
 }
 ```
 
-One of the features of the chart is to be able to load a saved chart showing a timeframe in the past. This loads up fine with the scale domain set appropriately, but the `chartNode` is initialized with the identity transform (where the transform-scale and translations are at the defaults: 1, 0, 0). This causes a problem because it creates a situation where a user is not able to pan/zoom into the future, even though the chart is showing a view from the past. Using the data available in the chart, I was able to determine what the scale should look like in the **present**. Now I needed to find a way to determine the transform to go between the present scale (**from** scale) and the currently shown scale (**to** scale). **Zoom** has no utility to do this, so I created my own.
+One of the features of the chart is to be able to load a saved chart showing a timeframe in the past. This loads up fine with the scale domain set appropriately, but the `chartNode{:js}` is initialized with the identity transform (where the transform-scale and translations are at the defaults: 1, 0, 0). This causes a problem because it creates a situation where a user is not able to pan/zoom into the future, even though the chart is showing a view from the past. Using the data available in the chart, I was able to determine what the scale should look like in the **present**. Now I needed to find a way to determine the transform to go between the present scale (**from** scale) and the currently shown scale (**to** scale). **Zoom** has no utility to do this, so I created my own.
 
 By passing in the two different scales along with the current transform, the function caclulates the proper transform-scale and translation to go from one scale to another, then returns a transform with the new values.
 
