@@ -38,6 +38,7 @@ draft: true
 - Update the tags
 - Update the header image
 - Add some sweet, sweet content
+- Ask yourself, should I include my resume for this build? 🤔
 - Once it's ready for publishing, remove the draft property from the frontmatter section ☝️`;
 
   const postPath = join(blogPath, slug + ".md");
