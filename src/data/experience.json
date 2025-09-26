@@ -2,6 +2,29 @@
 	"positions": [
 		{
 			"company": {
+				"name": "Plotly",
+				"description": "Creating products and open source libraries for building data visualization apps",
+				"logo": "plotly_logo.png"
+			},
+			"title": "Senior Software Engineer",
+			"location": "Montréal, Quebec, Canada",
+			"remote": true,
+			"duration": "2025-Present",
+			"description": [
+				"Developed and maintained JavaScript and Python open-source libraries for data visualization",
+				"Architected and implemented new software features and enhancements",
+				"Utilized GitHub Actions and CircleCI to power CI/CD pipeline"
+			],
+			"skills": [
+				"JavaScript",
+				"Python",
+				"Dash",
+				"CircleCI",
+				"React"
+			]
+		},
+		{
+			"company": {
 				"name": "WorkBright",
 				"description": "HR platform for onboarding, remote verification, and online Form I-9 management",
 				"logo": "workbright_logo.png"
@@ -9,7 +32,7 @@
 			"title": "Software Engineer",
 			"location": "Boulder, Colorado",
 			"remote": true,
-			"duration": "2024-Present",
+			"duration": "2024-2025",
 			"description": [
 				"Performed technical investigations of customer support requests",
 				"Maintained application state using AWS DynamoDB, Lambda, S3",
